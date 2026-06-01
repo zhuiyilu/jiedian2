@@ -1,0 +1,87 @@
+name: 自动聚合节点
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */8 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装依赖
+        run: pip install pyyaml
+
+      - name: 运行解析脚本
+        env:
+          SUBS_URLS: ${{ secrets.SUBS_URLS }}
+        run: |
+          cat << 'EOF' > clean.py
+          import urllib.request, base64
+
+          def fetch(url):
+              try:
+                  req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+                  with urllib.request.urlopen(req, timeout=20) as res:
+                      return res.read()
+              except Exception as e:
+                  print(f"请求失败: {url}, 原因: {e}")
+                  return None
+
+          def decode_content(content):
+              try:
+                  # 尝试 Base64 解码
+                  return base64.b64decode(content).decode('utf-8', errors='ignore')
+              except:
+                  # 如果不是 Base64，直接返回原文
+                  return content.decode('utf-8', errors='ignore')
+
+          def main():
+              urls = os.environ.get('SUBS_URLS', '').splitlines()
+              all_nodes = []
+              
+              for u in urls:
+                  u = u.strip()
+                  if not u: continue
+                  
+                  raw_data = fetch(u)
+                  if not raw_data: continue
+                  
+                  decoded_text = decode_content(raw_data)
+                  
+                  # 核心逻辑：按行分割，只要包含协议头的都是节点
+                  for line in decoded_text.splitlines():
+                      line = line.strip()
+                      if '://' in line:
+                          all_nodes.append(line)
+              
+              # 去重
+              unique_nodes = list(set(all_nodes))
+              
+              # 编码并输出
+              if unique_nodes:
+                  combined = '\n'.join(unique_nodes)
+                  encoded = base64.b64encode(combined.encode('utf-8')).decode('utf-8')
+                  with open('sub.txt', 'w', encoding='utf-8') as f:
+                      f.write(encoded)
+                  print(f"成功提取并保存了 {len(unique_nodes)} 个节点。")
+              else:
+                  print("未发现有效节点。")
+
+          if __name__ == "__main__":
+              import os
+              main()
+          EOF
+          python clean.py
+
+      - name: 提交更新
+        run: |
+          git config --global user.name "actions-user"
+          git config --global user.email "actions@github.com"
+          git add sub.txt
+          git commit -m "Auto-update subscription" || echo "No changes"
+          git push
