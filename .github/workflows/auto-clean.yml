@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-
-      - name: 安装依赖
-        run: pip install requests
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 聚合节点
         env:
@@ -31,66 +31,67 @@ jobs:
 
           def fetch_url(url):
               try:
-                  req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible)'})
+                  req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
                   with urllib.request.urlopen(req, timeout=35) as response:
                       return response.read()
               except Exception as e:
-                  print(f"❌ 获取失败: {url} | 错误: {e}")
+                  print(f"❌ 获取失败: {url} | {e}")
                   return None
 
           def decode_content(data):
-              if not data:
-                  return ""
+              if not data: return ""
               text = data.decode('utf-8', errors='ignore').strip()
-              # 处理单行 Base64 订阅（最常见情况）
               if '://' not in text[:100]:
                   try:
-                      decoded = base64.b64decode(text + '===').decode('utf-8')
-                      return decoded
+                      return base64.b64decode(text + '===').decode('utf-8')
                   except:
                       pass
               return text
 
-          # 主程序
-          urls = os.getenv('SUBS_URLS', '').strip().split('\n')
+          urls = [u.strip() for u in os.getenv('SUBS_URLS', '').splitlines() if u.strip()]
           nodes = []
 
           print(f"共发现 {len(urls)} 个订阅链接")
 
           for url in urls:
-              url = url.strip()
-              if not url or url.startswith('#'):
-                  continue
               print(f"正在处理: {url}")
               raw = fetch_url(url)
               if raw:
                   content = decode_content(raw)
                   for line in content.splitlines():
                       line = line.strip()
-                      if any(line.startswith(p) for p in ['vmess://', 'vless://', 'trojan://', 'ss://', 'hysteria2://', 'tuic://']):
+                      if any(line.startswith(p) for p in ['vmess://','vless://','trojan://','ss://','hysteria2://']):
                           nodes.append(line)
 
-          # 去重并保留顺序
           unique_nodes = list(dict.fromkeys(nodes))
-          print(f"✅ 聚合完成，共 {len(unique_nodes)} 个有效节点")
+          print(f"✅ 聚合完成，共 {len(unique_nodes)} 个节点")
 
           if unique_nodes:
-              # 生成 Base64 订阅（最常用）
               combined = '\n'.join(unique_nodes)
               encoded = base64.b64encode(combined.encode('utf-8')).decode('utf-8')
               
-              with open('sub.txt', 'w', encoding='utf-8') as f:
+              with open('sub.txt', 'w') as f:
                   f.write(encoded)
-              
-              # 可选：同时生成明文版本方便调试
-              with open('sub_plain.txt', 'w', encoding='utf-8') as f:
+              with open('sub_plain.txt', 'w') as f:
                   f.write(combined)
               
-              print("✅ 订阅文件生成成功！")
-          else:
-              print("⚠️ 没有找到任何有效节点，请检查 SUBS_URLS")
+              print("✅ 文件生成成功")
           EOF
 
           python3 aggregator.py
+
+      - name: 提交更新
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
-          ls -l   # 显示生成的文件，方便调试
+          if [ -f sub.txt ] && git diff --quiet sub.txt 2>/dev/null; then
+            echo "没有变化，跳过提交"
+          elif [ -f sub.txt ]; then
+            git add sub.txt sub_plain.txt
+            git commit -m "Auto update nodes $(date '+%Y-%m-%d %H:%M:%S UTC')"
+            git push
+            echo "✅ 成功提交并推送！"
+          else
+            echo "⚠️ 未生成 sub.txt"
+          fi
