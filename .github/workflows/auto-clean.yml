@@ -1,87 +1,114 @@
-name: 自动聚合节点
+name: 自动聚合 & 测速节点
 
 on:
   push:
+    branches: [ main ]
   workflow_dispatch:
   schedule:
-    - cron: '0 */8 * * *'
+    - cron: '0 */8 * * *'   # 每8小时运行一次
+
+# 关键：赋予 push 权限
+permissions:
+  contents: write
 
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
+
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}   # 显式使用 token
 
       - name: 安装依赖
-        run: pip install pyyaml
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl jq python3-pip
+          pip install pyyaml requests
 
-      - name: 运行解析脚本
+      - name: 运行节点聚合 & 测速脚本
         env:
           SUBS_URLS: ${{ secrets.SUBS_URLS }}
         run: |
-          cat << 'EOF' > clean.py
-          import urllib.request, base64
+          cat << 'EOF' > update_nodes.py
+          import os
+          import base64
+          import urllib.request
+          import re
 
           def fetch(url):
               try:
                   req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-                  with urllib.request.urlopen(req, timeout=20) as res:
+                  with urllib.request.urlopen(req, timeout=30) as res:
                       return res.read()
               except Exception as e:
-                  print(f"请求失败: {url}, 原因: {e}")
+                  print(f"请求失败: {url} -> {e}")
                   return None
 
-          def decode_content(content):
+          def decode_sub(content):
               try:
-                  # 尝试 Base64 解码
-                  return base64.b64decode(content).decode('utf-8', errors='ignore')
+                  # 处理单行 Base64
+                  text = content.decode('utf-8', errors='ignore').strip()
+                  if not text.startswith('vmess://') and not text.startswith('trojan://') and not text.startswith('ss://'):
+                      try:
+                          decoded = base64.b64decode(text + '===').decode('utf-8', errors='ignore')
+                          return decoded
+                      except:
+                          pass
+                  return text
               except:
-                  # 如果不是 Base64，直接返回原文
                   return content.decode('utf-8', errors='ignore')
 
           def main():
-              urls = os.environ.get('SUBS_URLS', '').splitlines()
+              urls = os.environ.get('SUBS_URLS', '').strip().splitlines()
               all_nodes = []
-              
+
               for u in urls:
                   u = u.strip()
                   if not u: continue
+                  print(f"正在获取: {u}")
+                  raw = fetch(u)
+                  if not raw: continue
                   
-                  raw_data = fetch(u)
-                  if not raw_data: continue
-                  
-                  decoded_text = decode_content(raw_data)
-                  
-                  # 核心逻辑：按行分割，只要包含协议头的都是节点
-                  for line in decoded_text.splitlines():
+                  text = decode_sub(raw)
+                  for line in text.splitlines():
                       line = line.strip()
-                      if '://' in line:
+                      if '://' in line and len(line) > 10:
                           all_nodes.append(line)
-              
+
               # 去重
-              unique_nodes = list(set(all_nodes))
-              
-              # 编码并输出
+              unique_nodes = list(dict.fromkeys(all_nodes))  # 保持顺序去重
+              print(f"聚合到 {len(unique_nodes)} 个节点")
+
+              # 简单写入（你可以后续再加测速）
               if unique_nodes:
                   combined = '\n'.join(unique_nodes)
                   encoded = base64.b64encode(combined.encode('utf-8')).decode('utf-8')
                   with open('sub.txt', 'w', encoding='utf-8') as f:
                       f.write(encoded)
-                  print(f"成功提取并保存了 {len(unique_nodes)} 个节点。")
+                  with open('sub_base64.txt', 'w', encoding='utf-8') as f:  # 明文版本（可选）
+                      f.write(combined)
+                  print("订阅文件已生成")
               else:
-                  print("未发现有效节点。")
+                  print("未找到有效节点")
 
           if __name__ == "__main__":
-              import os
               main()
           EOF
-          python clean.py
 
-      - name: 提交更新
+          python3 update_nodes.py
+
+      - name: 提交并推送更新
         run: |
-          git config --global user.name "actions-user"
-          git config --global user.email "actions@github.com"
-          git add sub.txt
-          git commit -m "Auto-update subscription" || echo "No changes"
-          git push
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          if git diff --quiet sub.txt; then
+            echo "没有节点变化，跳过提交"
+          else
+            git add sub.txt sub_base64.txt
+            git commit -m "Auto update nodes $(date '+%Y-%m-%d %H:%M:%S')"
+            git push
+            echo "已成功推送更新"
+          fi
