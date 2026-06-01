@@ -1,114 +1,96 @@
-name: 自动聚合 & 测速节点
+name: 自动聚合节点
 
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
   schedule:
-    - cron: '0 */8 * * *'   # 每8小时运行一次
+    - cron: '0 */6 * * *'
 
-# 关键：赋予 push 权限
 permissions:
   contents: write
 
 jobs:
-  update:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 检出代码
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}   # 显式使用 token
+      - uses: actions/checkout@v4
 
       - name: 安装依赖
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y curl jq python3-pip
-          pip install pyyaml requests
+        run: pip install requests
 
-      - name: 运行节点聚合 & 测速脚本
+      - name: 聚合节点
         env:
           SUBS_URLS: ${{ secrets.SUBS_URLS }}
         run: |
-          cat << 'EOF' > update_nodes.py
+          cat << 'EOF' > aggregator.py
           import os
           import base64
           import urllib.request
-          import re
 
-          def fetch(url):
+          def fetch_url(url):
               try:
-                  req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-                  with urllib.request.urlopen(req, timeout=30) as res:
-                      return res.read()
+                  req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible)'})
+                  with urllib.request.urlopen(req, timeout=35) as response:
+                      return response.read()
               except Exception as e:
-                  print(f"请求失败: {url} -> {e}")
+                  print(f"❌ 获取失败: {url} | 错误: {e}")
                   return None
 
-          def decode_sub(content):
-              try:
-                  # 处理单行 Base64
-                  text = content.decode('utf-8', errors='ignore').strip()
-                  if not text.startswith('vmess://') and not text.startswith('trojan://') and not text.startswith('ss://'):
-                      try:
-                          decoded = base64.b64decode(text + '===').decode('utf-8', errors='ignore')
-                          return decoded
-                      except:
-                          pass
-                  return text
-              except:
-                  return content.decode('utf-8', errors='ignore')
+          def decode_content(data):
+              if not data:
+                  return ""
+              text = data.decode('utf-8', errors='ignore').strip()
+              # 处理单行 Base64 订阅（最常见情况）
+              if '://' not in text[:100]:
+                  try:
+                      decoded = base64.b64decode(text + '===').decode('utf-8')
+                      return decoded
+                  except:
+                      pass
+              return text
 
-          def main():
-              urls = os.environ.get('SUBS_URLS', '').strip().splitlines()
-              all_nodes = []
+          # 主程序
+          urls = os.getenv('SUBS_URLS', '').strip().split('\n')
+          nodes = []
 
-              for u in urls:
-                  u = u.strip()
-                  if not u: continue
-                  print(f"正在获取: {u}")
-                  raw = fetch(u)
-                  if not raw: continue
-                  
-                  text = decode_sub(raw)
-                  for line in text.splitlines():
+          print(f"共发现 {len(urls)} 个订阅链接")
+
+          for url in urls:
+              url = url.strip()
+              if not url or url.startswith('#'):
+                  continue
+              print(f"正在处理: {url}")
+              raw = fetch_url(url)
+              if raw:
+                  content = decode_content(raw)
+                  for line in content.splitlines():
                       line = line.strip()
-                      if '://' in line and len(line) > 10:
-                          all_nodes.append(line)
+                      if any(line.startswith(p) for p in ['vmess://', 'vless://', 'trojan://', 'ss://', 'hysteria2://', 'tuic://']):
+                          nodes.append(line)
 
-              # 去重
-              unique_nodes = list(dict.fromkeys(all_nodes))  # 保持顺序去重
-              print(f"聚合到 {len(unique_nodes)} 个节点")
+          # 去重并保留顺序
+          unique_nodes = list(dict.fromkeys(nodes))
+          print(f"✅ 聚合完成，共 {len(unique_nodes)} 个有效节点")
 
-              # 简单写入（你可以后续再加测速）
-              if unique_nodes:
-                  combined = '\n'.join(unique_nodes)
-                  encoded = base64.b64encode(combined.encode('utf-8')).decode('utf-8')
-                  with open('sub.txt', 'w', encoding='utf-8') as f:
-                      f.write(encoded)
-                  with open('sub_base64.txt', 'w', encoding='utf-8') as f:  # 明文版本（可选）
-                      f.write(combined)
-                  print("订阅文件已生成")
-              else:
-                  print("未找到有效节点")
-
-          if __name__ == "__main__":
-              main()
+          if unique_nodes:
+              # 生成 Base64 订阅（最常用）
+              combined = '\n'.join(unique_nodes)
+              encoded = base64.b64encode(combined.encode('utf-8')).decode('utf-8')
+              
+              with open('sub.txt', 'w', encoding='utf-8') as f:
+                  f.write(encoded)
+              
+              # 可选：同时生成明文版本方便调试
+              with open('sub_plain.txt', 'w', encoding='utf-8') as f:
+                  f.write(combined)
+              
+              print("✅ 订阅文件生成成功！")
+          else:
+              print("⚠️ 没有找到任何有效节点，请检查 SUBS_URLS")
           EOF
 
-          python3 update_nodes.py
-
-      - name: 提交并推送更新
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 aggregator.py
           
-          if git diff --quiet sub.txt; then
-            echo "没有节点变化，跳过提交"
-          else
-            git add sub.txt sub_base64.txt
-            git commit -m "Auto update nodes $(date '+%Y-%m-%d %H:%M:%S')"
-            git push
-            echo "已成功推送更新"
-          fi
+          ls -l   # 显示生成的文件，方便调试
