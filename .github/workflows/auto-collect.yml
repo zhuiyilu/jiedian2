@@ -52,89 +52,58 @@ jobs:
           # ================================================================
           # 参数
           # ================================================================
-          REPO_MAX_AGE_DAYS      = 7    # 只要 N 天内有推送的仓库
-          FILE_MAX_AGE_DAYS      = 3    # 只要 N 天内有更新的文件
-          SEARCH_MAX_REPOS       = 60   # 最多发现多少个仓库
-          SEARCH_MAX_FILES       = 120  # 最多下载多少个文件
-          FILES_PER_REPO         = 5    # 每个仓库最多取多少文件
-          SEARCH_API_DELAY       = 1.2  # API 请求间隔(秒)
+          REPO_MAX_AGE_DAYS  = 7    # 只要 N 天内有推送的仓库
+          FILE_MAX_AGE_DAYS  = 3    # 只要 N 天内有 commit 的文件
+          SEARCH_MAX_REPOS   = 20
+          SEARCH_MAX_FILES   = 50
+          FILES_PER_REPO     = 5
+          SEARCH_API_DELAY   = 1.2
 
-          TCP_CONCURRENCY        = 500
-          TCP_TIMEOUT            = 1.5
-          HTTP_CANDIDATES        = 500
-          HTTP_PER_SOURCE        = 40
-          HTTP_CONCURRENCY       = 50
-          HTTP_TIMEOUT_MS        = 5000
-          TOP_N                  = 100
-          MIHOMO_API             = "http://127.0.0.1:9090"
-          MIHOMO_SECRET          = "AutoCollect2025"
+          TCP_CONCURRENCY    = 500
+          TCP_TIMEOUT        = 1.5
+          HTTP_CANDIDATES    = 500
+          HTTP_PER_SOURCE    = 40
+          HTTP_CONCURRENCY   = 50
+          HTTP_TIMEOUT_MS    = 5000
+          TOP_N              = 100
+          MIHOMO_API         = "http://127.0.0.1:9090"
+          MIHOMO_SECRET      = "AutoCollect2025"
 
           PREFIXES = ('vmess://', 'vless://', 'trojan://', 'ss://',
                       'hysteria2://', 'hy2://', 'tuic://')
 
-          # ================================================================
-          # 搜索策略（大范围撒网）
-          # ================================================================
-
-          # 仓库关键词搜索
+          # 第一版的原始搜索范围
           REPO_SEARCH_QUERIES = [
-              '免费节点 clash vmess vless 订阅',
-              '免费代理 节点订阅 clash yaml',
-              'free proxy nodes clash subscription auto update',
-              'clash free node subscription vmess vless trojan',
-              'v2ray free nodes subscription auto',
-              'proxy nodes clash yaml auto update daily',
-              '科学上网 节点 clash 订阅 免费',
-              '翻墙 免费节点 vmess vless trojan',
-              'xray nodes free subscription clash',
-              'sing-box free nodes subscription',
-              'hysteria2 free nodes subscription',
-              'shadowsocks free nodes clash subscription',
-              'proxy scraper free nodes daily update',
-              'clash provider free nodes auto collect',
+              '免费节点 clash vmess vless',
+              'free proxy nodes clash subscription',
+              'clash free node subscription auto update',
+              'v2ray free nodes subscription',
+              'proxy nodes clash yaml auto update',
           ]
 
-          # 话题搜索（GitHub Topics）
           REPO_TOPICS = [
-              # 协议类
-              'clash', 'clash-config', 'clash-subscription', 'clash-meta',
-              'v2ray', 'v2ray-config', 'v2ray-nodes',
-              'xray', 'xray-config',
-              'shadowsocks', 'shadowsocksr',
-              'trojan', 'trojan-go',
-              'hysteria', 'hysteria2',
-              'sing-box',
-              # 节点/代理类
-              'free-node', 'free-nodes', 'free-proxy',
-              'proxy-list', 'proxy-pool', 'proxy-scraper',
-              'node-list', 'node-collector',
-              'vpn', 'free-vpn',
-              # 订阅类
-              'subscription', 'sub-converter',
-              # 翻墙相关
-              'gfw', 'bypass-gfw', 'fanqiang',
-              # 聚合类
-              'aggregator', 'collector', 'crawler',
+              'clash-subscription',
+              'free-node',
+              'proxy-list',
+              'v2ray-nodes',
+              'clash-config',
           ]
 
-          # 在仓库里查找节点文件时的候选路径
           KNOWN_FILE_NAMES = [
               'sub.yaml', 'sub.yml', 'sub.txt',
               'clash.yaml', 'clash.yml',
               'config.yaml', 'nodes.yaml', 'proxy.yaml',
-              'all.yaml', 'merged.yaml', 'output.yaml', 'result.yaml',
-              'nodes.txt', 'proxy.txt', 'all.txt', 'subscribe.txt',
-              'base64.txt', 'v2ray.txt', 'vmess.txt',
+              'all.yaml', 'merged.yaml', 'output.yaml',
+              'nodes.txt', 'proxy.txt', 'all.txt',
           ]
 
           KNOWN_FOLDERS = [
-              '', 'clash', 'sub', 'config', 'nodes',
-              'proxy', 'output', 'result', 'subscribe',
-              'v2ray', 'xray', 'data', 'free',
+              '', 'clash', 'sub', 'config',
+              'nodes', 'proxy', 'output', 'result',
           ]
 
           # ================================================================
-          # 基础工具
+          # 时效工具
           # ================================================================
 
           def utc_now():
@@ -143,20 +112,18 @@ jobs:
           def days_ago(n):
               return (utc_now() - datetime.timedelta(days=n)).strftime('%Y-%m-%d')
 
-          def parse_iso(s):
-              try:
-                  return datetime.datetime.fromisoformat(s.replace('Z', '+00:00'))
-              except Exception:
-                  return None
-
           def is_fresh(date_str, max_days):
-              """日期字符串是否在 max_days 天以内"""
               if not date_str:
-                  return True   # 获取不到就放行
-              dt = parse_iso(date_str)
-              if not dt:
                   return True
-              return (utc_now() - dt).days <= max_days
+              try:
+                  dt = datetime.datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+                  return (utc_now() - dt).days <= max_days
+              except Exception:
+                  return True
+
+          # ================================================================
+          # 基础工具
+          # ================================================================
 
           def gh_request(url, token, timeout=15):
               headers = {
@@ -182,8 +149,7 @@ jobs:
               return base64.b64decode(s + '=' * (-len(s) % 4))
 
           def decode_content(data):
-              if not data:
-                  return ''
+              if not data: return ''
               text = data.decode('utf-8', errors='ignore').strip()
               if '://' not in text[:200]:
                   try:
@@ -200,7 +166,6 @@ jobs:
               try:
                   t = px.get('type', '').lower()
                   name_q = urllib.parse.quote(str(px.get('name', '')))
-
                   if t == 'vmess':
                       info = {
                           'v': '2', 'ps': px.get('name', ''),
@@ -217,7 +182,6 @@ jobs:
                       elif px.get('network') == 'grpc':
                           info['path'] = (px.get('grpc-opts') or {}).get('grpc-service-name', '')
                       return 'vmess://' + base64.b64encode(json.dumps(info).encode()).decode()
-
                   if t == 'vless':
                       params = {'encryption': 'none', 'type': px.get('network', 'tcp')}
                       sec = 'none'
@@ -239,7 +203,6 @@ jobs:
                           params['serviceName'] = (px.get('grpc-opts') or {}).get('grpc-service-name', '')
                       q = urllib.parse.urlencode(params)
                       return f"vless://{px.get('uuid','')}@{px['server']}:{px['port']}?{q}#{name_q}"
-
                   if t == 'trojan':
                       params = {}
                       if px.get('sni'): params['sni'] = px['sni']
@@ -253,12 +216,10 @@ jobs:
                               params['host'] = (opts.get('headers') or {}).get('Host', '')
                       q = urllib.parse.urlencode(params)
                       return f"trojan://{px.get('password','')}@{px['server']}:{px['port']}?{q}#{name_q}"
-
                   if t == 'ss':
                       method, pwd = px.get('cipher', ''), px.get('password', '')
                       userinfo = base64.b64encode(f'{method}:{pwd}'.encode()).decode()
                       return f"ss://{userinfo}@{px['server']}:{px['port']}#{name_q}"
-
                   if t == 'hysteria2':
                       params = {}
                       if px.get('sni'): params['sni'] = px['sni']
@@ -267,7 +228,6 @@ jobs:
                       if px.get('obfs-password'): params['obfs-password'] = px['obfs-password']
                       q = urllib.parse.urlencode(params)
                       return f"hysteria2://{px.get('password','')}@{px['server']}:{px['port']}?{q}#{name_q}"
-
                   if t == 'tuic':
                       params = {}
                       if px.get('sni'): params['sni'] = px['sni']
@@ -316,24 +276,23 @@ jobs:
           # GitHub 自动发现（带活跃过滤）
           # ================================================================
 
-          def search_repos(token, query, topic=False, per_page=10):
-              """搜索仓库，只返回 REPO_MAX_AGE_DAYS 天内有推送的"""
-              pushed_filter = f'+pushed:>{days_ago(REPO_MAX_AGE_DAYS)}'
+          def search_repos(token, query, topic=False, per_page=8):
+              """只搜索 REPO_MAX_AGE_DAYS 天内有推送的仓库"""
+              pushed = f'+pushed:>{days_ago(REPO_MAX_AGE_DAYS)}'
               if topic:
-                  q = f'topic:{query}+is:public{pushed_filter}'
+                  q = f'topic:{query}+is:public{pushed}'
               else:
-                  q = f'{urllib.parse.quote(query)}+is:public{pushed_filter}'
+                  q = f'{urllib.parse.quote(query)}+is:public{pushed}'
               url = (f'https://api.github.com/search/repositories'
                      f'?q={q}&sort=updated&order=desc&per_page={per_page}')
               try:
-                  data = gh_request(url, token)
-                  return data.get('items', [])
+                  return gh_request(url, token).get('items', [])
               except Exception as e:
                   print(f"    搜索失败: {e}")
                   return []
 
           def get_file_commit_date(token, full_name, path):
-              """获取文件最后一次 commit 的时间"""
+              """获取文件最后一次 commit 时间"""
               url = (f'https://api.github.com/repos/{full_name}/commits'
                      f'?path={urllib.parse.quote(path)}&per_page=1')
               try:
@@ -353,12 +312,9 @@ jobs:
 
           def is_node_filename(name):
               n = name.lower()
-              if not n.endswith(('.yaml', '.yml', '.txt')):
-                  return False
-              # 日期命名：2025-07-01.yaml / 20250701.yaml
+              if not n.endswith(('.yaml', '.yml', '.txt')): return False
               base = n.rsplit('.', 1)[0]
-              if len(base) >= 8 and base[:4].isdigit():
-                  return True
+              if len(base) >= 8 and base[:4].isdigit(): return True
               keywords = ('sub', 'clash', 'node', 'proxy', 'config',
                           'merged', 'all', 'output', 'result', 'free',
                           'v2ray', 'vmess', 'vless', 'trojan', 'base64',
@@ -366,37 +322,34 @@ jobs:
               return any(k in n for k in keywords)
 
           def find_node_files_in_repo(token, repo):
-              """扫描仓库，找近期更新的节点文件"""
+              """扫描仓库，只取 FILE_MAX_AGE_DAYS 天内有更新的节点文件"""
               full_name = repo['full_name']
-              result = []   # [(download_url, label, file_date)]
+              result = []
 
               root_items = list_contents(token, full_name, '')
               time.sleep(0.3)
-              if not isinstance(root_items, list):
-                  return result
+              if not isinstance(root_items, list): return result
 
               root_files = {it['name'].lower(): it for it in root_items if it['type'] == 'file'}
               root_dirs  = {it['name'].lower(): it for it in root_items if it['type'] == 'dir'}
 
-              def add_file(item, folder=''):
-                  # 用 commit API 验证文件最后更新时间
+              def add_if_fresh(item):
                   file_date = get_file_commit_date(token, full_name, item['path'])
                   time.sleep(0.3)
-                  if not is_fresh(file_date, FILE_MAX_AGE_DAYS):
-                      return   # 文件太久没更新，跳过
-                  label = f"github:{full_name}/{item['name']}"
-                  result.append((item['download_url'], label))
+                  if is_fresh(file_date, FILE_MAX_AGE_DAYS):
+                      label = f"github:{full_name}/{item['name']}"
+                      result.append((item['download_url'], label))
 
-              # 扫描根目录文件（日期命名优先）
+              # 根目录文件（日期命名优先）
               candidates = sorted(
                   [it for n, it in root_files.items() if is_node_filename(n)],
                   key=lambda x: x['name'], reverse=True
               )
               for it in candidates[:FILES_PER_REPO]:
                   if len(result) >= FILES_PER_REPO: break
-                  add_file(it)
+                  add_if_fresh(it)
 
-              # 扫描常见子目录
+              # 常见子目录
               for dname in KNOWN_FOLDERS[1:]:
                   if len(result) >= FILES_PER_REPO: break
                   if dname not in root_dirs: continue
@@ -410,7 +363,7 @@ jobs:
                   )
                   for it in yaml_files[:3]:
                       if len(result) >= FILES_PER_REPO: break
-                      add_file(it)
+                      add_if_fresh(it)
 
               return result
 
@@ -419,12 +372,11 @@ jobs:
                   print("⚠️  未检测到 GITHUB_TOKEN，跳过 GitHub 自动发现")
                   return {}
 
-              print(f"🔍 开始 GitHub 自动发现（只收录 {REPO_MAX_AGE_DAYS} 天内活跃仓库）\n")
+              print(f"🔍 GitHub 自动发现（只收录 {REPO_MAX_AGE_DAYS} 天内推送 / {FILE_MAX_AGE_DAYS} 天内更新）\n")
 
               repo_map = {}
 
-              def add_repos(items, source=''):
-                  added = 0
+              def add_repos(items):
                   for r in items:
                       fn = r['full_name']
                       if fn == my_repo or fn in repo_map: continue
@@ -435,32 +387,26 @@ jobs:
                           'stars': r.get('stargazers_count', 0),
                           'pushed_at': r.get('pushed_at', ''),
                       }
-                      added += 1
-                  return added
 
-              # 关键词搜索
-              print(f"  [1/2] 关键词搜索（{len(REPO_SEARCH_QUERIES)} 个查询）...")
+              print(f"  [1/2] 关键词搜索（{len(REPO_SEARCH_QUERIES)} 个）...")
               for q in REPO_SEARCH_QUERIES:
                   if len(repo_map) >= SEARCH_MAX_REPOS: break
-                  items = search_repos(token, q, topic=False, per_page=8)
-                  n = add_repos(items)
-                  print(f"    +{n:2d}  \"{q[:40]}\"")
+                  items = search_repos(token, q, topic=False)
+                  add_repos(items)
+                  print(f"    +{len(items):2d}  \"{q}\"")
                   time.sleep(SEARCH_API_DELAY)
 
-              # 话题搜索
-              print(f"\n  [2/2] 话题搜索（{len(REPO_TOPICS)} 个话题）...")
+              print(f"\n  [2/2] 话题搜索（{len(REPO_TOPICS)} 个）...")
               for topic in REPO_TOPICS:
                   if len(repo_map) >= SEARCH_MAX_REPOS: break
-                  items = search_repos(token, topic, topic=True, per_page=8)
-                  n = add_repos(items)
-                  print(f"    +{n:2d}  topic:{topic}")
+                  items = search_repos(token, topic, topic=True)
+                  add_repos(items)
+                  print(f"    +{len(items):2d}  topic:{topic}")
                   time.sleep(SEARCH_API_DELAY)
 
-              # 按 star + 推送时间排序
               repos = sorted(repo_map.values(),
-                             key=lambda x: (x['stars'], x['pushed_at']),
-                             reverse=True)
-              print(f"\n  共发现 {len(repos)} 个近期活跃仓库，扫描节点文件...\n")
+                             key=lambda x: (x['stars'], x['pushed_at']), reverse=True)
+              print(f"\n  发现 {len(repos)} 个近期活跃仓库，扫描文件...\n")
 
               all_sources = {}
               for repo in repos:
@@ -522,10 +468,9 @@ jobs:
               sem = asyncio.Semaphore(TCP_CONCURRENCY)
               tasks = [tcp_ping(h, p, sem) for h, p in server_list]
               results = []
-              CHUNK = 1000
               done = 0
-              for i in range(0, len(tasks), CHUNK):
-                  batch = await asyncio.gather(*tasks[i:i+CHUNK])
+              for i in range(0, len(tasks), 1000):
+                  batch = await asyncio.gather(*tasks[i:i+1000])
                   results.extend(batch)
                   done += len(batch)
                   alive = sum(1 for x in results if x is not None)
@@ -723,10 +668,8 @@ jobs:
               my_repo = os.getenv('GITHUB_REPOSITORY', '')
               extra   = os.getenv('EXTRA_SUBS', '')
 
-              # 1. GitHub 自动发现
               github_sources = discover_all_sources(token, my_repo)
 
-              # 2. 手动补充订阅（可选，配置在 EXTRA_SUBS secret 里）
               extra_sources = {}
               for u in extra.splitlines():
                   u = u.strip()
@@ -737,16 +680,13 @@ jobs:
                     f"{len(extra_sources)} 手动 = {len(all_sources)} 个\n")
 
               if not all_sources:
-                  print("❌ 没有找到任何来源，退出")
-                  return
+                  print("❌ 没有找到任何来源，退出"); return
 
-              # 3. 并发下载
               print("⬇️  并发下载节点文件...")
               url_list = list(all_sources.keys())
               with ThreadPoolExecutor(max_workers=min(30, len(url_list))) as pool:
                   raws = list(pool.map(fetch_raw, url_list))
 
-              # 4. 解析节点
               seen_links = {}
               src_counts = defaultdict(int)
               for url, raw in zip(url_list, raws):
@@ -760,14 +700,12 @@ jobs:
 
               unique_nodes = list(seen_links.keys())
               print(f"\n✅ 去重后共 {len(unique_nodes)} 个节点，来自 {len(src_counts)} 个来源")
-              print("Top 来源：")
-              for label, cnt in sorted(src_counts.items(), key=lambda x: -x[1])[:15]:
+              for label, cnt in sorted(src_counts.items(), key=lambda x: -x[1]):
                   print(f"  {cnt:6d} 个 ← {label}")
 
               if not unique_nodes:
                   print("❌ 没有获取到节点，退出"); return
 
-              # 5. 按 host:port 分组
               server_to_links = {}
               for link in unique_nodes:
                   h, p = get_host_port(link)
@@ -778,7 +716,6 @@ jobs:
               all_servers = list(server_to_links.keys())
               print(f"\n唯一服务器: {len(all_servers)} 个")
 
-              # 6. Stage 1: TCP ping
               print(f"\n🔌 Stage 1 TCP ping（{len(all_servers)} 个服务器）...")
               t0 = time.time()
               delays = asyncio.run(run_tcp_stage(all_servers))
@@ -788,7 +725,6 @@ jobs:
               alive.sort(key=lambda x: x[1])
               print(f"✅ TCP 存活: {len(alive)}/{len(all_servers)}")
 
-              # 7. 公平采样
               sub_buckets = defaultdict(list)
               for server_key, _ in alive:
                   for link in server_to_links[server_key]:
@@ -819,7 +755,6 @@ jobs:
               print(f"\n公平采样: {len(tcp_candidates)} 个 HTTP 候选"
                     f"（来自 {len(sub_counts2)} 个来源，每源最多 {HTTP_PER_SOURCE} 个）")
 
-              # 8. Stage 2: mihomo HTTP 测速
               print(f"\n🌐 Stage 2 真实 HTTP 测速（{len(tcp_candidates)} 个节点）...")
               used_names = set()
               name_to_link = {}
@@ -870,7 +805,6 @@ jobs:
                           if link not in tested:
                               best_links.append(link); tested.add(link)
 
-              # 9. 输出订阅文件
               combined = '\n'.join(best_links)
               with open('sub.txt', 'w') as f:
                   f.write(base64.b64encode(combined.encode()).decode())
@@ -897,7 +831,6 @@ jobs:
 
               print(f"\n✅ 最终输出 {len(best_links)} 个节点"
                     f"（{len(proxies_out)} 个转换为 Clash 格式）")
-              print("订阅文件：sub.txt / sub_plain.txt / sub.yaml")
 
           if __name__ == '__main__':
               main()
