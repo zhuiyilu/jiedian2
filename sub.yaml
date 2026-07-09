@@ -3,24 +3,17 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 US 11
+- name: V2 - 17
   type: vmess
-  server: 67.220.95.3
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  server: 57.151.100.27
+  port: 10086
+  uuid: 550e8400-e29b-41d4-a716-446655440000
   alterId: 0
   cipher: auto
   udp: true
 - name: 🇺🇸US-37.19.198.244-3684
   type: ss
   server: 37.19.198.244
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: 🇺🇸US-37.19.198.243-4267
-  type: ss
-  server: 37.19.198.243
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
@@ -32,50 +25,28 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: hbGrpfvNrJsUmKmPbR3iY2
   udp: true
-- name: 🇺🇸US-37.19.198.236-0053
+- name: 🇺🇸US-3.147.78.9-0430
   type: ss
-  server: 37.19.198.236
+  server: 3.147.78.9
   port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
+  cipher: aes-256-cfb
+  password: amazonskr05
   udp: true
-- name: 🇨🇦CA_1|2.4MB/s
+- name: 🇺🇸 US 9
   type: vmess
-  server: 23.162.200.198
+  server: 67.220.95.3
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
   udp: true
-  network: raw
-- name: 🇺🇸US_579|11.1MB/s|F003-260618
-  type: vless
-  server: 162.159.34.128
+- name: 🇺🇸US-37.19.198.243-0056
+  type: ss
+  server: 37.19.198.243
   port: 443
-  uuid: 4a1441b0-7bc8-4906-85cf-6b59c256b480
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
-  network: ws
-  tls: true
-  servername: edt2.yfqh08811.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: edt2.yfqh08811.ccwu.cc
-- name: 🇺🇸US_580|11.5MB/s|F003-260618
-  type: vless
-  server: 172.64.34.238
-  port: 443
-  uuid: 4a1441b0-7bc8-4906-85cf-6b59c256b480
-  udp: true
-  network: ws
-  tls: true
-  servername: edt2.yfqh08811.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: edt2.yfqh08811.ccwu.cc
 - name: 🇨🇦 CA 1
   type: vmess
   server: 134.195.196.211
@@ -84,102 +55,12 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
-- name: 🇺🇸US_581|11.5MB/s|F003-260618
-  type: vless
-  server: 162.159.43.233
-  port: 443
-  uuid: 4a1441b0-7bc8-4906-85cf-6b59c256b480
-  udp: true
-  network: ws
-  tls: true
-  servername: edt2.yfqh08811.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: edt2.yfqh08811.ccwu.cc
-- name: 🇺🇸US-3.147.78.9-0430
+- name: 🇺🇸US-37.19.198.236-0053
   type: ss
-  server: 3.147.78.9
+  server: 37.19.198.236
   port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-- name: 🇺🇸US_71|7.9MB/s
-  type: vmess
-  server: 38.110.1.246
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: raw
-- name: 🇺🇸US_217|3.4MB/s
-  type: vmess
-  server: 38.91.107.49
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 🇺🇸US_263|983KB/s
-  type: vmess
-  server: 107.172.75.141
-  port: 10086
-  uuid: e02c67a8-d769-4d73-833a-ab6acdb86e6e
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 🇺🇸US_578|6.4MB/s|F003-260618
-  type: vless
-  server: 162.159.18.122
-  port: 443
-  uuid: 4a1441b0-7bc8-4906-85cf-6b59c256b480
-  udp: true
-  network: ws
-  tls: true
-  servername: edt2.yfqh08811.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: edt2.yfqh08811.ccwu.cc
-- name: 🇺🇸US_426|5.6MB/s|S004-260618
-  type: vless
-  server: 173.245.58.247
-  port: 2053
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  udp: true
-  network: ws
-  tls: true
-  servername: t1s1.rittbo.kdns.fr
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-- name: 🇺🇸 US 7
-  type: vmess
-  server: 38.114.123.42
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 🇺🇸US_5|5.0MB/s
-  type: vmess
-  server: 129.146.143.80
-  port: 48111
-  uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: '@tootffarangi🍓-12'
-  type: ss
-  server: 20.223.221.41
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: qkRNNhsIrzU6qnkL
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
 - name: 🇺🇸 US 3
   type: vmess
@@ -189,52 +70,54 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
-- name: 🇺🇸US_564|6.1MB/s|S001-260618
-  type: vless
-  server: 45.39.230.228
-  port: 443
-  uuid: Telegram-CNT-Cafe
-  udp: true
-  tls: true
-  servername: www.yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ZDn8_M2k8Mvkk1z22VN_2c8TCmAPqC1KXVrLMcel9zk
-    short-id: aa0d0a
-  flow: xtls-rprx-vision
-- name: 🇺🇸US_576|11.8MB/s|F003-260618
-  type: vless
-  server: 162.159.4.13
-  port: 443
-  uuid: 4a1441b0-7bc8-4906-85cf-6b59c256b480
-  udp: true
-  network: ws
-  tls: true
-  servername: edt2.yfqh08811.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: edt2.yfqh08811.ccwu.cc
-- name: 🇺🇸US_1096|9.4MB/s|B007-260618 01
-  type: vless
-  server: 45.130.125.162
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  udp: true
-  network: ws
-  tls: true
-  servername: t1s1.rittbo.kdns.fr
-  client-fingerprint: chrome
-  ws-opts:
-    path: /fp
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-- name: 'Channel : @FreeConfigForYou🏴🏳'
+- name: 🇺🇸 US 4
   type: vmess
   server: 165.140.216.141
   port: 443
   uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 🇺🇸 US 7
+  type: vmess
+  server: 38.114.123.42
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 🇺🇸+140+-+US+-+VLESS/REALITY/PBK/VISION/UTLS+-+28190
+  type: vless
+  server: 159.89.87.21
+  port: 28190
+  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+  udp: true
+  tls: true
+  servername: aws.amazon.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
+    short-id: ''
+  flow: xtls-rprx-vision
+- name: 🇺🇸US_650|7.6MB/s 01
+  type: vless
+  server: 104.19.220.22
+  port: 443
+  uuid: 5b9fa73b-b549-480b-add9-c45e650d236f
+  udp: true
+  network: ws
+  tls: true
+  servername: gddy.hhlfy.de5.net
+  client-fingerprint: firefox
+  ws-opts:
+    path: /
+    headers:
+      Host: gddy.hhlfy.de5.net
+- name: 🇺🇸 US 10
+  type: vmess
+  server: 216.106.183.35
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
   udp: true
@@ -246,7 +129,33 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
-- name: 🇺🇸US_541|5.5MB/s|B007-260618
+- name: 🇺🇸US_421|22.0MB/s 01
+  type: vless
+  server: 216.24.57.6
+  port: 8443
+  uuid: d9f20a29-239e-46ab-82bb-fa0d69e480f9
+  udp: true
+  network: ws
+  tls: true
+  servername: kakoolnews-telegram.setg2egw.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kakoolnews-telegram.setg2egw.workers.dev
+- name: 🇺🇸US-173.249.209.146-0079
+  type: vmess
+  server: 173.249.209.146
+  port: 20086
+  uuid: 3935c2dc-dbb0-43f7-b367-fe89abe87fdf
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers: {}
+- name: 🇺🇸US_513|7.2MB/s|B007-260618
   type: vless
   server: 172.64.147.79
   port: 443
@@ -260,33 +169,20 @@ proxies:
     path: /QiangLieTuiJian?ed
     headers:
       Host: cfoo-146.pages.dev
-- name: 🇺🇸US_518|11.6MB/s|B007-260618
+- name: 🇺🇸US_634|4.8MB/s|B007-260618 01
   type: vless
-  server: 104.16.241.173
-  port: 2096
-  uuid: d6bbaa54-2fa9-46b9-8f6d-42ccdfc9122b
+  server: 104.16.75.234
+  port: 443
+  uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
   udp: true
   network: ws
   tls: true
-  servername: odd-wildflower-db1b.yasinmohammad.workers.dev
+  servername: server-ir-4.ariyuz.org
   client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: odd-wildflower-db1b.yasinmohammad.workers.dev
-- name: 🇺🇸US_553|5.4MB/s|A001-260618
-  type: vmess
-  server: 23.95.78.146
-  port: 18814
-  uuid: dc0672f1-1a09-42ec-8f46-0a7e68349e79
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /dc0672f1-1a09-42ec-8f46-0a7e68349e79-vm
-    headers:
-      Host: www.bing.com
+      Host: us-1.ariyuz.org
 - name: 🇺🇸 US 1
   type: vmess
   server: 129.146.77.248
@@ -299,13 +195,95 @@ proxies:
   ws-opts:
     path: /cctv13.m3u8
     headers: {}
-- name: 🇬🇧GB-141.98.101.181-0121
+- name: 🇺🇸US_548|10.4MB/s|F003-260618
+  type: vless
+  server: 162.159.43.233
+  port: 443
+  uuid: 4a1441b0-7bc8-4906-85cf-6b59c256b480
+  udp: true
+  network: ws
+  tls: true
+  servername: edt2.yfqh08811.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: edt2.yfqh08811.ccwu.cc
+- name: 🇺🇸US_573|3.0MB/s 01
+  type: vless
+  server: 162.159.49.204
+  port: 443
+  uuid: 5b9fa73b-b549-480b-add9-c45e650d236f
+  udp: true
+  network: ws
+  tls: true
+  servername: gddy.hhlfy.de5.net
+  client-fingerprint: firefox
+  ws-opts:
+    path: /
+    headers:
+      Host: gddy.hhlfy.de5.net
+- name: 🇺🇸US_512|4.9MB/s|B007-260618
+  type: vless
+  server: 172.64.147.227
+  port: 443
+  uuid: b08562b0-dbc0-47d1-860d-9435133b25c9
+  udp: true
+  network: ws
+  tls: true
+  servername: cfoo-146.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /QiangLieTuiJian?ed
+    headers:
+      Host: cfoo-146.pages.dev
+- name: 🏁RELAY-172.67.187.219-2143
+  type: vmess
+  server: skk.moe
+  port: 80
+  uuid: 65b17c0b-0a52-4b54-9bc9-60e31397b841
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /65b17c0b-0a52-4b54-9bc9-60e31397b841-vmess
+    headers:
+      Host: accklsj.bufu.us.ci
+- name: 🇬🇧+Join+Telegram:@Farah_VPN+🇬🇧
+  type: ss
+  server: 141.98.101.182
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: EPODONIOS
   type: ss
   server: 141.98.101.181
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
+- name: EPODONIOS-2
+  type: ss
+  server: 141.98.101.179
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: 🏁RELAY-104.21.89.181-2142
+  type: vmess
+  server: 104.21.89.181
+  port: 80
+  uuid: 65b17c0b-0a52-4b54-9bc9-60e31397b841
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /65b17c0b-0a52-4b54-9bc9-60e31397b841-vmess
+    headers:
+      Host: accklsj.bufu.us.ci
 - name: 🇬🇧GB-141.98.101.178-0281
   type: ss
   server: 141.98.101.178
@@ -313,80 +291,326 @@ proxies:
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: 🇬🇧GB-141.98.101.182-0118
-  type: ss
-  server: 141.98.101.182
+- name: 🇺🇸US_600|1.4MB/s|K001-260618
+  type: vless
+  server: 104.17.178.33
   port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
   udp: true
-- name: 🇺🇸US-173.249.209.146-0079
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_598|1.1MB/s|K001-260618
+  type: vless
+  server: 104.24.87.30
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_595|2.5MB/s|K001-260618
+  type: vless
+  server: 162.159.25.224
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_611|971KB/s|K001-260618
+  type: vless
+  server: 162.159.40.15
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_610|890KB/s|K001-260618
+  type: vless
+  server: 162.159.35.1
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸 US 8
   type: vmess
-  server: 173.249.209.146
-  port: 20086
-  uuid: 3935c2dc-dbb0-43f7-b367-fe89abe87fdf
+  server: 67.220.72.237
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
   udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: EPODONIOS
-  type: ss
-  server: 82.38.31.32
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: EPODONIOS-2
-  type: ss
-  server: 82.38.31.3
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: EPODONIOS-3
-  type: ss
-  server: 188.245.87.3
-  port: 2096
-  cipher: chacha20-ietf-poly1305
-  password: vSusABpgUznNkljHUj1v5w
-  udp: true
-- name: EPODONIOS-4
-  type: ss
-  server: 82.38.31.215
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  udp: true
-- name: 🇺🇸US_548|24.7MB/s|B007-260618
-  type: trojan
-  server: 162.159.38.119
-  port: 2083
-  password: MITIVPN
-  udp: true
-  sni: UsAa-Us.App-Cloud.ir
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=uSa
-    headers: {}
-- name: 🇺🇸US_547|11.7MB/s|B007-260618
-  type: trojan
-  server: 104.26.14.137
-  port: 2096
-  password: MITIVPN
-  udp: true
-  sni: de-ms.App-Cloud.ir
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=De1
-    headers: {}
-- name: 🇺🇸US_63|10.4MB/s|B007-260618
+- name: 🇺🇸US_603|1.7MB/s|K001-260618
   type: vless
-  server: 172.67.170.11
+  server: 104.19.64.48
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_601|2.1MB/s|K001-260618
+  type: vless
+  server: 104.18.34.254
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_594|922KB/s|K001-260618
+  type: vless
+  server: 172.64.32.182
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_609|749KB/s|K001-260618
+  type: vless
+  server: 162.159.32.71
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_607|643KB/s|K001-260618
+  type: vless
+  server: 162.159.36.111
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_596|2.4MB/s|K001-260618
+  type: vless
+  server: 162.159.33.60
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_592|2.5MB/s|K001-260618
+  type: vless
+  server: 172.64.157.114
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_606|2.5MB/s|K001-260618
+  type: vless
+  server: 172.67.217.170
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_593|721KB/s|K001-260618
+  type: vless
+  server: 162.159.40.19
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_438|1.7MB/s 01
+  type: vless
+  server: 185.162.229.40
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: vms.lifetime61.workers.dev
+- name: 🇺🇸US_602|774KB/s|K001-260618
+  type: vless
+  server: 104.17.50.118
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_608|1.4MB/s|K001-260618
+  type: vless
+  server: 162.159.49.82
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_597|1.6MB/s|K001-260618
+  type: vless
+  server: 162.159.49.225
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇺🇸US_604|1.0MB/s|K001-260618
+  type: vless
+  server: 172.67.225.149
+  port: 443
+  uuid: 8cd24f46-f57d-42ed-bd24-a7cc7daea720
+  udp: true
+  network: ws
+  tls: true
+  servername: tunnel.franklybuilds.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /afjhk1
+    headers:
+      Host: tunnel.franklybuilds.com
+- name: 🇫🇷FR_185|3.6MB/s|B007-260618
+  type: trojan
+  server: 103.133.1.2
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.calmloud.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_109|3.6MB/s 01
+  type: trojan
+  server: 104.16.174.44
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_179|4.3MB/s 01
+  type: trojan
+  server: 141.193.213.11
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.calmloud.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_170|3.4MB/s 01
+  type: trojan
+  server: 104.18.16.216
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.calmloud.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇺🇸US_477|5.0MB/s|B007-260618
+  type: vless
+  server: 172.67.70.92
   port: 443
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   udp: true
@@ -398,97 +622,62 @@ proxies:
     path: /
     headers:
       Host: t1s1.rittbo.kdns.fr
-- name: 🇺🇸US_560|12.2MB/s|P002-260618
-  type: trojan
-  server: 104.17.148.22
-  port: 443
-  password: MITIVPN
-  udp: true
-  sni: u---as.MaQror.ir
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=usa
-    headers: {}
-- name: 🇺🇸US_566|793KB/s|F003-260618
-  type: vless
-  server: 204.44.74.240
-  port: 25367
-  uuid: 24888476-ff0d-4048-de06-14f895e09430
-  udp: true
-  tls: true
-  servername: www.speedtest.org
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: g-oxbqigzCaXqARxuyD2_vbTYeMD9zn8wnTo02S69QM
-    short-id: ''
-  flow: xtls-rprx-vision
-- name: 🇺🇸US_551|22.6MB/s|B007-260618
-  type: trojan
-  server: 45.130.125.2
-  port: 2087
-  password: MiTiVPN
-  udp: true
-  sni: nland-o-oo.App-Cloud.ir
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=nl1
-    headers: {}
-- name: 🇩🇪+DE+23
+- name: 🇩🇪DE-185.137.157.142-0101
   type: trojan
   server: 185.137.157.142
   port: 443
   password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
   udp: true
-  sni: 185.137.157.142
-- name: 🇩🇪+DE+20
+- name: 🇺🇸US_612|8.0MB/s|B007-260618 01
+  type: vless
+  server: 104.21.94.161
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 🇩🇪+DE+6
   type: trojan
-  server: 185.137.157.156
+  server: 185.137.157.149
   port: 443
   password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
   udp: true
-- name: 🇺🇸US_1198|10.4MB/s|V010-260618 01
-  type: trojan
-  server: 104.31.16.65
-  port: 443
-  password: MITIVPN
+- name: 🇰🇷KR-211.178.105.134-0142
+  type: ss
+  server: 211.178.105.134
+  port: 6123
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
   udp: true
-  sni: U-S-A.App-Cloud.ir
-  skip-cert-verify: true
+- name: 🇳🇱NL_69|4.2MB/s 01
+  type: trojan
+  server: 172.67.180.92
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.multiplydose.com
   network: ws
   ws-opts:
-    path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=USAW
+    path: /assignment
     headers: {}
-- name: +By+EbraSha+🎛️
-  type: hysteria2
-  server: 62.210.124.146
-  port: 22000
-  password: dongtaiwang.com
+- name: 🇫🇷FR_95|3.4MB/s|B007-260618
+  type: trojan
+  server: 104.18.152.225
+  port: 443
+  password: humanity
   udp: true
-  sni: www.microsoft.com
-  skip-cert-verify: true
-- name: 🇳🇱NL_153|3.4MB/s|B007-260618 01
-  type: vless
-  server: 178.248.232.186
-  port: 8443
-  uuid: 0047a8bc-0025-4d45-899b-c75c669f3ede
-  udp: true
-  tls: true
-  servername: storage.yandex.net
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: LT_0j3zQkaqgtJHvyaG24xz0IfmXUswVCTeC75Qsgjo
-    short-id: ab4cc4f5aa354fa4
-  flow: xtls-rprx-vision
-- name: 🇯🇵 JP 1
-  type: vmess
-  server: 172.104.80.66
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 1
-  cipher: auto
-  udp: true
-- name: 🇺🇸US_595|31.4MB/s|A001-260618
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇺🇸US_562|9.9MB/s|A001-260618
   type: vless
   server: 104.18.33.171
   port: 443
@@ -502,113 +691,49 @@ proxies:
     path: /glasspanel/guest000_0_5de14443985f/fp=chrome
     headers:
       Host: wbz6z.ok7s.ceq.hh.hhyf.kdns.fr
-- name: 🇵🇱PL_20|1.7MB/s|M002-260618
+- name: 🇺🇸US_426|3.0MB/s 01
+  type: vless
+  server: 139.64.235.30
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime09.workers.dev
+- name: 🇫🇷FR_40|2.5MB/s
   type: trojan
-  server: 104.26.6.159
+  server: 104.18.152.219
   port: 443
   password: humanity
   udp: true
-  sni: www.creationlong.org
+  sni: www.ignitelimit.com
   network: ws
   ws-opts:
     path: /assignment
     headers: {}
-- name: 🇩🇪DE_190|4.1MB/s|S004-260618 01
-  type: vless
-  server: 104.21.36.120
-  port: 443
-  uuid: c35050ce-01ab-45a9-91b8-54cec637d0a8
-  udp: true
-  network: ws
-  tls: true
-  servername: octopusss5.info
-  client-fingerprint: chrome
-  ws-opts:
-    path: /udfyfws
-    headers:
-      Host: octopusss5.info
-- name: 🇩🇪DE_203|4.6MB/s|B007-260618 01
-  type: vless
-  server: 162.251.82.132
-  port: 443
-  uuid: c35050ce-01ab-45a9-91b8-54cec637d0a8
-  udp: true
-  network: ws
-  tls: true
-  servername: octopusss5.info
-  client-fingerprint: chrome
-  ws-opts:
-    path: /udfyfws
-    headers:
-      Host: octopusss5.info
-- name: 🇩🇪DE_192|3.4MB/s|S004-260618 01
-  type: vless
-  server: 104.18.154.205
-  port: 443
-  uuid: c35050ce-01ab-45a9-91b8-54cec637d0a8
-  udp: true
-  network: ws
-  tls: true
-  servername: octopusss5.info
-  client-fingerprint: chrome
-  ws-opts:
-    path: /udfyfws
-    headers:
-      Host: octopusss5.info
-- name: 🇺🇸US_599|11.6MB/s|B007-260618
+- name: 🇯🇵+日本+|+JPN+7
   type: trojan
-  server: 104.21.55.229
+  server: mature-lamprey.rooster465.autos
   port: 443
-  password: MiTiVPN
+  password: XG59623478
   udp: true
-  sni: w-s-s.Maqror.ir
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=S-w
-    headers: {}
-- name: 🇺🇸US_604|4.1MB/s|B007-260618
+- name: 🇩🇪DE_55|4.6MB/s|B007-260618 01
   type: vless
-  server: 69.46.46.88
+  server: 8.6.112.0
   port: 443
-  uuid: 7faaee24-0624-9677-9dbb-afd598f09665
+  uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77
   udp: true
   network: ws
   tls: true
-  servername: x4g-production-27bb.up.railway.app
+  servername: shegeftihaaa.net
   client-fingerprint: chrome
   ws-opts:
-    path: /ws/7faaee24-0624-9677-9dbb-afd598f09665
+    path: /rsedgws
     headers:
-      Host: x4g-production-27bb.up.railway.app
-- name: 🇺🇸US_1094|1.2MB/s|B007-260618 01
-  type: vless
-  server: 162.159.152.48
-  port: 443
-  uuid: c416332e-2bde-4806-ac02-8f021c6e8f68
-  udp: true
-  network: ws
-  tls: true
-  servername: bbc.zjxc.de5.net
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?proxyip=proxyip.oracle.fxxk.dedyn.io
-    headers:
-      Host: bbc.zjxc.de5.net
-- name: 🇩🇪DE_195|4.1MB/s|M002-260618 01
-  type: vless
-  server: 14.102.228.201
-  port: 443
-  uuid: f75566a5-4744-4806-ac2e-ccaefe1b1080
-  udp: true
-  network: ws
-  tls: true
-  servername: app.zynuro.ir
-  client-fingerprint: chrome
-  ws-opts:
-    path: /a8Kp92LmQx
-    headers:
-      Host: app.zynuro.ir
+      Host: shegeftihaaa.net
 - name: 🇯🇵JP-140.83.51.161-1363
   type: vmess
   server: 140.83.51.161
@@ -622,126 +747,267 @@ proxies:
     path: /cctv13.m3u8
     headers:
       Host: jp02.a0a.xyz
-- name: 亚太地区+V2CROSS.COM
+- name: 🇫🇷FR_162|1.3MB/s 01
+  type: trojan
+  server: 172.64.146.102
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.gossipglove.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇺🇸US_580|10.4MB/s 01
+  type: vless
+  server: 104.27.78.203
+  port: 2083
+  uuid: 3727b0ac-9f3e-4da8-895e-33f739e9d9bb
+  udp: true
+  network: ws
+  tls: true
+  servername: fhfhfhf.kathykroger.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: fhfhfhf.kathykroger.workers.dev
+- name: 🇫🇷FR_271|5.3MB/s|B007-260618 01
+  type: trojan
+  server: 104.16.72.50
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇩🇪DE_64|4.6MB/s|B007-260618 01
+  type: vless
+  server: 104.26.13.222
+  port: 443
+  uuid: c35050ce-01ab-45a9-91b8-54cec637d0a8
+  udp: true
+  network: ws
+  tls: true
+  servername: octopusss5.info
+  client-fingerprint: chrome
+  ws-opts:
+    path: /udfyfws
+    headers:
+      Host: octopusss5.info
+- name: 未知32 835.3KB/s
+  type: vmess
+  server: 132.145.80.230
+  port: 80
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: kr02.a0a.xyz
+- name: 🇺🇸US_615|10.0MB/s|P002-260618
+  type: vless
+  server: 104.18.45.32
+  port: 443
+  uuid: 68eee13f-1a7a-4761-b71e-83b997eeccf9
+  udp: true
+  network: ws
+  tls: true
+  servername: stx4x.gyvz.kj2.hh.hhyf.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /glasspanel/guest000_0_5de14443985f/
+    headers:
+      Host: stx4x.gyvz.kj2.hh.hhyf.kdns.fr
+- name: 🇫🇷FR_154|2.7MB/s
+  type: trojan
+  server: 188.114.97.7
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇰🇷 KR 2
+  type: vmess
+  server: 152.67.218.38
+  port: 443
+  uuid: b5e9480a-b7aa-40a4-f9a7-5299b5e363b4
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 152.67.218.38
+- name: 🇯🇵JP-103.125.216.18-0138
   type: trojan
   server: 103.125.216.18
   port: 443
   password: T9qoEuuxUEa9Dk3KxnTWrs6J8ilng9sCIf
   udp: true
-- name: 🇺🇸US_601|11.3MB/s|B007-260618
-  type: trojan
-  server: 172.66.132.196
-  port: 443
-  password: MiTiVPN
-  udp: true
-  sni: fl-o--7-m.Maqror.ir
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=FlL
-    headers: {}
-- name: 🇺🇸US_605|8.2MB/s|B007-260618
+- name: 🇺🇸US_408|11.6MB/s 01
   type: vless
-  server: 162.251.82.2
+  server: 104.18.9.41
+  port: 8443
+  uuid: 90a656ff-c77a-4b6d-87f4-a0b2cec91373
+  udp: true
+  network: ws
+  tls: true
+  servername: young-queen-488a.adriansheykhi730.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: young-queen-488a.adriansheykhi730.workers.dev
+- name: 🇺🇸US_609|7.9MB/s|F003-260618 01
+  type: vless
+  server: 104.19.35.206
   port: 443
-  uuid: Telegram🇨🇳 @WangCai2
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
   udp: true
   network: ws
   tls: true
   servername: support.zoom.us.yxls.eu.cc
   client-fingerprint: chrome
   ws-opts:
-    path: /sg-amz
+    path: /sg-melbi
     headers:
       Host: support.zoom.us.yxls.eu.cc
-- name: 🇸🇬SG_32|3.5MB/s|B007-260618 01
+- name: 🇺🇸US_593|5.5MB/s|X001-260618 01
   type: vless
-  server: 104.16.72.70
-  port: 2096
-  uuid: 70252937-5c61-4fb0-8656-d1a16261b795
+  server: 172.64.88.251
+  port: 8880
+  uuid: efb0a3fe-af52-45c5-b397-1a6866d88d67
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.KR.CMLiussss.net
+    headers:
+      Host: tight-recipe-11ad.252-068.workers.dev
+- name: +By+EbraSha+🦇
+  type: hysteria2
+  server: 62.210.124.146
+  port: 22000
+  password: dongtaiwang.com
+  udp: true
+  sni: www.microsoft.com
+  skip-cert-verify: true
+- name: 🇺🇸US_599|2.8MB/s|F003-260618 01
+  type: vless
+  server: 104.17.147.118
+  port: 443
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
   udp: true
   network: ws
   tls: true
-  servername: group.shalana.xyz
+  servername: support.zoom.us.yxls.eu.cc
   client-fingerprint: chrome
   ws-opts:
-    path: /shalana
+    path: /sg-melbi
     headers:
-      Host: group.shalana.xyz
-- name: 美国+CloudFlare节点
+      Host: support.zoom.us.yxls.eu.cc
+- name: 🇫🇷FR_190|2.8MB/s|B007-260618
   type: vless
-  server: 104.21.36.120
+  server: 104.21.52.100
+  port: 8443
+  uuid: 475823b6-71f6-4a63-a7de-0ecf0958f8db
+  udp: true
+  network: ws
+  tls: true
+  servername: ad-011.signalo3gjj.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: ad-011.signalo3gjj.site
+- name: 🇺🇸US_1163|6.8MB/s|P002-260618 01
+  type: vless
+  server: 104.17.170.132
+  port: 8880
+  uuid: 49a9aa25-443b-4fab-9a85-066dd5396c57
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.KR.CMLiussss.net
+    headers:
+      Host: mute-river-6aee.421-bd7.workers.dev
+- name: 🇩🇪DE_72|3.4MB/s|V001-260618 01
+  type: vless
+  server: 188.114.97.6
   port: 8443
   uuid: f3b8c2a1-9d4e-4b7f-a6c5-2e8d1f0b4a93
   udp: true
   network: ws
   tls: true
-  servername: srv75.perfectbulk.info
+  servername: srv71.perfectbulk.info
   client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: srv75.perfectbulk.info
-- name: 🇺🇸US_1171|1.5MB/s|V009-260618 01
+      Host: srv71.perfectbulk.info
+- name: 🇺🇸US_564|5.5MB/s 01
   type: vless
-  server: 104.25.42.180
-  port: 2096
-  uuid: d9ecaa79-5ab0-49be-a312-c2c13eef929e
+  server: 8.35.211.32
+  port: 443
+  uuid: 5b9fa73b-b549-480b-add9-c45e650d236f
   udp: true
   network: ws
   tls: true
-  servername: eZ-e7b016.kAkadADa1.wORKerS.DEV
+  servername: gddy.hhlfy.de5.net
   client-fingerprint: chrome
   ws-opts:
-    path: /eyJqdW5rIjoiSW94QVVBV2IydkpNIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560
+    path: /fp=firefox
     headers:
-      Host: ez-e7b016.kakadada1.workers.dev
-- name: 🇸🇬SG_34|7.8MB/s|B007-260618 01
+      Host: gddy.hhlfy.de5.net
+- name: 🇺🇸US_546|9.7MB/s|F003-260618
   type: vless
-  server: 104.16.72.2
-  port: 2096
-  uuid: 70252937-5c61-4fb0-8656-d1a16261b795
+  server: 162.159.34.128
+  port: 443
+  uuid: 4a1441b0-7bc8-4906-85cf-6b59c256b480
   udp: true
   network: ws
   tls: true
-  servername: group.shalana.xyz
+  servername: edt2.yfqh08811.ccwu.cc
   client-fingerprint: chrome
   ws-opts:
-    path: /shalana
+    path: /
     headers:
-      Host: group.shalana.xyz
-- name: 🇸🇬SG_33|8.0MB/s 01
-  type: vless
-  server: 172.66.40.229
-  port: 2096
-  uuid: 70252937-5c61-4fb0-8656-d1a16261b795
-  udp: true
-  network: ws
-  tls: true
-  servername: group.shalana.xyz
-  client-fingerprint: chrome
-  ws-opts:
-    path: /shalana
-    headers:
-      Host: group.shalana.xyz
-- name: 🇫🇷FR_153|4.3MB/s|B007-260618
+      Host: edt2.yfqh08811.ccwu.cc
+- name: 🇭🇰HK_16|4.4MB/s|M002-260618
   type: trojan
-  server: 103.133.1.2
+  server: 172.67.149.1
   port: 443
-  password: humanity
+  password: a4dbc061021f2931c0e28901a602f3c5
   udp: true
-  sni: www.calmloud.com
+  sni: hk-007.pg13900.com
   network: ws
   ws-opts:
-    path: /assignment
+    path: /atlas-cdn
     headers: {}
-- name: EPODONIOS-5
-  type: ss
-  server: 141.98.101.179
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
+- name: 🇯🇵JP_23|3.4MB/s|M002-260618
+  type: vless
+  server: 188.114.97.6
+  port: 2087
+  uuid: 4311bd3f-4f66-4538-a624-221b87690b2c
   udp: true
+  network: ws
+  tls: true
+  servername: mjtbknetmkhremge.ordak.qzz.io
+  client-fingerprint: chrome
+  ws-opts:
+    path: /fl
+    headers:
+      Host: mjtbknetmkhremge.ordak.qzz.io
 - name: 🏁RELAY-104.16.0.0-2279
   type: vmess
   server: 104.16.0.0
@@ -757,35 +1023,26 @@ proxies:
     path: /ws-gongyi
     headers:
       Host: gongyilm.dpdns.org
-- name: v2raybaaz+🐮³
+- name: 🇰🇷KR-221.139.79.57-0139
   type: ss
-  server: 82.38.31.218
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
+  server: 221.139.79.57
+  port: 13979
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
   udp: true
-- name: 🇩🇪DE_105|4.3MB/s|F003-260618
-  type: vless
-  server: 104.17.223.92
-  port: 8443
-  uuid: f3b8c2a1-9d4e-4b7f-a6c5-2e8d1f0b4a93
+- name: 🇺🇸US_276|538KB/s
+  type: trojan
+  server: 104.19.173.68
+  port: 443
+  password: d0298536-d670-4045-bbb1-ddd5ea68683e
   udp: true
+  sni: azadnet-5vk.pages.dev
   network: ws
-  tls: true
-  servername: srv10.perfectbulk.info
-  client-fingerprint: chrome
   ws-opts:
-    path: /
+    path: /azadnet-5vk.pages.dev/?ed=2560&PROT_TYPE=trojan
     headers:
-      Host: srv10.perfectbulk.info
-- name: EPODONIOS-6
-  type: ss
-  server: 82.38.31.219
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  udp: true
-- name: 🇸🇬SG_5|2.6MB/s|S001-260618
+      Host: azadnet-5vk.pages.dev
+- name: 🇸🇬SG_7|3.3MB/s|S001-260618
   type: vless
   server: 141.193.213.20
   port: 8443
@@ -799,39 +1056,75 @@ proxies:
     path: /dula
     headers:
       Host: speed.dulacloud.store
-- name: 🏁RELAY-172.67.187.219-2143
-  type: vmess
-  server: skk.moe
+- name: 巴西圣保罗+CloudFlare节点
+  type: vless
+  server: 188.114.98.66
   port: 80
-  uuid: 65b17c0b-0a52-4b54-9bc9-60e31397b841
-  alterId: 0
-  cipher: auto
+  uuid: eb23c871-425a-ac0f-1e6f-dedf0000002e
   udp: true
   network: ws
   ws-opts:
-    path: /65b17c0b-0a52-4b54-9bc9-60e31397b841-vmess
+    path: /sync
     headers:
-      Host: accklsj.bufu.us.ci
-- name: 🏁RELAY-104.21.89.181-2142
-  type: vmess
-  server: 104.21.89.181
-  port: 80
-  uuid: 65b17c0b-0a52-4b54-9bc9-60e31397b841
-  alterId: 0
-  cipher: auto
+      Host: dry-moon-b9ca.netizo04.workers.dev
+- name: 🇺🇸US_547|10.3MB/s|F003-260618
+  type: vless
+  server: 172.64.34.238
+  port: 443
+  uuid: 4a1441b0-7bc8-4906-85cf-6b59c256b480
+  udp: true
+  network: ws
+  tls: true
+  servername: edt2.yfqh08811.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: edt2.yfqh08811.ccwu.cc
+- name: 🇺🇸US_543|3.8MB/s 01
+  type: vless
+  server: 162.159.22.111
+  port: 443
+  uuid: 5b9fa73b-b549-480b-add9-c45e650d236f
+  udp: true
+  network: ws
+  tls: true
+  servername: gddy.hhlfy.de5.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /fp=firefox
+    headers:
+      Host: gddy.hhlfy.de5.net
+- name: EPODONIOS-3
+  type: ss
+  server: 213.202.208.199
+  port: 7001
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  udp: true
+- name: 🇺🇸US_1176|2.8MB/s|P002-260618 01
+  type: vless
+  server: 172.67.66.177
+  port: 2095
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
   udp: true
   network: ws
   ws-opts:
-    path: /65b17c0b-0a52-4b54-9bc9-60e31397b841-vmess
+    path: /
     headers:
-      Host: accklsj.bufu.us.ci
-- name: V2 - 17
-  type: vmess
-  server: 57.151.100.27
-  port: 10086
-  uuid: 550e8400-e29b-41d4-a716-446655440000
-  alterId: 0
-  cipher: auto
+      Host: cnmfangbinxingnmsl.cnm-fangbinxingnmsl-250.workers.dev
+- name: 🇺🇸US-216.105.168.18-0172
+  type: ss
+  server: 216.105.168.18
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: hCCWOcIsK5wrFz4OX70rWf
+  udp: true
+- name: 🟠🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001_4cf518cc
+  type: vless
+  server: 76.13.29.145
+  port: 28168
+  uuid: cf24d549-98a9-42c3-91b3-b376bb228ace
   udp: true
 - name: 🇩🇪DE_196|4.4MB/s|P002-260618 01
   type: vless
@@ -847,485 +1140,227 @@ proxies:
     path: /vip1
     headers:
       Host: hamshahriesfahan.com
-- name: 🇺🇸US_1195|6.1MB/s|B007-260618 01
-  type: vless
-  server: 69.46.46.116
-  port: 443
-  uuid: f1f47653-d57b-5917-fa47-c80823a8b7f3
-  udp: true
-  network: ws
-  tls: true
-  servername: rvg-production-8249.up.railway.app
-  client-fingerprint: chrome
-  ws-opts:
-    path: /ws/f1f47653-d57b-5917-fa47-c80823a8b7f3
-    headers:
-      Host: rvg-production-8249.up.railway.app
-- name: 🇺🇸US_1259|25.4MB/s|X001-260618 01
-  type: vless
-  server: 104.19.50.29
-  port: 443
-  uuid: 0970324b-8c61-4ae7-8c3f-385a6f1e17e4
-  udp: true
-  network: ws
-  tls: true
-  servername: vpn47.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: vpn47.cc.cd
-- name: 🇺🇸US_593|30.5MB/s|A001-260618
-  type: vless
-  server: 104.18.39.150
-  port: 443
-  uuid: 68eee13f-1a7a-4761-b71e-83b997eeccf9
-  udp: true
-  network: ws
-  tls: true
-  servername: wbz6z.ok7s.ceq.hh.hhyf.kdns.fr
-  client-fingerprint: chrome
-  ws-opts:
-    path: /glasspanel/guest000_0_5de14443985f/fp=chrome
-    headers:
-      Host: wbz6z.ok7s.ceq.hh.hhyf.kdns.fr
-- name: 🇺🇸US_1188|901KB/s|T001-260618 01
-  type: vless
-  server: 104.24.38.86
-  port: 8880
-  uuid: 77b90f21-d414-43ae-a81d-ab6769649fc4
-  udp: true
-  network: ws
-  ws-opts:
-    path: /In_Panel_Rayeghan_Ast_Va_Gheyre_Ghabele_Foroosh
-    headers:
-      Host: zeus-panel-8hkm7j.zeus-zew7l5.workers.dev
-- name: 🇺🇸US_1224|8.8MB/s|T001-260618 01
-  type: vless
-  server: 104.17.21.32
-  port: 8880
-  uuid: d1eeb74f-e5ea-45eb-9934-5376bfeb5ba4
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: fragrant-shape-07a0.269-144.workers.dev
-- name: 🇺🇸US_1262|748KB/s|B007-260618 01
-  type: vless
-  server: 104.25.122.72
-  port: 80
-  uuid: 6cd78ec7-b715-471c-92b4-0c3842caea4b
-  udp: true
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiVXRIT2UwaDUiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0=
-    headers:
-      Host: billowing-cloud-d339.sospanel.workers.dev
-- name: 🇺🇸US_594|27.8MB/s|A001-260618
-  type: vless
-  server: 104.18.34.143
-  port: 443
-  uuid: 68eee13f-1a7a-4761-b71e-83b997eeccf9
-  udp: true
-  network: ws
-  tls: true
-  servername: wbz6z.ok7s.ceq.hh.hhyf.kdns.fr
-  client-fingerprint: chrome
-  ws-opts:
-    path: /glasspanel/guest000_0_5de14443985f/fp=chrome
-    headers:
-      Host: wbz6z.ok7s.ceq.hh.hhyf.kdns.fr
-- name: 🇺🇸US_1199|930KB/s|S004-260618 01
-  type: vless
-  server: 104.21.76.6
-  port: 443
-  uuid: a37dadb8-a5e8-4dfe-b542-ba24566e9af8
-  udp: true
-  network: ws
-  tls: true
-  servername: zeus-panel-6vcehp.amirhoseinardakan10.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /In_Panel_Rayeghan_Ast_Va_Gheyre_Ghabele_Foroosh
-    headers:
-      Host: zeus-panel-6vcehp.amirhoseinardakan10.workers.dev
-- name: 🇺🇸US_1257|1.7MB/s|T001-260618 01
-  type: vless
-  server: 216.24.57.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime28.workers.dev
-- name: 🇩🇪DE_187|4.7MB/s|B007-260618 01
-  type: vless
-  server: 104.16.75.207
-  port: 8443
-  uuid: e328f428-5aa5-497e-a645-3779f36898e4
-  udp: true
-  network: xhttp
-  tls: true
-  servername: cdarvph.ir
-  client-fingerprint: chrome
-- name: 🇺🇸US_1254|1.8MB/s|S004-260618 01
-  type: vless
-  server: 172.67.223.47
-  port: 443
-  uuid: 634cdbe8-963c-403b-8347-0e107ef6891e
-  udp: true
-  network: ws
-  tls: true
-  servername: ez-22bbc3.ezaccess1a491f7.workers.dev
-  client-fingerprint: android
-  ws-opts:
-    path: /In_Panel_Rayeghan_Ast_Va_Gheyre_Ghabele_Foroosh
-    headers:
-      Host: ez-22bbc3.ezaccess1a491f7.workers.dev
-- name: 🇺🇸US_1253|3.8MB/s|S004-260618 01
-  type: vless
-  server: 188.114.99.80
-  port: 443
-  uuid: 36ea9346-f68b-4176-9698-4ebf36bb776b
-  udp: true
-  network: ws
-  tls: true
-  servername: zeus-panel-bwqgio.zeus-7t93e5.workers.dev
-  client-fingerprint: ios
-  ws-opts:
-    path: /In_Panel_Rayeghan_Ast_Va_Gheyre_Ghabele_Foroosh
-    headers:
-      Host: zeus-panel-bwqgio.zeus-7t93e5.workers.dev
-- name: EPODONIOS-7
-  type: ss
-  server: 216.105.168.18
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: hCCWOcIsK5wrFz4OX70rWf
-  udp: true
-- name: 🇺🇸US_1278|1.7MB/s|S004-260618 01
-  type: vless
-  server: 104.21.62.20
-  port: 80
-  uuid: ec14c5e8-f3cb-4f6a-ac48-1f8237cf0d8b
-  udp: true
-  network: ws
-  ws-opts:
-    path: /In_Panel_Rayeghan_Ast_Va_Gheyre_Ghabele_Foroosh
-    headers:
-      Host: zeus-panel-iow633.zeus-3rbeuh.workers.dev
-- name: 🇩🇪DE_177|5.5MB/s|S004-260618 01
-  type: vless
-  server: 45.12.30.248
-  port: 443
-  uuid: 14b59caf-a196-4ec2-8c70-c7b388062f5b
-  udp: true
-  network: ws
-  tls: true
-  servername: vangoghhh.info
-  client-fingerprint: chrome
-  ws-opts:
-    path: /rdfgtws
-    headers:
-      Host: vangoghhh.info
-- name: 🇺🇸US_1248|759KB/s|B007-260618 01
-  type: vless
-  server: 162.159.6.237
-  port: 443
-  uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
-  udp: true
-  network: ws
-  tls: true
-  servername: powered-by-surena.configfarsi6982dd6e0355e.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: powered-by-surena.configfarsi6982dd6e0355e.workers.dev
-- name: 🇺🇸US_550|9.4MB/s|B007-260618
+- name: 🇺🇸US_540|4.5MB/s|B007-260618 01
   type: trojan
-  server: 104.17.25.173
-  port: 8443
-  password: MiTiVPN
+  server: 104.24.163.206
+  port: 443
+  password: bd85f5fe32d9446a8b1f59e4f710455b
   udp: true
-  sni: fl-o--7-m.App-Cloud.ir
-  skip-cert-verify: true
+  sni: BpB-PAnEL-62c3.mlM-eE9A3b83.wOrKErS.dev
   network: ws
   ws-opts:
-    path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=FLS
+    path: /eyJqdW5rIjoibkN2cER2SDZIUTkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6IiIsInBhbmVsSVBzIjoiWzJhMDI6ODk4OjE0Njo2NDo6XSJ9?ed=2560
     headers: {}
-- name: 🇺🇸US_540|10.7MB/s|B007-260618
-  type: vless
-  server: 172.64.147.227
-  port: 443
-  uuid: b08562b0-dbc0-47d1-860d-9435133b25c9
-  udp: true
-  network: ws
-  tls: true
-  servername: cfoo-146.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /QiangLieTuiJian?ed
-    headers:
-      Host: cfoo-146.pages.dev
-- name: 🇺🇸US_1176|2.8MB/s|P002-260618 01
-  type: vless
-  server: 172.67.66.177
-  port: 2095
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cnmfangbinxingnmsl.cnm-fangbinxingnmsl-250.workers.dev
-- name: 🇺🇸US_1246|7.0MB/s|B007-260618 01
-  type: vless
-  server: 172.67.186.89
-  port: 443
-  uuid: 0a7a2588-6457-4ae1-9b7d-8643e2153144
-  udp: true
-  network: ws
-  tls: true
-  servername: zeus-panel-ehqukv.ewrw34634532.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: zeus-panel-ehqukv.ewrw34634532.workers.dev
-- name: 🇫🇷FR_147|713KB/s|B007-260618
-  type: vless
-  server: 172.64.34.119
-  port: 443
-  uuid: 8ad6f598-cd8d-4fca-848e-05fc9be15ff3
-  udp: true
-  network: ws
-  tls: true
-  servername: deicl.redstone-vex.sbs
-  client-fingerprint: chrome
-  ws-opts:
-    path: /sea
-    headers:
-      Host: deicl.redstone-vex.sbs
-- name: 🇩🇪+DE+15
-  type: trojan
-  server: 185.137.157.135
-  port: 443
-  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
-  udp: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - 🇺🇸 US 11
+  - V2 - 17
   - 🇺🇸US-37.19.198.244-3684
-  - 🇺🇸US-37.19.198.243-4267
   - ✨+@NamiraConfigs+|+❤️+وصل+شدی+جوین+شو+|+🔒+|+🇺🇸
-  - 🇺🇸US-37.19.198.236-0053
-  - 🇨🇦CA_1|2.4MB/s
-  - 🇺🇸US_579|11.1MB/s|F003-260618
-  - 🇺🇸US_580|11.5MB/s|F003-260618
-  - 🇨🇦 CA 1
-  - 🇺🇸US_581|11.5MB/s|F003-260618
   - 🇺🇸US-3.147.78.9-0430
-  - 🇺🇸US_71|7.9MB/s
-  - 🇺🇸US_217|3.4MB/s
-  - 🇺🇸US_263|983KB/s
-  - 🇺🇸US_578|6.4MB/s|F003-260618
-  - 🇺🇸US_426|5.6MB/s|S004-260618
-  - 🇺🇸 US 7
-  - 🇺🇸US_5|5.0MB/s
-  - '@tootffarangi🍓-12'
+  - 🇺🇸 US 9
+  - 🇺🇸US-37.19.198.243-0056
+  - 🇨🇦 CA 1
+  - 🇺🇸US-37.19.198.236-0053
   - 🇺🇸 US 3
-  - 🇺🇸US_564|6.1MB/s|S001-260618
-  - 🇺🇸US_576|11.8MB/s|F003-260618
-  - 🇺🇸US_1096|9.4MB/s|B007-260618 01
-  - 'Channel : @FreeConfigForYou🏴🏳'
+  - 🇺🇸 US 4
+  - 🇺🇸 US 7
+  - 🇺🇸+140+-+US+-+VLESS/REALITY/PBK/VISION/UTLS+-+28190
+  - 🇺🇸US_650|7.6MB/s 01
+  - 🇺🇸 US 10
   - 🇺🇸 US 5
-  - 🇺🇸US_541|5.5MB/s|B007-260618
-  - 🇺🇸US_518|11.6MB/s|B007-260618
-  - 🇺🇸US_553|5.4MB/s|A001-260618
-  - 🇺🇸 US 1
-  - 🇬🇧GB-141.98.101.181-0121
-  - 🇬🇧GB-141.98.101.178-0281
-  - 🇬🇧GB-141.98.101.182-0118
+  - 🇺🇸US_421|22.0MB/s 01
   - 🇺🇸US-173.249.209.146-0079
+  - 🇺🇸US_513|7.2MB/s|B007-260618
+  - 🇺🇸US_634|4.8MB/s|B007-260618 01
+  - 🇺🇸 US 1
+  - 🇺🇸US_548|10.4MB/s|F003-260618
+  - 🇺🇸US_573|3.0MB/s 01
+  - 🇺🇸US_512|4.9MB/s|B007-260618
+  - 🏁RELAY-172.67.187.219-2143
+  - 🇬🇧+Join+Telegram:@Farah_VPN+🇬🇧
   - EPODONIOS
   - EPODONIOS-2
-  - EPODONIOS-3
-  - EPODONIOS-4
-  - 🇺🇸US_548|24.7MB/s|B007-260618
-  - 🇺🇸US_547|11.7MB/s|B007-260618
-  - 🇺🇸US_63|10.4MB/s|B007-260618
-  - 🇺🇸US_560|12.2MB/s|P002-260618
-  - 🇺🇸US_566|793KB/s|F003-260618
-  - 🇺🇸US_551|22.6MB/s|B007-260618
-  - 🇩🇪+DE+23
-  - 🇩🇪+DE+20
-  - 🇺🇸US_1198|10.4MB/s|V010-260618 01
-  - +By+EbraSha+🎛️
-  - 🇳🇱NL_153|3.4MB/s|B007-260618 01
-  - 🇯🇵 JP 1
-  - 🇺🇸US_595|31.4MB/s|A001-260618
-  - 🇵🇱PL_20|1.7MB/s|M002-260618
-  - 🇩🇪DE_190|4.1MB/s|S004-260618 01
-  - 🇩🇪DE_203|4.6MB/s|B007-260618 01
-  - 🇩🇪DE_192|3.4MB/s|S004-260618 01
-  - 🇺🇸US_599|11.6MB/s|B007-260618
-  - 🇺🇸US_604|4.1MB/s|B007-260618
-  - 🇺🇸US_1094|1.2MB/s|B007-260618 01
-  - 🇩🇪DE_195|4.1MB/s|M002-260618 01
-  - 🇯🇵JP-140.83.51.161-1363
-  - 亚太地区+V2CROSS.COM
-  - 🇺🇸US_601|11.3MB/s|B007-260618
-  - 🇺🇸US_605|8.2MB/s|B007-260618
-  - 🇸🇬SG_32|3.5MB/s|B007-260618 01
-  - 美国+CloudFlare节点
-  - 🇺🇸US_1171|1.5MB/s|V009-260618 01
-  - 🇸🇬SG_34|7.8MB/s|B007-260618 01
-  - 🇸🇬SG_33|8.0MB/s 01
-  - 🇫🇷FR_153|4.3MB/s|B007-260618
-  - EPODONIOS-5
-  - 🏁RELAY-104.16.0.0-2279
-  - v2raybaaz+🐮³
-  - 🇩🇪DE_105|4.3MB/s|F003-260618
-  - EPODONIOS-6
-  - 🇸🇬SG_5|2.6MB/s|S001-260618
-  - 🏁RELAY-172.67.187.219-2143
   - 🏁RELAY-104.21.89.181-2142
-  - V2 - 17
-  - 🇩🇪DE_196|4.4MB/s|P002-260618 01
-  - 🇺🇸US_1195|6.1MB/s|B007-260618 01
-  - 🇺🇸US_1259|25.4MB/s|X001-260618 01
-  - 🇺🇸US_593|30.5MB/s|A001-260618
-  - 🇺🇸US_1188|901KB/s|T001-260618 01
-  - 🇺🇸US_1224|8.8MB/s|T001-260618 01
-  - 🇺🇸US_1262|748KB/s|B007-260618 01
-  - 🇺🇸US_594|27.8MB/s|A001-260618
-  - 🇺🇸US_1199|930KB/s|S004-260618 01
-  - 🇺🇸US_1257|1.7MB/s|T001-260618 01
-  - 🇩🇪DE_187|4.7MB/s|B007-260618 01
-  - 🇺🇸US_1254|1.8MB/s|S004-260618 01
-  - 🇺🇸US_1253|3.8MB/s|S004-260618 01
-  - EPODONIOS-7
-  - 🇺🇸US_1278|1.7MB/s|S004-260618 01
-  - 🇩🇪DE_177|5.5MB/s|S004-260618 01
-  - 🇺🇸US_1248|759KB/s|B007-260618 01
-  - 🇺🇸US_550|9.4MB/s|B007-260618
-  - 🇺🇸US_540|10.7MB/s|B007-260618
+  - 🇬🇧GB-141.98.101.178-0281
+  - 🇺🇸US_600|1.4MB/s|K001-260618
+  - 🇺🇸US_598|1.1MB/s|K001-260618
+  - 🇺🇸US_595|2.5MB/s|K001-260618
+  - 🇺🇸US_611|971KB/s|K001-260618
+  - 🇺🇸US_610|890KB/s|K001-260618
+  - 🇺🇸 US 8
+  - 🇺🇸US_603|1.7MB/s|K001-260618
+  - 🇺🇸US_601|2.1MB/s|K001-260618
+  - 🇺🇸US_594|922KB/s|K001-260618
+  - 🇺🇸US_609|749KB/s|K001-260618
+  - 🇺🇸US_607|643KB/s|K001-260618
+  - 🇺🇸US_596|2.4MB/s|K001-260618
+  - 🇺🇸US_592|2.5MB/s|K001-260618
+  - 🇺🇸US_606|2.5MB/s|K001-260618
+  - 🇺🇸US_593|721KB/s|K001-260618
+  - 🇺🇸US_438|1.7MB/s 01
+  - 🇺🇸US_602|774KB/s|K001-260618
+  - 🇺🇸US_608|1.4MB/s|K001-260618
+  - 🇺🇸US_597|1.6MB/s|K001-260618
+  - 🇺🇸US_604|1.0MB/s|K001-260618
+  - 🇫🇷FR_185|3.6MB/s|B007-260618
+  - 🇫🇷FR_109|3.6MB/s 01
+  - 🇫🇷FR_179|4.3MB/s 01
+  - 🇫🇷FR_170|3.4MB/s 01
+  - 🇺🇸US_477|5.0MB/s|B007-260618
+  - 🇩🇪DE-185.137.157.142-0101
+  - 🇺🇸US_612|8.0MB/s|B007-260618 01
+  - 🇩🇪+DE+6
+  - 🇰🇷KR-211.178.105.134-0142
+  - 🇳🇱NL_69|4.2MB/s 01
+  - 🇫🇷FR_95|3.4MB/s|B007-260618
+  - 🇺🇸US_562|9.9MB/s|A001-260618
+  - 🇺🇸US_426|3.0MB/s 01
+  - 🇫🇷FR_40|2.5MB/s
+  - 🇯🇵+日本+|+JPN+7
+  - 🇩🇪DE_55|4.6MB/s|B007-260618 01
+  - 🇯🇵JP-140.83.51.161-1363
+  - 🇫🇷FR_162|1.3MB/s 01
+  - 🇺🇸US_580|10.4MB/s 01
+  - 🇫🇷FR_271|5.3MB/s|B007-260618 01
+  - 🇩🇪DE_64|4.6MB/s|B007-260618 01
+  - 未知32 835.3KB/s
+  - 🇺🇸US_615|10.0MB/s|P002-260618
+  - 🇫🇷FR_154|2.7MB/s
+  - 🇰🇷 KR 2
+  - 🇯🇵JP-103.125.216.18-0138
+  - 🇺🇸US_408|11.6MB/s 01
+  - 🇺🇸US_609|7.9MB/s|F003-260618 01
+  - 🇺🇸US_593|5.5MB/s|X001-260618 01
+  - +By+EbraSha+🦇
+  - 🇺🇸US_599|2.8MB/s|F003-260618 01
+  - 🇫🇷FR_190|2.8MB/s|B007-260618
+  - 🇺🇸US_1163|6.8MB/s|P002-260618 01
+  - 🇩🇪DE_72|3.4MB/s|V001-260618 01
+  - 🇺🇸US_564|5.5MB/s 01
+  - 🇺🇸US_546|9.7MB/s|F003-260618
+  - 🇭🇰HK_16|4.4MB/s|M002-260618
+  - 🇯🇵JP_23|3.4MB/s|M002-260618
+  - 🏁RELAY-104.16.0.0-2279
+  - 🇰🇷KR-221.139.79.57-0139
+  - 🇺🇸US_276|538KB/s
+  - 🇸🇬SG_7|3.3MB/s|S001-260618
+  - 巴西圣保罗+CloudFlare节点
+  - 🇺🇸US_547|10.3MB/s|F003-260618
+  - 🇺🇸US_543|3.8MB/s 01
+  - EPODONIOS-3
   - 🇺🇸US_1176|2.8MB/s|P002-260618 01
-  - 🇺🇸US_1246|7.0MB/s|B007-260618 01
-  - 🇫🇷FR_147|713KB/s|B007-260618
-  - 🇩🇪+DE+15
+  - 🇺🇸US-216.105.168.18-0172
+  - 🟠🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001_4cf518cc
+  - 🇩🇪DE_196|4.4MB/s|P002-260618 01
+  - 🇺🇸US_540|4.5MB/s|B007-260618 01
 - name: ♻️ 自动选择
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 US 11
+  - V2 - 17
   - 🇺🇸US-37.19.198.244-3684
-  - 🇺🇸US-37.19.198.243-4267
   - ✨+@NamiraConfigs+|+❤️+وصل+شدی+جوین+شو+|+🔒+|+🇺🇸
-  - 🇺🇸US-37.19.198.236-0053
-  - 🇨🇦CA_1|2.4MB/s
-  - 🇺🇸US_579|11.1MB/s|F003-260618
-  - 🇺🇸US_580|11.5MB/s|F003-260618
-  - 🇨🇦 CA 1
-  - 🇺🇸US_581|11.5MB/s|F003-260618
   - 🇺🇸US-3.147.78.9-0430
-  - 🇺🇸US_71|7.9MB/s
-  - 🇺🇸US_217|3.4MB/s
-  - 🇺🇸US_263|983KB/s
-  - 🇺🇸US_578|6.4MB/s|F003-260618
-  - 🇺🇸US_426|5.6MB/s|S004-260618
-  - 🇺🇸 US 7
-  - 🇺🇸US_5|5.0MB/s
-  - '@tootffarangi🍓-12'
+  - 🇺🇸 US 9
+  - 🇺🇸US-37.19.198.243-0056
+  - 🇨🇦 CA 1
+  - 🇺🇸US-37.19.198.236-0053
   - 🇺🇸 US 3
-  - 🇺🇸US_564|6.1MB/s|S001-260618
-  - 🇺🇸US_576|11.8MB/s|F003-260618
-  - 🇺🇸US_1096|9.4MB/s|B007-260618 01
-  - 'Channel : @FreeConfigForYou🏴🏳'
+  - 🇺🇸 US 4
+  - 🇺🇸 US 7
+  - 🇺🇸+140+-+US+-+VLESS/REALITY/PBK/VISION/UTLS+-+28190
+  - 🇺🇸US_650|7.6MB/s 01
+  - 🇺🇸 US 10
   - 🇺🇸 US 5
-  - 🇺🇸US_541|5.5MB/s|B007-260618
-  - 🇺🇸US_518|11.6MB/s|B007-260618
-  - 🇺🇸US_553|5.4MB/s|A001-260618
-  - 🇺🇸 US 1
-  - 🇬🇧GB-141.98.101.181-0121
-  - 🇬🇧GB-141.98.101.178-0281
-  - 🇬🇧GB-141.98.101.182-0118
+  - 🇺🇸US_421|22.0MB/s 01
   - 🇺🇸US-173.249.209.146-0079
+  - 🇺🇸US_513|7.2MB/s|B007-260618
+  - 🇺🇸US_634|4.8MB/s|B007-260618 01
+  - 🇺🇸 US 1
+  - 🇺🇸US_548|10.4MB/s|F003-260618
+  - 🇺🇸US_573|3.0MB/s 01
+  - 🇺🇸US_512|4.9MB/s|B007-260618
+  - 🏁RELAY-172.67.187.219-2143
+  - 🇬🇧+Join+Telegram:@Farah_VPN+🇬🇧
   - EPODONIOS
   - EPODONIOS-2
-  - EPODONIOS-3
-  - EPODONIOS-4
-  - 🇺🇸US_548|24.7MB/s|B007-260618
-  - 🇺🇸US_547|11.7MB/s|B007-260618
-  - 🇺🇸US_63|10.4MB/s|B007-260618
-  - 🇺🇸US_560|12.2MB/s|P002-260618
-  - 🇺🇸US_566|793KB/s|F003-260618
-  - 🇺🇸US_551|22.6MB/s|B007-260618
-  - 🇩🇪+DE+23
-  - 🇩🇪+DE+20
-  - 🇺🇸US_1198|10.4MB/s|V010-260618 01
-  - +By+EbraSha+🎛️
-  - 🇳🇱NL_153|3.4MB/s|B007-260618 01
-  - 🇯🇵 JP 1
-  - 🇺🇸US_595|31.4MB/s|A001-260618
-  - 🇵🇱PL_20|1.7MB/s|M002-260618
-  - 🇩🇪DE_190|4.1MB/s|S004-260618 01
-  - 🇩🇪DE_203|4.6MB/s|B007-260618 01
-  - 🇩🇪DE_192|3.4MB/s|S004-260618 01
-  - 🇺🇸US_599|11.6MB/s|B007-260618
-  - 🇺🇸US_604|4.1MB/s|B007-260618
-  - 🇺🇸US_1094|1.2MB/s|B007-260618 01
-  - 🇩🇪DE_195|4.1MB/s|M002-260618 01
-  - 🇯🇵JP-140.83.51.161-1363
-  - 亚太地区+V2CROSS.COM
-  - 🇺🇸US_601|11.3MB/s|B007-260618
-  - 🇺🇸US_605|8.2MB/s|B007-260618
-  - 🇸🇬SG_32|3.5MB/s|B007-260618 01
-  - 美国+CloudFlare节点
-  - 🇺🇸US_1171|1.5MB/s|V009-260618 01
-  - 🇸🇬SG_34|7.8MB/s|B007-260618 01
-  - 🇸🇬SG_33|8.0MB/s 01
-  - 🇫🇷FR_153|4.3MB/s|B007-260618
-  - EPODONIOS-5
-  - 🏁RELAY-104.16.0.0-2279
-  - v2raybaaz+🐮³
-  - 🇩🇪DE_105|4.3MB/s|F003-260618
-  - EPODONIOS-6
-  - 🇸🇬SG_5|2.6MB/s|S001-260618
-  - 🏁RELAY-172.67.187.219-2143
   - 🏁RELAY-104.21.89.181-2142
-  - V2 - 17
-  - 🇩🇪DE_196|4.4MB/s|P002-260618 01
-  - 🇺🇸US_1195|6.1MB/s|B007-260618 01
-  - 🇺🇸US_1259|25.4MB/s|X001-260618 01
-  - 🇺🇸US_593|30.5MB/s|A001-260618
-  - 🇺🇸US_1188|901KB/s|T001-260618 01
-  - 🇺🇸US_1224|8.8MB/s|T001-260618 01
-  - 🇺🇸US_1262|748KB/s|B007-260618 01
-  - 🇺🇸US_594|27.8MB/s|A001-260618
-  - 🇺🇸US_1199|930KB/s|S004-260618 01
-  - 🇺🇸US_1257|1.7MB/s|T001-260618 01
-  - 🇩🇪DE_187|4.7MB/s|B007-260618 01
-  - 🇺🇸US_1254|1.8MB/s|S004-260618 01
-  - 🇺🇸US_1253|3.8MB/s|S004-260618 01
-  - EPODONIOS-7
-  - 🇺🇸US_1278|1.7MB/s|S004-260618 01
-  - 🇩🇪DE_177|5.5MB/s|S004-260618 01
-  - 🇺🇸US_1248|759KB/s|B007-260618 01
-  - 🇺🇸US_550|9.4MB/s|B007-260618
-  - 🇺🇸US_540|10.7MB/s|B007-260618
+  - 🇬🇧GB-141.98.101.178-0281
+  - 🇺🇸US_600|1.4MB/s|K001-260618
+  - 🇺🇸US_598|1.1MB/s|K001-260618
+  - 🇺🇸US_595|2.5MB/s|K001-260618
+  - 🇺🇸US_611|971KB/s|K001-260618
+  - 🇺🇸US_610|890KB/s|K001-260618
+  - 🇺🇸 US 8
+  - 🇺🇸US_603|1.7MB/s|K001-260618
+  - 🇺🇸US_601|2.1MB/s|K001-260618
+  - 🇺🇸US_594|922KB/s|K001-260618
+  - 🇺🇸US_609|749KB/s|K001-260618
+  - 🇺🇸US_607|643KB/s|K001-260618
+  - 🇺🇸US_596|2.4MB/s|K001-260618
+  - 🇺🇸US_592|2.5MB/s|K001-260618
+  - 🇺🇸US_606|2.5MB/s|K001-260618
+  - 🇺🇸US_593|721KB/s|K001-260618
+  - 🇺🇸US_438|1.7MB/s 01
+  - 🇺🇸US_602|774KB/s|K001-260618
+  - 🇺🇸US_608|1.4MB/s|K001-260618
+  - 🇺🇸US_597|1.6MB/s|K001-260618
+  - 🇺🇸US_604|1.0MB/s|K001-260618
+  - 🇫🇷FR_185|3.6MB/s|B007-260618
+  - 🇫🇷FR_109|3.6MB/s 01
+  - 🇫🇷FR_179|4.3MB/s 01
+  - 🇫🇷FR_170|3.4MB/s 01
+  - 🇺🇸US_477|5.0MB/s|B007-260618
+  - 🇩🇪DE-185.137.157.142-0101
+  - 🇺🇸US_612|8.0MB/s|B007-260618 01
+  - 🇩🇪+DE+6
+  - 🇰🇷KR-211.178.105.134-0142
+  - 🇳🇱NL_69|4.2MB/s 01
+  - 🇫🇷FR_95|3.4MB/s|B007-260618
+  - 🇺🇸US_562|9.9MB/s|A001-260618
+  - 🇺🇸US_426|3.0MB/s 01
+  - 🇫🇷FR_40|2.5MB/s
+  - 🇯🇵+日本+|+JPN+7
+  - 🇩🇪DE_55|4.6MB/s|B007-260618 01
+  - 🇯🇵JP-140.83.51.161-1363
+  - 🇫🇷FR_162|1.3MB/s 01
+  - 🇺🇸US_580|10.4MB/s 01
+  - 🇫🇷FR_271|5.3MB/s|B007-260618 01
+  - 🇩🇪DE_64|4.6MB/s|B007-260618 01
+  - 未知32 835.3KB/s
+  - 🇺🇸US_615|10.0MB/s|P002-260618
+  - 🇫🇷FR_154|2.7MB/s
+  - 🇰🇷 KR 2
+  - 🇯🇵JP-103.125.216.18-0138
+  - 🇺🇸US_408|11.6MB/s 01
+  - 🇺🇸US_609|7.9MB/s|F003-260618 01
+  - 🇺🇸US_593|5.5MB/s|X001-260618 01
+  - +By+EbraSha+🦇
+  - 🇺🇸US_599|2.8MB/s|F003-260618 01
+  - 🇫🇷FR_190|2.8MB/s|B007-260618
+  - 🇺🇸US_1163|6.8MB/s|P002-260618 01
+  - 🇩🇪DE_72|3.4MB/s|V001-260618 01
+  - 🇺🇸US_564|5.5MB/s 01
+  - 🇺🇸US_546|9.7MB/s|F003-260618
+  - 🇭🇰HK_16|4.4MB/s|M002-260618
+  - 🇯🇵JP_23|3.4MB/s|M002-260618
+  - 🏁RELAY-104.16.0.0-2279
+  - 🇰🇷KR-221.139.79.57-0139
+  - 🇺🇸US_276|538KB/s
+  - 🇸🇬SG_7|3.3MB/s|S001-260618
+  - 巴西圣保罗+CloudFlare节点
+  - 🇺🇸US_547|10.3MB/s|F003-260618
+  - 🇺🇸US_543|3.8MB/s 01
+  - EPODONIOS-3
   - 🇺🇸US_1176|2.8MB/s|P002-260618 01
-  - 🇺🇸US_1246|7.0MB/s|B007-260618 01
-  - 🇫🇷FR_147|713KB/s|B007-260618
-  - 🇩🇪+DE+15
+  - 🇺🇸US-216.105.168.18-0172
+  - 🟠🇺🇸[🎬🤖📺🎭]_github.com/Ruk1ng001_4cf518cc
+  - 🇩🇪DE_196|4.4MB/s|P002-260618 01
+  - 🇺🇸US_540|4.5MB/s|B007-260618 01
 rules:
 - MATCH,🚀 节点选择
