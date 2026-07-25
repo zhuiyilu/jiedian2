@@ -3,828 +3,6 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: shadowsocks-157
-  type: ss
-  server: 108.181.0.177
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: G5p6ww4o67HB
-  udp: true
-- name: shadowsocks-2536938
-  type: ss
-  server: 216.105.168.18
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: bQZl7HDxSabr1FurTYQHFU
-  udp: true
-- name: shadowsocks-156
-  type: ss
-  server: 173.244.56.9
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: trojan-2520863
-  type: trojan
-  server: 64.94.95.115
-  port: 57142
-  password: kkzh2prsyr2ik47as615
-  udp: true
-  sni: static.rutube.ru
-  skip-cert-verify: true
-- name: trojan-120887
-  type: trojan
-  server: 64.94.95.117
-  port: 57142
-  password: kkzh2prsyr2ik47as615
-  udp: true
-  sni: static.rutube.ru
-  skip-cert-verify: true
-- name: trojan-2520862
-  type: trojan
-  server: 64.94.95.114
-  port: 57142
-  password: kkzh2prsyr2ik47as615
-  udp: true
-  sni: static.rutube.ru
-  skip-cert-verify: true
-- name: trojan-59508879
-  type: trojan
-  server: 148.72.168.35
-  port: 58615
-  password: bIsrw94HH7zmhmvmGskKIb4HbmOZdcCR
-  udp: true
-  sni: 148.72.168.35
-  skip-cert-verify: true
-- name: shadowsocks-166
-  type: ss
-  server: 137.184.174.93
-  port: 8080
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  udp: true
-- name: shadowsocks-213
-  type: ss
-  server: 149.22.87.240
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: shadowsocks-211
-  type: ss
-  server: 149.22.87.241
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: shadowsocks-35277585
-  type: ss
-  server: 36.224.162.159
-  port: 50099
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  udp: true
-- name: shadowsocks-276
-  type: ss
-  server: 213.202.208.199
-  port: 7001
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  udp: true
-- name: shadowsocks-125596
-  type: ss
-  server: 141.164.45.187
-  port: 8000
-  cipher: aes-256-gcm
-  password: KixLvKzwjekG00rm
-  udp: true
-- name: shadowsocks-125597
-  type: ss
-  server: 141.164.45.187
-  port: 8008
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-  udp: true
-- name: shadowsocks-125595
-  type: ss
-  server: 141.164.45.187
-  port: 7002
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  udp: true
-- name: shadowsocks-240
-  type: ss
-  server: 94.156.250.148
-  port: 7001
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  udp: true
-- name: shadowsocks-27055
-  type: ss
-  server: 158.173.20.171
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: shadowsocks-212
-  type: ss
-  server: 108.181.126.122
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: CJmTCCx7Ltud
-  udp: true
-- name: shadowsocks-209
-  type: ss
-  server: 209.46.102.22
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: 1hhrqrokj3ag
-  udp: true
-- name: shadowsocks-188
-  type: ss
-  server: 82.38.31.149
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: shadowsocks-125602
-  type: ss
-  server: 141.164.45.187
-  port: 9101
-  cipher: aes-256-gcm
-  password: e4FCWrgpkji3QY
-  udp: true
-- name: shadowsocks-125599
-  type: ss
-  server: 141.164.45.187
-  port: 8119
-  cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
-  udp: true
-- name: shadowsocks-226
-  type: ss
-  server: 141.98.101.179
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: shadowsocks-125601
-  type: ss
-  server: 141.164.45.187
-  port: 9090
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  udp: true
-- name: shadowsocks-125598
-  type: ss
-  server: 141.164.45.187
-  port: 8091
-  cipher: aes-256-gcm
-  password: PCnnH6SQSnfoS27
-  udp: true
-- name: shadowsocks-125594
-  type: ss
-  server: 141.164.45.187
-  port: 5498
-  cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
-  udp: true
-- name: shadowsocks-125593
-  type: ss
-  server: 141.164.45.187
-  port: 5001
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  udp: true
-- name: shadowsocks-11052
-  type: ss
-  server: 140.174.184.5
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: qItG8SueYQcP
-  udp: true
-- name: shadowsocks-4892328
-  type: ss
-  server: 141.164.45.187
-  port: 2376
-  cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-  udp: true
-- name: 🇫🇷FR_72|970KB/s|B007-260618 01
-  type: trojan
-  server: 185.18.250.252
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_80|1.3MB/s|B007-260618 01
-  type: vless
-  server: 45.130.125.207
-  port: 443
-  uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77
-  udp: true
-  network: ws
-  tls: true
-  servername: shegeftihaaa.net
-  client-fingerprint: chrome
-  ws-opts:
-    path: /rsedgws
-    headers:
-      Host: shegeftihaaa.net
-- name: DE - zhuhai.uk 02
-  type: vless
-  server: 5.83.129.253
-  port: 443
-  uuid: c28ee61d-0d43-4e69-8e6a-6397ed0ffc03
-  udp: true
-  tls: true
-  servername: flash.try-me.store
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: dJDkS3qV0P2GnLUkGBpmeWhu5brRDMVUeBE4ng1WcnQ
-    short-id: ''
-  flow: xtls-rprx-vision
-- name: 🇺🇸US_286|713KB/s 01
-  type: vless
-  server: 104.17.170.132
-  port: 8880
-  uuid: 9fa85900-14f9-4874-89af-eaf7c2fe4885
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-    headers:
-      Host: summer-hill-7bbd.149-40f.workers.dev
-- name: 🇫🇷FR_81|640KB/s|B007-260618 01
-  type: vless
-  server: 8.47.69.0
-  port: 443
-  uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77
-  udp: true
-  network: ws
-  tls: true
-  servername: shegeftihaaa.net
-  client-fingerprint: chrome
-  ws-opts:
-    path: /rsedgws
-    headers:
-      Host: shegeftihaaa.net
-- name: shadowsocks-174
-  type: ss
-  server: 82.38.31.155
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: 🇳🇴NO_2|808KB/s|B007-260618 01
-  type: vless
-  server: 8.6.112.7
-  port: 2087
-  uuid: 412d7fbe-7474-4f1d-86c6-7eebdc628f72
-  udp: true
-  network: xhttp
-  tls: true
-  servername: norway.alfather.ir
-  client-fingerprint: chrome
-- name: shadowsocks-11031
-  type: ss
-  server: 82.38.31.213
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  udp: true
-- name: DE - zhuhai.uk
-  type: vless
-  server: 2.27.25.13
-  port: 443
-  uuid: 4bf4c3ce-c4bb-4e0b-85d8-79238539c4a9
-  udp: true
-  tls: true
-  servername: deepl.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
-    short-id: 15affa0af66dfc79
-  flow: xtls-rprx-vision
-- name: shadowsocks-127246
-  type: ss
-  server: 193.29.139.144
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: shadowsocks-274
-  type: ss
-  server: 82.38.31.10
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: 🇫🇷FR_90|578KB/s|B007-260618 01
-  type: trojan
-  server: 216.24.57.7
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_83|658KB/s|B007-260618 01
-  type: trojan
-  server: 104.16.174.6
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: shadowsocks-125093
-  type: ss
-  server: 102.129.229.85
-  port: 31700
-  cipher: chacha20-ietf-poly1305
-  password: d7zh2lMrXNH5+8+8pKzlxiCU9NN022ih+uAyxj5d4qo=
-  udp: true
-- name: shadowsocks-268
-  type: ss
-  server: 82.38.31.35
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: 🇫🇷FR_84|1.1MB/s|B007-260618 01
-  type: trojan
-  server: 104.18.152.208
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_87|1.9MB/s|B007-260618 01
-  type: trojan
-  server: 141.101.90.101
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: shadowsocks-283
-  type: ss
-  server: 221.139.79.57
-  port: 13979
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  udp: true
-- name: 🇫🇷FR_67|863KB/s|B007-260618 01
-  type: trojan
-  server: 104.16.174.36
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_66|1.2MB/s|B007-260618 01
-  type: trojan
-  server: 104.16.174.117
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: shadowsocks-125600
-  type: ss
-  server: 141.164.45.187
-  port: 8888
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  udp: true
-- name: shadowsocks-207
-  type: ss
-  server: 141.164.45.187
-  port: 7001
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  udp: true
-- name: 🇺🇸US_350|1.4MB/s|B007-260618 01
-  type: vless
-  server: 104.16.72.20
-  port: 8443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  udp: true
-  network: ws
-  tls: true
-  servername: t1s1.rittbo.kdns.fr
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-- name: 🇺🇸US_1|527KB/s
-  type: vless
-  server: 104.18.42.163
-  port: 8880
-  uuid: ce977d82-824b-4209-87f1-0719f78d6a2e
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: royal-mode-cf74.210-62d.workers.dev
-- name: 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加_1
-  type: vmess
-  server: 172.67.75.172
-  port: 80
-  uuid: 0c5e59d4-2ab3-4dc7-8b56-4ee355551162
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /s15.html
-    headers:
-      Host: 173578851232252025041119231677671.s15.chibaba.filegear-sg.me
-- name: EE - zhuhai.uk
-  type: vless
-  server: 95.85.228.212
-  port: 443
-  uuid: 109c13c0-5ef7-47a3-b278-3d47a35136e5
-  udp: true
-  tls: true
-  servername: est.hatvpn.org
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 0aGTmSxEW21dFVomobDSRjUWnPptI4yT_eL-0PCf-h0
-    short-id: 5a7216aec1371894
-  flow: xtls-rprx-vision
-- name: 🇺🇸US_351|525KB/s|B007-260618 01
-  type: vless
-  server: 104.18.38.47
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  udp: true
-  network: ws
-  tls: true
-  servername: t1s1.rittbo.kdns.fr
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-- name: 🇺🇸_US_美国_3
-  type: trojan
-  server: 104.21.21.226
-  port: 443
-  password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db
-  udp: true
-  sni: 1P.890689.xyZ
-  network: ws
-  ws-opts:
-    path: /lXENb74xF4ylXngZ
-    headers: {}
-- name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
-  type: vless
-  server: 104.17.147.22
-  port: 2052
-  uuid: 880adfbf-6098-5ed9-8e3d-7716caf63e72
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: sPeedtest2.sbs.lu.v2vless.sitespeedtest.net
-- name: 🇺🇸US_375|823KB/s|B007-260618 01
-  type: vless
-  server: 216.24.57.6
-  port: 8443
-  uuid: 12cb0a24-0438-4980-8617-9c93205895fa
-  udp: true
-  network: ws
-  tls: true
-  servername: kakoolnews.dontstealkakoolnews.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: kakoolnews.dontstealkakoolnews.workers.dev
-- name: 🇺🇸_US_美国->🇨🇳_CN_中国
-  type: vless
-  server: 104.26.15.85
-  port: 8080
-  uuid: 0eb83f3e-7b95-427a-8952-abedfca1869f
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: QW.VU6d72nt9y.zULaiR.orG.
-- name: TR - zhuhai.uk
-  type: vless
-  server: 45.196.201.117
-  port: 443
-  uuid: f75814f6-8f81-4847-b792-168c41f2dc85
-  udp: true
-  tls: true
-  servername: storage.yandex.net
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
-    short-id: c6ef72e4635d15a5
-  flow: xtls-rprx-vision
-- name: 🇺🇸US_385|817KB/s|B007-260618 01
-  type: vless
-  server: 8.35.211.87
-  port: 2096
-  uuid: 56e4896e-90a9-4fe0-8480-90d3d68b9928
-  udp: true
-  network: ws
-  tls: true
-  servername: go.iranfree.de5.net
-  client-fingerprint: firefox
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: go.iranfree.de5.net
-- name: 🇺🇸_US_美国_1
-  type: vless
-  server: 104.17.148.22
-  port: 2052
-  uuid: 880adfbf-6098-5ed9-8e3d-7716caf63e72
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: sPeedtest2.sbs.lu.v2vless.sitespeedtest.net
-- name: 🇺🇸US_386|1.4MB/s|B007-260618 01
-  type: vless
-  server: 185.148.107.40
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vms.lifetime55.workers.dev
-- name: 🇺🇸_US_美国->🇩🇪_DE_德国
-  type: vless
-  server: 192.0.63.61
-  port: 2083
-  uuid: '@V2ConfigPro'
-  udp: true
-  network: ws
-  tls: true
-  servername: twotwoirvz.dpdns.org
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: twotwoirvz.dpdns.org
-- name: 🇺🇸US_293|685KB/s 01
-  type: vless
-  server: 104.17.28.89
-  port: 443
-  uuid: 1078d418-b4e0-4668-9018-dc90c2042d61
-  udp: true
-  network: ws
-  tls: true
-  servername: workspace.evan00.dpdns.org
-  client-fingerprint: randomized
-  ws-opts:
-    path: /
-    headers:
-      Host: workspace.evan00.dpdns.org
-- name: 🇫🇷FR_85|1.0MB/s|B007-260618 01
-  type: trojan
-  server: 104.17.131.88
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.gossipglove.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇳🇱NL_107|611KB/s|B007-260618 01
-  type: trojan
-  server: 104.19.208.184
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.multiplydose.com
-  network: ws
-  ws-opts:
-    path: //assignment
-    headers: {}
-- name: shadowsocks-278
-  type: ss
-  server: 218.237.185.230
-  port: 4652
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  udp: true
-- name: 🇵🇱PL_26|592KB/s|B007-260618 01
-  type: trojan
-  server: 104.20.6.134
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.creationlong.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇵🇱PL_28|1.0MB/s|B007-260618 01
-  type: trojan
-  server: 216.24.57.1
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.creationlong.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇺🇸US_377|956KB/s|B007-260618 01
-  type: vless
-  server: 172.67.152.71
-  port: 8880
-  uuid: 21b93e91-5bb1-4d6d-9093-1fd09ae06903
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.JP.CMLiussss.net
-    headers:
-      Host: morning-silence-7b1b.222-46c.workers.dev
-- name: 🇺🇸US_387|573KB/s|B007-260618 01
-  type: vless
-  server: 141.101.120.73
-  port: 443
-  uuid: 5d8eb33a-2166-4daf-88fe-4be5799c493b
-  udp: true
-  network: ws
-  tls: true
-  servername: noisy-term-e657.airdrop2014aa5168.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: noisy-term-e657.airdrop2014aa5168.workers.dev
-- name: 🇺🇸US_345|1.1MB/s|B007-260618 01
-  type: vless
-  server: 192.0.63.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime36.workers.dev
-- name: 🇫🇷FR_89|540KB/s|B007-260618 01
-  type: trojan
-  server: 172.64.155.209
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.gossipglove.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇺🇸US_373|1.5MB/s|B007-260618 01
-  type: vless
-  server: 185.207.197.12
-  port: 80
-  uuid: 080fad7c-ff4b-499f-ab5d-52d69ea5745a
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pyip=Telegram🇨🇳 @WangCai2
-    headers:
-      Host: calm-tree-22b0.215-d2a.workers.dev
-- name: 🇺🇸US_290|1.2MB/s 01
-  type: vless
-  server: 104.17.172.114
-  port: 2053
-  uuid: ad4ae058-cd7e-4e69-a6f7-aee7ce7b0e6e
-  udp: true
-  network: ws
-  tls: true
-  servername: node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev
-- name: 🇺🇸US_291|1010KB/s 01
-  type: vless
-  server: 172.67.78.139
-  port: 8443
-  uuid: ad4ae058-cd7e-4e69-a6f7-aee7ce7b0e6e
-  udp: true
-  network: ws
-  tls: true
-  servername: node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev
-- name: 🇺🇸US_346|1.3MB/s|B007-260618 01
-  type: vless
-  server: 194.76.18.2
-  port: 8880
-  uuid: bb5f4b63-0b91-4f2c-8a02-66c3f99c1aaa
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pyip=Telegram🇨🇳 @WangCai2
-    headers:
-      Host: yellow-mouse-fcce.400-318.workers.dev
-- name: 🇵🇱PL_27|1.3MB/s|B007-260618 01
-  type: trojan
-  server: 208.103.161.110
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.creationlong.org
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇺🇸US_374|1.0MB/s|B007-260618 01
-  type: vless
-  server: 172.67.161.104
-  port: 8880
-  uuid: 11046a7c-fa1b-4653-ab87-400feb465540
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: nameless-poetry-12fb.8-0a2.workers.dev
-- name: 🇵🇱PL_29|1.5MB/s|B007-260618 01
-  type: trojan
-  server: 216.24.57.6
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.creationlong.org
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇺🇸US_371|1.6MB/s|B007-260618 01
-  type: vless
-  server: 188.114.96.3
-  port: 2053
-  uuid: 0779dc74-2464-461f-90ef-874e4cae7fae
-  udp: true
-  network: ws
-  tls: true
-  servername: WeaTHeREd-MATH-1f8B.aMIRAligHasEMPoR010.WOrkERs.dEv
-  client-fingerprint: chrome
-  ws-opts:
-    path: /eyJqdW5rIjoiUHQ4YzBma3IxczlPIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OjExOjY0OjpdIl19?ed
-    headers:
-      Host: weathered-math-1f8b.amiralighasempor010.workers.dev
-- name: 🇺🇸US_294|979KB/s|A001-260618 01
-  type: vless
-  server: 104.18.45.249
-  port: 8443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  udp: true
-  network: ws
-  tls: true
-  servername: t1s1.rittbo.kdns.fr
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: t1s1.rittbo.kdns.fr
 - name: 🇺🇸US_352|1.1MB/s|B007-260618 01
   type: vless
   server: 104.18.42.98
@@ -839,9 +17,62 @@ proxies:
     path: /
     headers:
       Host: t1s1.rittbo.kdns.fr
-- name: 🇺🇸US_353|1.3MB/s|B007-260618 01
+- name: shadowsocks-166
+  type: ss
+  server: 137.184.174.93
+  port: 8080
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  udp: true
+- name: trojan-59508879
+  type: trojan
+  server: 148.72.168.35
+  port: 58615
+  password: bIsrw94HH7zmhmvmGskKIb4HbmOZdcCR
+  udp: true
+  sni: 148.72.168.35
+  skip-cert-verify: true
+- name: trojan-120887
+  type: trojan
+  server: 64.94.95.117
+  port: 57142
+  password: kkzh2prsyr2ik47as615
+  udp: true
+  sni: static.rutube.ru
+  skip-cert-verify: true
+- name: trojan-2520863
+  type: trojan
+  server: 64.94.95.115
+  port: 57142
+  password: kkzh2prsyr2ik47as615
+  udp: true
+  sni: static.rutube.ru
+  skip-cert-verify: true
+- name: trojan-2520862
+  type: trojan
+  server: 64.94.95.114
+  port: 57142
+  password: kkzh2prsyr2ik47as615
+  udp: true
+  sni: static.rutube.ru
+  skip-cert-verify: true
+- name: shadowsocks-2536938
+  type: ss
+  server: 216.105.168.18
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: bQZl7HDxSabr1FurTYQHFU
+  udp: true
+- name: shadowsocks-157
+  type: ss
+  server: 108.181.0.177
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: G5p6ww4o67HB
+  udp: true
+- name: 🇺🇸US_279|593KB/s 01
   type: vless
-  server: 104.19.145.11
+  server: 104.16.72.100
   port: 443
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   udp: true
@@ -853,20 +84,680 @@ proxies:
     path: /fp
     headers:
       Host: t1s1.rittbo.kdns.fr
-- name: 🇺🇸US_388|592KB/s|B007-260618 01
-  type: vless
-  server: 173.245.59.35
+- name: shadowsocks-27055
+  type: ss
+  server: 158.173.20.171
   port: 443
-  uuid: 65d3f9b3-d289-4a8e-9c87-90bba156de30
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: shadowsocks-212
+  type: ss
+  server: 108.181.126.122
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: CJmTCCx7Ltud
+  udp: true
+- name: shadowsocks-226
+  type: ss
+  server: 141.98.101.179
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: shadowsocks-209
+  type: ss
+  server: 209.46.102.22
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: 1hhrqrokj3ag
+  udp: true
+- name: shadowsocks-156
+  type: ss
+  server: 173.244.56.9
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: shadowsocks-276
+  type: ss
+  server: 213.202.208.199
+  port: 7001
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  udp: true
+- name: shadowsocks-188
+  type: ss
+  server: 82.38.31.149
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: shadowsocks-11026
+  type: ss
+  server: 82.38.31.200
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
+- name: shadowsocks-127246
+  type: ss
+  server: 193.29.139.144
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: shadowsocks-268
+  type: ss
+  server: 82.38.31.35
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: shadowsocks-174
+  type: ss
+  server: 82.38.31.155
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: shadowsocks-19056434
+  type: ss
+  server: 92.112.126.90
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: wwzVn2ZnHfqYa6l8EWh3eY
+  udp: true
+- name: shadowsocks-189
+  type: ss
+  server: 82.38.31.184
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
+- name: shadowsocks-11031
+  type: ss
+  server: 82.38.31.213
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
+- name: shadowsocks-274
+  type: ss
+  server: 82.38.31.10
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: 🇺🇸US_401|547KB/s|B007-260618 01
+  type: vless
+  server: 172.67.89.31
+  port: 2086
+  uuid: 98b6cb05-b5ab-4c82-8683-07de28f796a9
+  udp: true
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiRHF6VWU4SmYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0
+    headers:
+      Host: holy-glitter-39f9.wwewee2dasdds.workers.dev
+- name: 🇳🇴NO_2|808KB/s|B007-260618 01
+  type: vless
+  server: 8.6.112.7
+  port: 2087
+  uuid: 412d7fbe-7474-4f1d-86c6-7eebdc628f72
+  udp: true
+  network: xhttp
+  tls: true
+  servername: norway.alfather.ir
+  client-fingerprint: chrome
+- name: shadowsocks-11052
+  type: ss
+  server: 140.174.184.5
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: qItG8SueYQcP
+  udp: true
+- name: shadowsocks-11088
+  type: ss
+  server: 38.244.132.14
+  port: 5499
+  cipher: aes-256-gcm
+  password: lGqs95QkFHo2NV
+  udp: true
+- name: 🇬🇧GB_8|1.0MB/s 01
+  type: vless
+  server: 45.131.210.63
+  port: 443
+  uuid: 14b59caf-a196-4ec2-8c70-c7b388062f5b
   udp: true
   network: ws
   tls: true
-  servername: ld.235231.xyz
+  servername: vangoghhh.info
+  client-fingerprint: chrome
+  ws-opts:
+    path: /rdfgtws
+    headers:
+      Host: vangoghhh.info
+- name: 🇬🇧GB_19|1.3MB/s|B007-260618 01
+  type: vless
+  server: 91.193.58.201
+  port: 443
+  uuid: 14b59caf-a196-4ec2-8c70-c7b388062f5b
+  udp: true
+  network: ws
+  tls: true
+  servername: vangoghhh.info
+  client-fingerprint: chrome
+  ws-opts:
+    path: /rdfgtws
+    headers:
+      Host: vangoghhh.info
+- name: 🇬🇧GB_9|1.5MB/s 01
+  type: vless
+  server: 45.12.30.228
+  port: 443
+  uuid: 14b59caf-a196-4ec2-8c70-c7b388062f5b
+  udp: true
+  network: ws
+  tls: true
+  servername: vangoghhh.info
+  client-fingerprint: chrome
+  ws-opts:
+    path: /rdfgtws
+    headers:
+      Host: vangoghhh.info
+- name: 🇫🇷FR_66|1.2MB/s|B007-260618 01
+  type: trojan
+  server: 104.16.174.117
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: US - zhuhai.uk 02
+  type: trojan
+  server: 104.18.16.56
+  port: 443
+  password: MITIVPN
+  udp: true
+  sni: i---7-MiTiVPN----o.aPp-cLoud.IR
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: '---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN=des'
+    headers:
+      Host: i---7-MiTiVPN----o.aPp-cLoud.IR
+- name: 🇬🇧GB_17|715KB/s|B007-260618 01
+  type: vless
+  server: 104.21.5.137
+  port: 443
+  uuid: 14b59caf-a196-4ec2-8c70-c7b388062f5b
+  udp: true
+  network: ws
+  tls: true
+  servername: vangoghhh.info
+  client-fingerprint: chrome
+  ws-opts:
+    path: /rdfgtws
+    headers:
+      Host: vangoghhh.info
+- name: 🇫🇷FR_70|1.3MB/s|B007-260618 01
+  type: trojan
+  server: 104.18.152.225
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: shadowsocks-240
+  type: ss
+  server: 94.156.250.148
+  port: 7001
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  udp: true
+- name: 🇫🇷FR_67|863KB/s|B007-260618 01
+  type: trojan
+  server: 104.16.174.36
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_71|594KB/s|B007-260618 01
+  type: trojan
+  server: 104.21.40.34
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.gossipglove.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_68|854KB/s|B007-260618 01
+  type: trojan
+  server: 104.16.174.44
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: shadowsocks-213
+  type: ss
+  server: 149.22.87.240
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: shadowsocks-211
+  type: ss
+  server: 149.22.87.241
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: 🇺🇸US_1103|666KB/s|B007-260618 01
+  type: vless
+  server: 104.16.72.41
+  port: 443
+  uuid: c19735a7-ff97-a112-3f07-60e500f7719b
+  udp: true
+  network: ws
+  tls: true
+  servername: l-j-uu-MiTiVPN---MiTiVPN-o.MAQROR.ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN---@MiTiVPN=finland
+    headers:
+      Host: l-j-iii-MiTiVPN---MiTiVPN-o.MAQROR.ir
+- name: 🇫🇷FR_72|970KB/s|B007-260618 01
+  type: trojan
+  server: 185.18.250.252
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇺🇸US_398|539KB/s|B007-260618 01
+  type: vless
+  server: 104.18.42.163
+  port: 2095
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: download.pusytroller.gq
+- name: 🇵🇱PL_22|968KB/s|B007-260618 01
+  type: trojan
+  server: 198.202.211.1
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.creationlong.org
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_69|1.3MB/s|B007-260618 01
+  type: trojan
+  server: 104.16.71.213
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: shadowsocks-35277585
+  type: ss
+  server: 36.224.162.159
+  port: 50099
+  cipher: chacha20-ietf-poly1305
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  udp: true
+- name: shadowsocks-283
+  type: ss
+  server: 221.139.79.57
+  port: 13979
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  udp: true
+- name: shadowsocks-287
+  type: ss
+  server: 211.178.105.134
+  port: 6123
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  udp: true
+- name: shadowsocks-16133
+  type: ss
+  server: 103.111.114.61
+  port: 28061
+  cipher: chacha20-ietf-poly1305
+  password: WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm
+  udp: true
+- name: shadowsocks-246
+  type: ss
+  server: 102.133.165.160
+  port: 16233
+  cipher: chacha20-ietf-poly1305
+  password: Xsy8Ox4yOV3xLlpxtjzs3X
+  udp: true
+- name: shadowsocks-278
+  type: ss
+  server: 218.237.185.230
+  port: 4652
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  udp: true
+- name: shadowsocks-236
+  type: ss
+  server: 102.37.156.224
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  udp: true
+- name: shadowsocks-125595
+  type: ss
+  server: 141.164.45.187
+  port: 7002
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  udp: true
+- name: shadowsocks-125602
+  type: ss
+  server: 141.164.45.187
+  port: 9101
+  cipher: aes-256-gcm
+  password: e4FCWrgpkji3QY
+  udp: true
+- name: shadowsocks-125596
+  type: ss
+  server: 141.164.45.187
+  port: 8000
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
+  udp: true
+- name: DE - zhuhai.uk 02
+  type: vless
+  server: 82.39.171.148
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  flow: xtls-rprx-vision
+- name: 🇺🇸US_209|679KB/s 01
+  type: vless
+  server: 172.66.40.139
+  port: 443
+  uuid: 1679af35-6dd6-4c09-ae3b-18f239217f3e
+  udp: true
+  network: ws
+  tls: true
+  servername: rAyAn-007.pArViN.DpDnS.OrG
   client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: ld.235231.xyz
+      Host: rAyAn-007.pArViN.DpDnS.OrG
+- name: 🇺🇸US_341|887KB/s|B007-260618 01
+  type: vless
+  server: 104.16.72.101
+  port: 8880
+  uuid: 26fb53e4-fd49-4b34-b605-b6cc1b1a06a8
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip
+    headers:
+      Host: royal-shape-3771.93-728.workers.dev
+- name: shadowsocks-125111
+  type: ss
+  server: 103.120.178.193
+  port: 31348
+  cipher: chacha20-ietf-poly1305
+  password: EBDRo9THx4CqiFU7h5gfov76oNwzZURAh0ZwbWjBKddtUhvz
+  udp: true
+- name: shadowsocks-27048
+  type: ss
+  server: 172.105.39.124
+  port: 7002
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  udp: true
+- name: 🇺🇸US_351|525KB/s|B007-260618 01
+  type: vless
+  server: 104.18.38.47
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 🇺🇸US_286|713KB/s 01
+  type: vless
+  server: 104.17.170.132
+  port: 8880
+  uuid: 9fa85900-14f9-4874-89af-eaf7c2fe4885
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.KR.CMLiussss.net
+    headers:
+      Host: summer-hill-7bbd.149-40f.workers.dev
+- name: RU - zhuhai.uk
+  type: vless
+  server: 46.8.229.48
+  port: 443
+  uuid: 2c634977-584e-4e1f-b501-1b70c77a6743
+  udp: true
+  network: ws
+  tls: true
+  servername: furrycdn.net
+  client-fingerprint: safari
+  ws-opts:
+    path: /api/v1/video-stream
+    headers:
+      Host: furrycdn.net
+- name: 🇺🇸US_407|824KB/s|B007-260618 01
+  type: vless
+  server: 172.66.47.45
+  port: 2083
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  udp: true
+  network: ws
+  tls: true
+  servername: wk1.f1w.de5.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: wk1.f1w.de5.net
+- name: 🇺🇸US_291|1010KB/s 01
+  type: vless
+  server: 172.67.78.139
+  port: 8443
+  uuid: ad4ae058-cd7e-4e69-a6f7-aee7ce7b0e6e
+  udp: true
+  network: ws
+  tls: true
+  servername: node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev
+- name: 🇺🇸US_243|596KB/s 01
+  type: vless
+  server: 91.193.58.22
+  port: 80
+  uuid: f2d55510-fa3c-4e3b-adfc-2d96fa399c19
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=Telegram🇨🇳 @WangCai2
+    headers:
+      Host: plain-darkness-90ea.259.workers.dev
+- name: trojan-80925755
+  type: trojan
+  server: 54.69.49.203
+  port: 443
+  password: PD07395842
+  udp: true
+  sni: sharing-chipmunk.rooster465.autos
+- name: 🇺🇸US_414|536KB/s|B007-260618 01
+  type: vless
+  server: 162.159.46.67
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 🇺🇸US_419|811KB/s|B007-260618 01
+  type: vless
+  server: 172.64.52.18
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 🇺🇸US_1137|1.3MB/s|V009-260618 01
+  type: vless
+  server: 69.46.46.89
+  port: 443
+  uuid: f411d02a-fff5-86a4-9f02-cfd75fa76d41
+  udp: true
+  network: ws
+  tls: true
+  servername: x4g-production-ee29.up.railway.app
+  client-fingerprint: chrome
+  ws-opts:
+    path: /ws/f411d02a-fff5-86a4-9f02-cfd75fa76d41
+    headers:
+      Host: x4g-production-ee29.up.railway.app
+- name: 🇺🇸US_181|786KB/s 01
+  type: vless
+  server: 172.67.79.128
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /fp
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 🇺🇸US_290|1.2MB/s 01
+  type: vless
+  server: 104.17.172.114
+  port: 2053
+  uuid: ad4ae058-cd7e-4e69-a6f7-aee7ce7b0e6e
+  udp: true
+  network: ws
+  tls: true
+  servername: node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: node-726721114-1b5aef.infinityconfig7-3b9f.workers.dev
+- name: 🇺🇸US_294|979KB/s|A001-260618 01
+  type: vless
+  server: 104.18.45.249
+  port: 8443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 🇳🇱NL_107|611KB/s|B007-260618 01
+  type: trojan
+  server: 104.19.208.184
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.multiplydose.com
+  network: ws
+  ws-opts:
+    path: //assignment
+    headers: {}
+- name: 🇺🇸US_417|1.1MB/s|B007-260618 01
+  type: vless
+  server: 172.67.70.92
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 🇺🇸US_343|929KB/s|B007-260618 01
+  type: vless
+  server: 176.124.223.16
+  port: 2087
+  uuid: 38a43f18-b4d9-443f-9ff1-4cf9de3d666e
+  udp: true
+  network: ws
+  tls: true
+  servername: valid22.validbv9501.ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /eyJqdW5rIjoiS0ZJaGhSaG14Z0NMeCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjE0Ni4xMDMuMTE0LjEzNCJdfQ==
+    headers:
+      Host: valid22.validbv9501.ir
 - name: 🇺🇸US_1114|574KB/s|B007-260618 01
   type: vless
   server: 104.25.64.103
@@ -881,16 +772,70 @@ proxies:
     path: /fp
     headers:
       Host: t1s1.rittbo.kdns.fr
-- name: shadowsocks-27309
-  type: ss
-  server: 195.238.126.84
-  port: 9039
-  cipher: aes-256-cfb
-  password: qYEN5HX4JKeVCdEC
-  udp: true
-- name: 🇺🇸US_361|770KB/s|B007-260618 01
+- name: 🇺🇸US_224|1.3MB/s 01
   type: vless
-  server: 172.64.147.104
+  server: 172.64.145.158
+  port: 80
+  uuid: fe273991-0514-4a16-8ec4-b15ae861c000
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zyzzzoao.xn--fiqv8j.eu.org
+- name: 🇺🇸US_396|850KB/s|B007-260618 01
+  type: vless
+  server: 104.21.4.230
+  port: 443
+  uuid: 850371e8-bce4-4500-abd7-2a76df3b78da
+  udp: true
+  network: ws
+  tls: true
+  servername: EveNt-bUS-c22219-edG.STaGIng-Api-5De174.woRKers.dEV
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: eVENT-bus-C22219-edG.StAGING-Api-5De174.woRKERS.deV
+- name: 🇺🇸US_400|513KB/s|B007-260618 01
+  type: vless
+  server: 104.27.82.154
+  port: 8880
+  uuid: 94ed4a58-dcf4-43cb-afc1-f158e14ec42d
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: gentle-surf-cc74.345-604.workers.dev
+- name: 🇺🇸US_1101|541KB/s|B007-260618 01
+  type: vless
+  server: 104.16.227.6
+  port: 2096
+  uuid: 5dcc63ae-506d-4e31-8b75-f171afec4e8a
+  udp: true
+  network: ws
+  tls: true
+  servername: nova-swift-node-1fe1.mohammadfghkonani.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?u=free-configs
+    headers:
+      Host: nova-swift-node-1fe1.mohammadfghkonani.workers.dev
+- name: 🇺🇸US_346|1.3MB/s|B007-260618 01
+  type: vless
+  server: 194.76.18.2
+  port: 8880
+  uuid: bb5f4b63-0b91-4f2c-8a02-66c3f99c1aaa
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=Telegram🇨🇳 @WangCai2
+    headers:
+      Host: yellow-mouse-fcce.400-318.workers.dev
+- name: FR法國丨yoyapai.com
+  type: vless
+  server: cloudflare-ip.mofashi.ltd
   port: 443
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   udp: true
@@ -902,299 +847,430 @@ proxies:
     path: /
     headers:
       Host: t1s1.rittbo.kdns.fr
-- name: 未知
-  type: vmess
-  server: 89.18.58.104
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 🇨🇳_CN_中国_1
-  type: vmess
-  server: 3b6ec92e-sux8g0-swffb5-1s6xm.cu.plebai.net
-  port: 5228
-  uuid: 2b634c80-fd7e-11ef-9f25-f23c9164ca5d
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  type: vmess
-  server: 74f77c00-sutj40-t5qufl-8n27.cu.plebai.net
-  port: 5229
-  uuid: 5dc6fa05-a601-aba6-7761-ecde22d2b0fc
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 🇮🇩_ID_印度尼西亚
+- name: FR法國丨yoyapai.com-2
   type: vless
-  server: 180.131.145.32
-  port: 21000
-  uuid: d653116d-be7c-4c21-b44a-e71969564200
+  server: yx.cloudflare.182682.xyz
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   udp: true
-  network: tls
-  flow: -udp443
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-  type: vmess
-  server: 157.148.96.92
-  port: 5228
-  uuid: 6ada1622-e018-11ec-bb74-f23c9164ca5d
-  alterId: 0
-  cipher: auto
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 日本丨yoyapai.com
+  type: trojan
+  server: 18.163.123.229
+  port: 38937
+  password: b490740312aedb5f9f6b84c7aebd08c0
   udp: true
-- name: 🇩🇪_DE_德国->🇫🇷_FR_法国
+  sni: www.nintendogames.net
+- name: 美国丨yoyapai.com
   type: vless
-  server: 116.203.136.232
-  port: 2078
-  uuid: 5528489a-c548-481f-b558-8c7a8a0b6448
+  server: yx.cloudflare.182682.xyz
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   udp: true
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
-  type: vmess
-  server: cd04809b-sux8g0-t3f7qr-141tv.cu.plebai.net
-  port: 5228
-  uuid: bd77bfe8-e0f3-11ec-bd7c-f23c913c8d2b
-  alterId: 0
-  cipher: auto
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 美國丨yoyapai.com
+  type: vless
+  server: 198.41.223.238
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   udp: true
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国_4
-  type: vmess
-  server: 2e93912d-sutj40-sutgau-1r62f.cu.plebai.net
-  port: 5229
-  uuid: 154b0bf8-f9a7-11ee-a218-f23c91cfbbc9
-  alterId: 0
-  cipher: auto
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: FR法國丨yoyapai.com-3
+  type: vless
+  server: cf.877774.xyz
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   udp: true
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国_5
-  type: vmess
-  server: 2c2227e1-sutj40-t907cr-1c1mr.cu.plebai.net
-  port: 5229
-  uuid: a12640d0-e2ad-11ef-8f5b-f23c913c8d2b
-  alterId: 0
-  cipher: auto
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: CA加拿大丨yoyapai.com
+  type: vless
+  server: 162.159.21.206
+  port: 2083
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   udp: true
-- name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大
-  type: vmess
-  server: v35.heduian.link
-  port: 30835
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 🇺🇸US美國丨yoyapai.com
+  type: vless
+  server: 162.159.44.180
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: CA加拿大丨yoyapai.com-2
+  type: vless
+  server: 172.64.153.159
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: CA加拿大丨yoyapai.com-3
+  type: vless
+  server: 162.159.16.154
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: CA加拿大丨yoyapai.com-4
+  type: vless
+  server: 172.64.150.246
+  port: 2083
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: FR法國丨yoyapai.com-4
+  type: vless
+  server: store.ubi.com
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 美國CloudFlare节点丨yoyapai.com
+  type: vless
+  server: 162.159.81.104
+  port: 80
+  uuid: 4b00d726-e072-429b-997e-f07affea3b7f
   udp: true
   network: ws
   ws-opts:
-    path: /oooo
+    path: /eyJqdW5rIjoiUEVTdDRlR2hhc0JuYyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzI2MDI6ZmM1OTpiMDo2NDo6XSJdfQ
     headers:
-      Host: baidu.com
+      Host: icy-darkness-8ff1.farzambia12mo.workers.dev
+- name: CA加拿大丨yoyapai.com-5
+  type: vless
+  server: 104.18.37.237
+  port: 8443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: 🇺🇸US美國丨yoyapai.com-2
+  type: vless
+  server: 172.64.153.159
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: CA加拿大丨yoyapai.com-6
+  type: vless
+  server: 162.159.12.210
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: CA加拿大丨yoyapai.com-7
+  type: vless
+  server: 198.41.223.238
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - shadowsocks-157
-  - shadowsocks-2536938
-  - shadowsocks-156
-  - trojan-2520863
-  - trojan-120887
-  - trojan-2520862
-  - trojan-59508879
+  - 🇺🇸US_352|1.1MB/s|B007-260618 01
   - shadowsocks-166
-  - shadowsocks-213
-  - shadowsocks-211
-  - shadowsocks-35277585
-  - shadowsocks-276
-  - shadowsocks-125596
-  - shadowsocks-125597
-  - shadowsocks-125595
-  - shadowsocks-240
+  - trojan-59508879
+  - trojan-120887
+  - trojan-2520863
+  - trojan-2520862
+  - shadowsocks-2536938
+  - shadowsocks-157
+  - 🇺🇸US_279|593KB/s 01
   - shadowsocks-27055
   - shadowsocks-212
-  - shadowsocks-209
-  - shadowsocks-188
-  - shadowsocks-125602
-  - shadowsocks-125599
   - shadowsocks-226
-  - shadowsocks-125601
-  - shadowsocks-125598
-  - shadowsocks-125594
-  - shadowsocks-125593
-  - shadowsocks-11052
-  - shadowsocks-4892328
-  - 🇫🇷FR_72|970KB/s|B007-260618 01
-  - 🇫🇷FR_80|1.3MB/s|B007-260618 01
-  - DE - zhuhai.uk 02
-  - 🇺🇸US_286|713KB/s 01
-  - 🇫🇷FR_81|640KB/s|B007-260618 01
-  - shadowsocks-174
-  - 🇳🇴NO_2|808KB/s|B007-260618 01
-  - shadowsocks-11031
-  - DE - zhuhai.uk
+  - shadowsocks-209
+  - shadowsocks-156
+  - shadowsocks-276
+  - shadowsocks-188
+  - shadowsocks-11026
   - shadowsocks-127246
-  - shadowsocks-274
-  - 🇫🇷FR_90|578KB/s|B007-260618 01
-  - 🇫🇷FR_83|658KB/s|B007-260618 01
-  - shadowsocks-125093
   - shadowsocks-268
-  - 🇫🇷FR_84|1.1MB/s|B007-260618 01
-  - 🇫🇷FR_87|1.9MB/s|B007-260618 01
-  - shadowsocks-283
-  - 🇫🇷FR_67|863KB/s|B007-260618 01
+  - shadowsocks-174
+  - shadowsocks-19056434
+  - shadowsocks-189
+  - shadowsocks-11031
+  - shadowsocks-274
+  - 🇺🇸US_401|547KB/s|B007-260618 01
+  - 🇳🇴NO_2|808KB/s|B007-260618 01
+  - shadowsocks-11052
+  - shadowsocks-11088
+  - 🇬🇧GB_8|1.0MB/s 01
+  - 🇬🇧GB_19|1.3MB/s|B007-260618 01
+  - 🇬🇧GB_9|1.5MB/s 01
   - 🇫🇷FR_66|1.2MB/s|B007-260618 01
-  - shadowsocks-125600
-  - shadowsocks-207
-  - 🇺🇸US_350|1.4MB/s|B007-260618 01
-  - 🇺🇸US_1|527KB/s
-  - 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加_1
-  - EE - zhuhai.uk
-  - 🇺🇸US_351|525KB/s|B007-260618 01
-  - 🇺🇸_US_美国_3
-  - 🇺🇸_US_美国->🇳🇱_NL_荷兰
-  - 🇺🇸US_375|823KB/s|B007-260618 01
-  - 🇺🇸_US_美国->🇨🇳_CN_中国
-  - TR - zhuhai.uk
-  - 🇺🇸US_385|817KB/s|B007-260618 01
-  - 🇺🇸_US_美国_1
-  - 🇺🇸US_386|1.4MB/s|B007-260618 01
-  - 🇺🇸_US_美国->🇩🇪_DE_德国
-  - 🇺🇸US_293|685KB/s 01
-  - 🇫🇷FR_85|1.0MB/s|B007-260618 01
-  - 🇳🇱NL_107|611KB/s|B007-260618 01
+  - US - zhuhai.uk 02
+  - 🇬🇧GB_17|715KB/s|B007-260618 01
+  - 🇫🇷FR_70|1.3MB/s|B007-260618 01
+  - shadowsocks-240
+  - 🇫🇷FR_67|863KB/s|B007-260618 01
+  - 🇫🇷FR_71|594KB/s|B007-260618 01
+  - 🇫🇷FR_68|854KB/s|B007-260618 01
+  - shadowsocks-213
+  - shadowsocks-211
+  - 🇺🇸US_1103|666KB/s|B007-260618 01
+  - 🇫🇷FR_72|970KB/s|B007-260618 01
+  - 🇺🇸US_398|539KB/s|B007-260618 01
+  - 🇵🇱PL_22|968KB/s|B007-260618 01
+  - 🇫🇷FR_69|1.3MB/s|B007-260618 01
+  - shadowsocks-35277585
+  - shadowsocks-283
+  - shadowsocks-287
+  - shadowsocks-16133
+  - shadowsocks-246
   - shadowsocks-278
-  - 🇵🇱PL_26|592KB/s|B007-260618 01
-  - 🇵🇱PL_28|1.0MB/s|B007-260618 01
-  - 🇺🇸US_377|956KB/s|B007-260618 01
-  - 🇺🇸US_387|573KB/s|B007-260618 01
-  - 🇺🇸US_345|1.1MB/s|B007-260618 01
-  - 🇫🇷FR_89|540KB/s|B007-260618 01
-  - 🇺🇸US_373|1.5MB/s|B007-260618 01
-  - 🇺🇸US_290|1.2MB/s 01
+  - shadowsocks-236
+  - shadowsocks-125595
+  - shadowsocks-125602
+  - shadowsocks-125596
+  - DE - zhuhai.uk 02
+  - 🇺🇸US_209|679KB/s 01
+  - 🇺🇸US_341|887KB/s|B007-260618 01
+  - shadowsocks-125111
+  - shadowsocks-27048
+  - 🇺🇸US_351|525KB/s|B007-260618 01
+  - 🇺🇸US_286|713KB/s 01
+  - RU - zhuhai.uk
+  - 🇺🇸US_407|824KB/s|B007-260618 01
   - 🇺🇸US_291|1010KB/s 01
-  - 🇺🇸US_346|1.3MB/s|B007-260618 01
-  - 🇵🇱PL_27|1.3MB/s|B007-260618 01
-  - 🇺🇸US_374|1.0MB/s|B007-260618 01
-  - 🇵🇱PL_29|1.5MB/s|B007-260618 01
-  - 🇺🇸US_371|1.6MB/s|B007-260618 01
+  - 🇺🇸US_243|596KB/s 01
+  - trojan-80925755
+  - 🇺🇸US_414|536KB/s|B007-260618 01
+  - 🇺🇸US_419|811KB/s|B007-260618 01
+  - 🇺🇸US_1137|1.3MB/s|V009-260618 01
+  - 🇺🇸US_181|786KB/s 01
+  - 🇺🇸US_290|1.2MB/s 01
   - 🇺🇸US_294|979KB/s|A001-260618 01
-  - 🇺🇸US_352|1.1MB/s|B007-260618 01
-  - 🇺🇸US_353|1.3MB/s|B007-260618 01
-  - 🇺🇸US_388|592KB/s|B007-260618 01
+  - 🇳🇱NL_107|611KB/s|B007-260618 01
+  - 🇺🇸US_417|1.1MB/s|B007-260618 01
+  - 🇺🇸US_343|929KB/s|B007-260618 01
   - 🇺🇸US_1114|574KB/s|B007-260618 01
-  - shadowsocks-27309
-  - 🇺🇸US_361|770KB/s|B007-260618 01
-  - 未知
-  - 🇨🇳_CN_中国_1
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇮🇩_ID_印度尼西亚
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_2
-  - 🇩🇪_DE_德国->🇫🇷_FR_法国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_3
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_4
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_5
-  - 🇨🇳_CN_中国->🇨🇦_CA_加拿大
+  - 🇺🇸US_224|1.3MB/s 01
+  - 🇺🇸US_396|850KB/s|B007-260618 01
+  - 🇺🇸US_400|513KB/s|B007-260618 01
+  - 🇺🇸US_1101|541KB/s|B007-260618 01
+  - 🇺🇸US_346|1.3MB/s|B007-260618 01
+  - FR法國丨yoyapai.com
+  - FR法國丨yoyapai.com-2
+  - 日本丨yoyapai.com
+  - 美国丨yoyapai.com
+  - 美國丨yoyapai.com
+  - FR法國丨yoyapai.com-3
+  - CA加拿大丨yoyapai.com
+  - 🇺🇸US美國丨yoyapai.com
+  - CA加拿大丨yoyapai.com-2
+  - CA加拿大丨yoyapai.com-3
+  - CA加拿大丨yoyapai.com-4
+  - FR法國丨yoyapai.com-4
+  - 美國CloudFlare节点丨yoyapai.com
+  - CA加拿大丨yoyapai.com-5
+  - 🇺🇸US美國丨yoyapai.com-2
+  - CA加拿大丨yoyapai.com-6
+  - CA加拿大丨yoyapai.com-7
 - name: ♻️ 自动选择
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - shadowsocks-157
-  - shadowsocks-2536938
-  - shadowsocks-156
-  - trojan-2520863
-  - trojan-120887
-  - trojan-2520862
-  - trojan-59508879
+  - 🇺🇸US_352|1.1MB/s|B007-260618 01
   - shadowsocks-166
-  - shadowsocks-213
-  - shadowsocks-211
-  - shadowsocks-35277585
-  - shadowsocks-276
-  - shadowsocks-125596
-  - shadowsocks-125597
-  - shadowsocks-125595
-  - shadowsocks-240
+  - trojan-59508879
+  - trojan-120887
+  - trojan-2520863
+  - trojan-2520862
+  - shadowsocks-2536938
+  - shadowsocks-157
+  - 🇺🇸US_279|593KB/s 01
   - shadowsocks-27055
   - shadowsocks-212
-  - shadowsocks-209
-  - shadowsocks-188
-  - shadowsocks-125602
-  - shadowsocks-125599
   - shadowsocks-226
-  - shadowsocks-125601
-  - shadowsocks-125598
-  - shadowsocks-125594
-  - shadowsocks-125593
-  - shadowsocks-11052
-  - shadowsocks-4892328
-  - 🇫🇷FR_72|970KB/s|B007-260618 01
-  - 🇫🇷FR_80|1.3MB/s|B007-260618 01
-  - DE - zhuhai.uk 02
-  - 🇺🇸US_286|713KB/s 01
-  - 🇫🇷FR_81|640KB/s|B007-260618 01
-  - shadowsocks-174
-  - 🇳🇴NO_2|808KB/s|B007-260618 01
-  - shadowsocks-11031
-  - DE - zhuhai.uk
+  - shadowsocks-209
+  - shadowsocks-156
+  - shadowsocks-276
+  - shadowsocks-188
+  - shadowsocks-11026
   - shadowsocks-127246
-  - shadowsocks-274
-  - 🇫🇷FR_90|578KB/s|B007-260618 01
-  - 🇫🇷FR_83|658KB/s|B007-260618 01
-  - shadowsocks-125093
   - shadowsocks-268
-  - 🇫🇷FR_84|1.1MB/s|B007-260618 01
-  - 🇫🇷FR_87|1.9MB/s|B007-260618 01
-  - shadowsocks-283
-  - 🇫🇷FR_67|863KB/s|B007-260618 01
+  - shadowsocks-174
+  - shadowsocks-19056434
+  - shadowsocks-189
+  - shadowsocks-11031
+  - shadowsocks-274
+  - 🇺🇸US_401|547KB/s|B007-260618 01
+  - 🇳🇴NO_2|808KB/s|B007-260618 01
+  - shadowsocks-11052
+  - shadowsocks-11088
+  - 🇬🇧GB_8|1.0MB/s 01
+  - 🇬🇧GB_19|1.3MB/s|B007-260618 01
+  - 🇬🇧GB_9|1.5MB/s 01
   - 🇫🇷FR_66|1.2MB/s|B007-260618 01
-  - shadowsocks-125600
-  - shadowsocks-207
-  - 🇺🇸US_350|1.4MB/s|B007-260618 01
-  - 🇺🇸US_1|527KB/s
-  - 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加_1
-  - EE - zhuhai.uk
-  - 🇺🇸US_351|525KB/s|B007-260618 01
-  - 🇺🇸_US_美国_3
-  - 🇺🇸_US_美国->🇳🇱_NL_荷兰
-  - 🇺🇸US_375|823KB/s|B007-260618 01
-  - 🇺🇸_US_美国->🇨🇳_CN_中国
-  - TR - zhuhai.uk
-  - 🇺🇸US_385|817KB/s|B007-260618 01
-  - 🇺🇸_US_美国_1
-  - 🇺🇸US_386|1.4MB/s|B007-260618 01
-  - 🇺🇸_US_美国->🇩🇪_DE_德国
-  - 🇺🇸US_293|685KB/s 01
-  - 🇫🇷FR_85|1.0MB/s|B007-260618 01
-  - 🇳🇱NL_107|611KB/s|B007-260618 01
+  - US - zhuhai.uk 02
+  - 🇬🇧GB_17|715KB/s|B007-260618 01
+  - 🇫🇷FR_70|1.3MB/s|B007-260618 01
+  - shadowsocks-240
+  - 🇫🇷FR_67|863KB/s|B007-260618 01
+  - 🇫🇷FR_71|594KB/s|B007-260618 01
+  - 🇫🇷FR_68|854KB/s|B007-260618 01
+  - shadowsocks-213
+  - shadowsocks-211
+  - 🇺🇸US_1103|666KB/s|B007-260618 01
+  - 🇫🇷FR_72|970KB/s|B007-260618 01
+  - 🇺🇸US_398|539KB/s|B007-260618 01
+  - 🇵🇱PL_22|968KB/s|B007-260618 01
+  - 🇫🇷FR_69|1.3MB/s|B007-260618 01
+  - shadowsocks-35277585
+  - shadowsocks-283
+  - shadowsocks-287
+  - shadowsocks-16133
+  - shadowsocks-246
   - shadowsocks-278
-  - 🇵🇱PL_26|592KB/s|B007-260618 01
-  - 🇵🇱PL_28|1.0MB/s|B007-260618 01
-  - 🇺🇸US_377|956KB/s|B007-260618 01
-  - 🇺🇸US_387|573KB/s|B007-260618 01
-  - 🇺🇸US_345|1.1MB/s|B007-260618 01
-  - 🇫🇷FR_89|540KB/s|B007-260618 01
-  - 🇺🇸US_373|1.5MB/s|B007-260618 01
-  - 🇺🇸US_290|1.2MB/s 01
+  - shadowsocks-236
+  - shadowsocks-125595
+  - shadowsocks-125602
+  - shadowsocks-125596
+  - DE - zhuhai.uk 02
+  - 🇺🇸US_209|679KB/s 01
+  - 🇺🇸US_341|887KB/s|B007-260618 01
+  - shadowsocks-125111
+  - shadowsocks-27048
+  - 🇺🇸US_351|525KB/s|B007-260618 01
+  - 🇺🇸US_286|713KB/s 01
+  - RU - zhuhai.uk
+  - 🇺🇸US_407|824KB/s|B007-260618 01
   - 🇺🇸US_291|1010KB/s 01
-  - 🇺🇸US_346|1.3MB/s|B007-260618 01
-  - 🇵🇱PL_27|1.3MB/s|B007-260618 01
-  - 🇺🇸US_374|1.0MB/s|B007-260618 01
-  - 🇵🇱PL_29|1.5MB/s|B007-260618 01
-  - 🇺🇸US_371|1.6MB/s|B007-260618 01
+  - 🇺🇸US_243|596KB/s 01
+  - trojan-80925755
+  - 🇺🇸US_414|536KB/s|B007-260618 01
+  - 🇺🇸US_419|811KB/s|B007-260618 01
+  - 🇺🇸US_1137|1.3MB/s|V009-260618 01
+  - 🇺🇸US_181|786KB/s 01
+  - 🇺🇸US_290|1.2MB/s 01
   - 🇺🇸US_294|979KB/s|A001-260618 01
-  - 🇺🇸US_352|1.1MB/s|B007-260618 01
-  - 🇺🇸US_353|1.3MB/s|B007-260618 01
-  - 🇺🇸US_388|592KB/s|B007-260618 01
+  - 🇳🇱NL_107|611KB/s|B007-260618 01
+  - 🇺🇸US_417|1.1MB/s|B007-260618 01
+  - 🇺🇸US_343|929KB/s|B007-260618 01
   - 🇺🇸US_1114|574KB/s|B007-260618 01
-  - shadowsocks-27309
-  - 🇺🇸US_361|770KB/s|B007-260618 01
-  - 未知
-  - 🇨🇳_CN_中国_1
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇮🇩_ID_印度尼西亚
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_2
-  - 🇩🇪_DE_德国->🇫🇷_FR_法国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_3
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_4
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_5
-  - 🇨🇳_CN_中国->🇨🇦_CA_加拿大
+  - 🇺🇸US_224|1.3MB/s 01
+  - 🇺🇸US_396|850KB/s|B007-260618 01
+  - 🇺🇸US_400|513KB/s|B007-260618 01
+  - 🇺🇸US_1101|541KB/s|B007-260618 01
+  - 🇺🇸US_346|1.3MB/s|B007-260618 01
+  - FR法國丨yoyapai.com
+  - FR法國丨yoyapai.com-2
+  - 日本丨yoyapai.com
+  - 美国丨yoyapai.com
+  - 美國丨yoyapai.com
+  - FR法國丨yoyapai.com-3
+  - CA加拿大丨yoyapai.com
+  - 🇺🇸US美國丨yoyapai.com
+  - CA加拿大丨yoyapai.com-2
+  - CA加拿大丨yoyapai.com-3
+  - CA加拿大丨yoyapai.com-4
+  - FR法國丨yoyapai.com-4
+  - 美國CloudFlare节点丨yoyapai.com
+  - CA加拿大丨yoyapai.com-5
+  - 🇺🇸US美國丨yoyapai.com-2
+  - CA加拿大丨yoyapai.com-6
+  - CA加拿大丨yoyapai.com-7
 rules:
 - MATCH,🚀 节点选择
