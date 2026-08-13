@@ -3,6 +3,27 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
+- name: shadowsocks-415243975
+  type: ss
+  server: 23.150.248.20
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: qB2Cv9VIlujj
+  udp: true
+- name: shadowsocks-159
+  type: ss
+  server: 156.146.38.170
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: shadowsocks-158
+  type: ss
+  server: 156.146.38.167
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
 - name: shadowsocks-27269
   type: ss
   server: 138.199.42.68
@@ -10,105 +31,242 @@ proxies:
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
   udp: true
-- name: trojan-246566047
+- name: shadowsocks-163
+  type: ss
+  server: 156.146.38.168
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: trojan-120887
+  type: trojan
+  server: 64.94.95.117
+  port: 57142
+  password: kkzh2prsyr2ik47as615
+  udp: true
+  sni: static.rutube.ru
+  skip-cert-verify: true
+- name: shadowsocks-194
+  type: ss
+  server: 156.146.38.169
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: trojan-198807551
+  type: trojan
+  server: 64.94.95.114
+  port: 57142
+  password: kkzh2prsyr2ik47as615
+  udp: true
+  skip-cert-verify: true
+- name: trojan-2520863
   type: trojan
   server: 64.94.95.115
   port: 57142
   password: kkzh2prsyr2ik47as615
   udp: true
-  sni: 64.94.95.115
+  sni: static.rutube.ru
   skip-cert-verify: true
-- name: 🇫🇷FR_170|471KB/s|T001-260618
-  type: vless
-  server: 91.193.59.251
-  port: 2053
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+- name: trojan-2520867
+  type: trojan
+  server: 64.94.95.118
+  port: 57142
+  password: kkzh2prsyr2ik47as615
   udp: true
-  network: ws
+  sni: 64.94.95.118
+  skip-cert-verify: true
+- name: vless-468883230
+  type: vless
+  server: 195.211.98.214
+  port: 443
+  uuid: 522fdbb0-61a9-4779-bcc9-ebae85978685
+  udp: true
   tls: true
-  servername: vlso6.1d.mom
+  servername: www.cloudflare.com
   client-fingerprint: chrome
-  ws-opts:
-    path: /socks5=888:888@hkip.1d.mom:1080
-    headers:
-      Host: vlso6.1d.mom
-- name: 🇫🇷FR_159|232KB/s|B007-260618
+  reality-opts:
+    public-key: 1GEimhTv11Oyp85VBhiJ77ytOsmb3O6On8O7jkdH0EE
+    short-id: 62bae2f417e00f89
+  flow: xtls-rprx-vision
+- name: vless-461784514
   type: vless
-  server: 104.18.36.122
-  port: 8880
-  uuid: 9bf81377-d077-4569-9fc9-5f0a55180651
+  server: 195.211.99.49
+  port: 443
+  uuid: 7eed6d87-ecf6-467b-a8ca-52071fa84fca
+  udp: true
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: VRrsZmyM-QD8YgLGgy2h3pMLbauIBCMoGN2pc8Xt5hE
+    short-id: b605d4e8b7f453ab
+  flow: xtls-rprx-vision
+- name: vless-468904445
+  type: vless
+  server: 195.211.99.45
+  port: 443
+  uuid: 1f999bcd-f85e-47c3-afd7-92b6dd6b14b0
+  udp: true
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: U_LRWSRuJNqBS3kXxaXveMhC_D8c_WuqK3sglCGCnSo
+    short-id: 17a6cd20d21e4740
+  flow: xtls-rprx-vision
+- name: 🇺🇸US_25|353KB/s|B007-260618
+  type: vless
+  server: 104.18.42.163
+  port: 2095
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
   udp: true
   network: ws
   ws-opts:
-    path: /pyip=ProxyIP.JP.CMLiussss.net
+    path: /
     headers:
-      Host: super-feather-91c4.267.workers.dev
-- name: CO - zhuhai.uk
+      Host: download.pusytroller.gq
+- name: NL - zhuhai.uk 02
   type: vless
-  server: 149.130.189.155
+  server: 84.235.166.120
   port: 62145
   uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
   udp: true
-- name: 🇫🇷FR_3|358KB/s
+- name: NL - zhuhai.uk 05
   type: vless
-  server: 104.16.107.139
-  port: 8880
-  uuid: ff7390de-ce93-4d7d-b08b-bef8f71a85cf
+  server: 84.235.161.95
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: NL - zhuhai.uk 03
+  type: vless
+  server: 158.101.217.235
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: BR - zhuhai.uk
+  type: ss
+  server: 137.131.248.115
+  port: 59319
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 1HM/x7SUJ1uHRmACfHbU051eV5vmNLtG+fT9AXeoEq0=
+  udp: true
+- name: 🇺🇸US_67|266KB/s|A001-260618
+  type: vless
+  server: 162.159.36.5
+  port: 2095
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
   udp: true
   network: ws
   ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
+    path: /
     headers:
-      Host: tiny-lake-c7f3.16-1af.workers.dev
-- name: 🇫🇷FR_215|195KB/s
+      Host: fangbinxingnmsl.pusytroller.gq
+- name: 🇺🇸US_68|182KB/s|A001-260618
   type: vless
-  server: 172.64.88.251
-  port: 8880
-  uuid: 87a5d3eb-afd4-4193-9787-c54ef7c26c8c
+  server: 172.64.144.82
+  port: 2095
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
   udp: true
   network: ws
   ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
+    path: /
     headers:
-      Host: patient-cake-39c7.44-e7a.workers.dev
-- name: 🇫🇷FR_33|212KB/s|C002-260622
+      Host: fangbinxingnmsl.pusytroller.gq
+- name: vless-468901396
   type: vless
-  server: 104.17.181.19
-  port: 8880
-  uuid: b8cd08fd-a19a-4ad0-b8ae-b664b89791da
+  server: 104.16.72.41
+  port: 2095
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
   udp: true
   network: ws
   ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
+    path: /
     headers:
-      Host: sweet-scene-bffd.312-860.workers.dev
-- name: KR - zhuhai.uk 02
+      Host: fuckfangbinxing.pusytroller.gq
+- name: vless-468154221
   type: vless
-  server: 43.203.209.13
-  port: 10046
-  uuid: B1BF44DF-BADD-44EE-826A-12C27206993D
+  server: 67.220.73.204
+  port: 18662
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
   udp: true
-  network: grpc
+  network: tcp#🎗️100@oneclickvpnkeys
   tls: true
-  servername: s0.awsstatic.com
+  servername: www.apple.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: 686c0ef0
-  grpc-opts:
-    grpc-service-name: update
-- name: 🇫🇷FR_194|239KB/s
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  flow: xtls-rprx-vision
+- name: vless-468892486
   type: vless
-  server: 172.66.200.130
-  port: 8880
-  uuid: 4c37df21-0a34-41bf-8bc7-78efd823c03b
+  server: 8.6.112.6
+  port: 443
+  uuid: 49e76398-5127-4005-90cb-c2a971f745f1
   udp: true
   network: ws
+  tls: true
+  servername: lucxi.lightorbitlab-kiloilm.sbs
+  client-fingerprint: qq
   ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
+    path: /ram
     headers:
-      Host: shiny-salad-e491.479.workers.dev
-- name: 🇫🇷FR_108|238KB/s|M002-260618
+      Host: lucxi.lightorbitlab-kiloilm.sbs
+- name: vless-468900810
+  type: vless
+  server: 104.17.134.117
+  port: 443
+  uuid: 49e76398-5127-4005-90cb-c2a971f745f1
+  udp: true
+  network: ws
+  tls: true
+  servername: nmrgf.minipixelbox-nexoim.sbs
+  ws-opts:
+    path: /ram
+    headers:
+      Host: nmrgf.minipixelbox-nexoim.sbs
+- name: 🇫🇷FR_102|109KB/s|M002-260618
+  type: vless
+  server: 104.16.72.70
+  port: 443
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  udp: true
+  network: ws
+  tls: true
+  servername: hhlfy.twiladaphne.ndjp.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2560
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+- name: vless-468900809
+  type: vless
+  server: 188.114.97.3
+  port: 443
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+  udp: true
+  network: ws
+  tls: true
+  servername: josni.hoyes.cloudns.ch
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: josni.hoyes.cloudns.ch
+- name: vless-465856923
+  type: vless
+  server: 172.66.44.97
+  port: 443
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+  udp: true
+  network: ws
+  tls: true
+  servername: josni.hoyes.cloudns.ch
+  ws-opts:
+    path: musiclovers85_musiclovers85?ed
+    headers:
+      Host: josni.hoyes.cloudns.ch
+- name: 🇫🇷FR_92|317KB/s|M002-260618
   type: vless
   server: 162.159.60.231
   port: 443
@@ -122,91 +280,143 @@ proxies:
     path: /fp=chrome
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
-- name: 🇫🇷FR_133|222KB/s|B007-260618
+- name: 🇺🇸US_70|454KB/s|M002-260618
   type: vless
-  server: 104.18.11.118
-  port: 8880
-  uuid: 17b2ed22-5fd0-47ad-b5f0-658379379ced
+  server: 162.159.44.195
+  port: 443
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   udp: true
   network: ws
+  tls: true
+  servername: hhlfy.twiladaphne.ndjp.net
+  client-fingerprint: chrome
   ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
+    path: /fp=random
     headers:
-      Host: black-wildflower-dd92.72-1e8.workers.dev
-- name: 🇫🇷FR_154|377KB/s|A004-260618
+      Host: hhlfy.twiladaphne.ndjp.net
+- name: shadowsocks-11074
+  type: ss
+  server: 185.196.61.82
+  port: 8080
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
+  udp: true
+- name: 🇫🇷FR_99|468KB/s|M002-260618
   type: vless
-  server: 104.21.23.72
+  server: 104.16.158.249
+  port: 443
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  udp: true
+  network: ws
+  tls: true
+  servername: hhlfy.twiladaphne.ndjp.net
+  client-fingerprint: random
+  ws-opts:
+    path: /
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+- name: vless-463888256
+  type: vless
+  server: 199.232.78.160
+  port: 443
+  uuid: XpnTeam-35
+  udp: true
+  network: ws
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: appxdn.global.ssl.fastly.net
+- name: ❓Other_13|139KB/s|M002-260618
+  type: vless
+  server: 104.18.34.124
+  port: 443
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  udp: true
+  network: ws
+  tls: true
+  servername: hhlfy.twiladaphne.ndjp.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+- name: vless-468154225
+  type: vless
+  server: 169.40.42.232
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  network: tcp#🎗️98@oneclickvpnkeys
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  flow: xtls-rprx-vision
+- name: vless-468904448
+  type: vless
+  server: 47.89.186.170
+  port: 55861
+  uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
+  udp: true
+  tls: true
+  servername: www.intel.com
+  client-fingerprint: edge
+  reality-opts:
+    public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
+    short-id: 7551ed1b
+  flow: xtls-rprx-vision
+- name: FI - zhuhai.uk
+  type: vless
+  server: 163.5.153.153
+  port: 443
+  uuid: 0a76a766-d141-44b8-944e-dff757d7116f
+  udp: true
+  network: raw
+  tls: true
+  servername: www.samsung.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: aB_2Tcf0A5LoiIEZHztR_l-ZOFeJKxYRH67s_OVQ9C0
+    short-id: a91045bc
+  flow: xtls-rprx-vision
+- name: vless-468892528
+  type: vless
+  server: 8.6.112.6
+  port: 2053
+  uuid: d361072e-9e0e-4e2d-8ec7-2a4189b5b23a
+  udp: true
+  network: ws
+  tls: true
+  servername: ov.iran-servers.shop
+  client-fingerprint: qq
+  ws-opts:
+    path: /J5aLQOY1R9ONWYCM
+    headers:
+      Host: ov.iran-servers.shop
+- name: 🇫🇷FR_1|324KB/s
+  type: vless
+  server: 172.66.214.247
   port: 8880
-  uuid: 942bdcfc-e522-44f1-b899-3bd8db7c5ae2
+  uuid: e7f6f783-6754-4228-a5d0-aeed84b9949a
   udp: true
   network: ws
   ws-opts:
     path: /pyip=ProxyIP.SG.CMLiussss.net
     headers:
-      Host: winter-leaf-b4da.122-6c9.workers.dev
-- name: 🇫🇷FR_175|205KB/s|M003-260806
-  type: vless
-  server: 104.16.97.215
-  port: 8880
-  uuid: 20f21d96-3700-46d9-9f63-5933403c0c18
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.JP.CMLiussss.net
-    headers:
-      Host: restless-math-7bde.299-75c.workers.dev
-- name: 🇫🇷FR_42|168KB/s|C002-260622
-  type: vless
-  server: 104.16.8.66
-  port: 8880
-  uuid: d6d0ba7b-fa88-4b2c-9915-530ae4a81035
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.JP.CMLiussss.net
-    headers:
-      Host: aged-mud-9b4c.202-2dc.workers.dev
-- name: SE - zhuhai.uk
-  type: vless
-  server: dsech.mostserv.xyz
-  port: 443
-  uuid: 463a26c2-eba8-40ea-89c4-ee5c1373ccbe
-  udp: true
-  tls: true
-  servername: dsech.mostserv.xyz
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: g0mDPNlv3uOrnxXvBYP3cEjd0ewJuIFlBh93KE5bU3A
-    short-id: d0ca141e839394a3
-  flow: xtls-rprx-vision
-- name: US - zhuhai.uk 05
-  type: vmess
-  server: 366-1095.rabbitpro-in-3.com
-  port: 29018
-  uuid: e351d6d8-c167-3e07-8fda-3f2f4ec0760b
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: IN - zhuhai.uk
-  type: vless
-  server: 157.20.27.52
-  port: 443
-  uuid: ff1b0b50-70dc-4bae-866e-55cff86f4d6d
-  udp: true
-  tls: true
-  servername: apxc.falsemirrov.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: sbl95eJz_SP1vYb8doCjAJOo0o5NveutEb9J-XKGl1w
-    short-id: 9c2378562188c3cb
-  flow: xtls-rprx-vision
-- name: trojan-408494770
+      Host: sweet-sun-c70f.317-ba5.workers.dev
+- name: trojan-24728
   type: trojan
-  server: 188.114.97.6
+  server: 172.64.152.23
   port: 443
-  password: MITIVPN
+  password: humanity
   udp: true
-  sni: usa-sa-mitivpn--mitivpn--mitivpn---mitivpn--mitivpn--mitivpn.mitivpn.lifestyle
+  sni: www.calmlunch.com
+  skip-cert-verify: true
   network: ws
   ws-opts:
     path: /
@@ -222,36 +432,17 @@ proxies:
     path: /@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy?ed=2048
     headers:
       Host: www.speedtest.net.www.zula.ir.cloudflare.com.www.parsvds.ir.svgspeedtest.net.
-- name: 🇺🇸US_447|79KB/s|R002-260618
-  type: ss
-  server: www.syfe.com
-  port: 80
-  cipher: 2022-blake3-aes-128-gcm
-  password: YTE1ZWU4ZTEyZjc3YmEzZA==:ZjQ4NzExMzUtMGYzNy00NA==
-  udp: true
-- name: 🇫🇷FR_188|471KB/s
+- name: 🇫🇷FR_25|199KB/s|C002-260622
   type: vless
-  server: 172.66.214.247
+  server: 104.26.13.40
   port: 8880
-  uuid: e7f6f783-6754-4228-a5d0-aeed84b9949a
+  uuid: 2b2ed3be-36bd-486d-9d04-ebf5b4be7ae9
   udp: true
   network: ws
   ws-opts:
     path: /pyip=ProxyIP.SG.CMLiussss.net
     headers:
-      Host: sweet-sun-c70f.317-ba5.workers.dev
-- name: trojan-379268098
-  type: trojan
-  server: 104.17.148.22
-  port: 443
-  password: MiTiVPN
-  udp: true
-  sni: gb-ss-mitivpn--mitivpn--mitivpn---mitivpn--mitivpn--mitivpn.mitivpn.lifestyle
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
+      Host: twilight-heart-dbd6.220-2bd.workers.dev
 - name: 🇺🇸_US_美国_6
   type: vless
   server: 172.67.73.163
@@ -263,54 +454,20 @@ proxies:
     path: /
     headers:
       Host: 0j.Gr02P5L88B.zUlaIR.oRG.
-- name: 🇫🇷FR_196|178KB/s
+- name: 🇫🇷FR_71|216KB/s|B007-260618
   type: trojan
-  server: 167.68.4.199
-  port: 2053
-  password: Aimer
-  udp: true
-  sni: epge.muarua.filegear-sg.me
-  network: ws
-  ws-opts:
-    path: /?proxyip=ts.hpc.tw
-    headers: {}
-- name: trojan-442529881
-  type: trojan
-  server: 104.19.229.21
+  server: 104.16.174.44
   port: 443
-  password: MITIVPN
+  password: humanity
   udp: true
-  sni: d--aa-ia-mitivpn--mitivpn--mitivpn---mitivpn--mitivpn--mitivpn.mitivpn.lifestyle
-  skip-cert-verify: true
+  sni: www.ignitelimit.com
   network: ws
   ws-opts:
-    path: /
+    path: /assignment
     headers: {}
-- name: 🇺🇸_US_美国_5
-  type: vless
-  server: 104.17.147.22
-  port: 2082
-  uuid: 8209dbd9-24ef-4d84-bf40-b0e9dbba1279
-  udp: true
-  network: ws
-  ws-opts:
-    path: /@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn?ed=2082
-    headers:
-      Host: novinsoft.ir.oradoshop.com.persiangsm.ir.digikala.com.abadis.ir.shad.ir.divar.ir.downloadly.com.aparat.com.cafebazar.ir.varzesh3.com.ninisite.com.abadis.ir.bama.ir.p30download.ir.telewebion.bmi.ir.shad.ir.mayket.com.ninisite.top.
-- name: 🇫🇷FR_204|482KB/s
-  type: vless
-  server: 45.142.120.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime08.workers.dev
-- name: trojan-114712191
+- name: trojan-13367504
   type: trojan
-  server: 104.16.72.41
+  server: 188.114.96.3
   port: 443
   password: humanity
   udp: true
@@ -331,18 +488,28 @@ proxies:
     path: /?ed=2048
     headers:
       Host: 2r.YFxG2buH2B.zULaIr.orG.
-- name: trojan-292956737
-  type: trojan
-  server: 165.215.250.14
-  port: 443
-  password: humanity
+- name: 🇫🇷FR_19|207KB/s|C002-260622
+  type: vless
+  server: 162.159.140.78
+  port: 8880
+  uuid: a8c27bd6-e395-4f9b-a75d-1c3bc6b1f83a
   udp: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
-    headers: {}
+    path: /pyip=ProxyIP.JP.CMLiussss.net
+    headers:
+      Host: long-boat-7113.303-08c.workers.dev
+- name: 🇺🇸_US_美国_5
+  type: vless
+  server: 104.17.147.22
+  port: 2082
+  uuid: 8209dbd9-24ef-4d84-bf40-b0e9dbba1279
+  udp: true
+  network: ws
+  ws-opts:
+    path: /@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn?ed=2082
+    headers:
+      Host: novinsoft.ir.oradoshop.com.persiangsm.ir.digikala.com.abadis.ir.shad.ir.divar.ir.downloadly.com.aparat.com.cafebazar.ir.varzesh3.com.ninisite.com.abadis.ir.bama.ir.p30download.ir.telewebion.bmi.ir.shad.ir.mayket.com.ninisite.top.
 - name: 🇺🇸_US_美国_3
   type: vless
   server: 104.26.15.85
@@ -354,39 +521,20 @@ proxies:
     path: /?ed=2048
     headers:
       Host: PG.xu1C4F9uxY.ZuLAiR.ORg.
-- name: FI - zhuhai.uk 02
+- name: 🇫🇷FR_5|225KB/s
   type: vless
-  server: ru211.mechvpn.online
+  server: 208.103.161.5
   port: 443
-  uuid: 1c6824de-312c-4876-aa3f-5a30e3df2de7
+  uuid: d042a74a-c305-4eec-a89f-39a348022c92
   udp: true
+  network: ws
   tls: true
-  servername: ru211.mechvpn.online
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-- name: 🇫🇷FR_47|126KB/s|C002-260622
-  type: vless
-  server: 185.176.26.50
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vms.lifetime06.workers.dev
-- name: trojan-16421
-  type: trojan
-  server: 45.130.125.76
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  network: ws
+  servername: dry-butterfly-8eb9.tmpgnacio83.workers.dev
+  client-fingerprint: chrome
   ws-opts:
     path: /
-    headers: {}
+    headers:
+      Host: dry-butterfly-8eb9.tmpgnacio83.workers.dev
 - name: 🇺🇸_US_美国_2
   type: trojan
   server: 104.21.69.41
@@ -399,44 +547,32 @@ proxies:
     path: /WxWOWO1YA9bs2HOmaeWimvT3
     headers:
       Host: kju84.890602.xyz
-- name: SG - zhuhai.uk
+- name: DE - zhuhai.uk 02
   type: vless
-  server: sg1-r.link-t7.com
-  port: 10036
-  uuid: 98525CD3-88F8-45AE-851A-B64327E39D2A
+  server: 194.93.0.28
+  port: 443
+  uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
   udp: true
   network: grpc
   tls: true
-  servername: s0.awsstatic.com
-  client-fingerprint: chrome
+  servername: media2.tcpdoor.net
+  client-fingerprint: safari
   reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: 686c0ef0
+    public-key: vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8
+    short-id: 3303c7a5
   grpc-opts:
     grpc-service-name: ''
-- name: 🇫🇷FR_136|276KB/s|C002-260622
+- name: 🇫🇷FR_31|275KB/s|C002-260622
   type: vless
-  server: 195.85.59.30
+  server: 162.159.156.214
   port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: 4f74ff26-25af-41d6-9d39-be46fe8ff1a8
   udp: true
   network: ws
   ws-opts:
-    path: /
+    path: /pyip=ProxyIP.US.CMLiussss.net
     headers:
-      Host: vms.lifetime58.workers.dev
-- name: trojan-2514876
-  type: trojan
-  server: 104.18.32.47
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
+      Host: steep-resonance-1ffb.274.workers.dev
 - name: 🇺🇸_US_美国_1
   type: trojan
   server: 172.67.200.238
@@ -448,27 +584,16 @@ proxies:
   ws-opts:
     path: /XjTi1NYwi9A2bckpqdDoAgkondVWl
     headers: {}
-- name: 🇫🇷FR_168|155KB/s|B007-260618
-  type: vless
-  server: 104.16.72.101
-  port: 80
-  uuid: d5598622-46b8-b017-3af3-232500000001
-  udp: true
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: nahan-core.netizo09.workers.dev
-- name: trojan-387464376
+- name: 🇫🇷FR_73|319KB/s|B007-260618
   type: trojan
-  server: 45.80.111.7
+  server: 141.101.90.101
   port: 443
-  password: MiTiVPN
+  password: humanity
   udp: true
-  sni: d-2-aa-ia-mitivpn--mitivpn--mitivpn---mitivpn--mitivpn--mitivpn.mitivpn.lifestyle
+  sni: www.ignitelimit.com
   network: ws
   ws-opts:
-    path: /
+    path: /assignment
     headers: {}
 - name: 🇺🇸_US_美国->🇧🇪_BE_比利时
   type: vless
@@ -481,39 +606,16 @@ proxies:
     path: /?ed=2048
     headers:
       Host: e2.iON7fpGej8.ZuLaIR.ORg.
-- name: JP - zhuhai.uk
-  type: vmess
-  server: 366-1095.rabbitpro-in-3.com
-  port: 27123
-  uuid: e351d6d8-c167-3e07-8fda-3f2f4ec0760b
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 🇫🇷FR_180|267KB/s|M003-260806
-  type: vless
-  server: 172.67.145.21
-  port: 443
-  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
-  udp: true
-  network: ws
-  tls: true
-  servername: INDEX.Arcane509.Workers.DEV
-  client-fingerprint: chrome
-  ws-opts:
-    path: /assets
-    headers:
-      Host: index.arcane509.workers.dev
-- name: trojan-16166
+- name: 🇫🇷FR_74|263KB/s|B007-260618
   type: trojan
-  server: 185.18.250.252
+  server: 216.24.57.7
   port: 443
   password: humanity
   udp: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
+  sni: www.ignitelimit.com
   network: ws
   ws-opts:
-    path: /
+    path: /assignment
     headers: {}
 - name: 🇺🇸_US_美国_7
   type: ss
@@ -522,582 +624,46 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: XsDDBBSiY18qHD9CcomK5T
   udp: true
-- name: 🇫🇷FR_181|416KB/s
+- name: 🇫🇷FR_104|330KB/s|M002-260618
   type: vless
-  server: 45.131.209.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime04.workers.dev
-- name: trojan-108567
-  type: trojan
-  server: 104.18.8.83
+  server: 104.18.95.26
   port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_198|239KB/s
-  type: trojan
-  server: 188.114.97.7
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: trojan-24728
-  type: trojan
-  server: 172.64.152.23
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_252|378KB/s
-  type: trojan
-  server: 104.18.23.63
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: trojan-24448
-  type: trojan
-  server: 188.114.98.0
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_4|200KB/s
-  type: vless
-  server: 172.67.174.249
-  port: 443
-  uuid: 26b35808-f1e1-4b97-8c69-46796f058d8b
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   udp: true
   network: ws
   tls: true
-  servername: eZaccESs-PROjeCT-9138d4.5f6ON.WORkerS.DeV
+  servername: hhlfy.twiladaphne.ndjp.net
   client-fingerprint: chrome
   ws-opts:
-    path: /eyJqdW5rIjoicG9pMkt4TDY2TVNtRSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560
-    headers:
-      Host: ezaccess-project-9138d4.5f6on.workers.dev
-- name: trojan-2513804
-  type: trojan
-  server: 104.16.72.2
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
     path: /
-    headers: {}
-- name: 🇫🇷FR_6|173KB/s
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+- name: vless-468105601
   type: vless
-  server: 104.21.15.212
+  server: 172.66.47.132
+  port: 443
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+  udp: true
+  network: ws
+  tls: true
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  client-fingerprint: randomized
+  ws-opts:
+    path: /KOStF9fnx9sJgNib?ed=2560
+    headers:
+      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+- name: 🇫🇷FR_34|286KB/s|C002-260622
+  type: vless
+  server: 172.64.88.168
   port: 8880
-  uuid: 65aed3c1-1999-46a1-a3f3-2e5eb119ec64
+  uuid: b4883d27-3151-4adf-92b1-841c0dccd1ea
   udp: true
   network: ws
   ws-opts:
     path: /pyip=ProxyIP.KR.CMLiussss.net
     headers:
-      Host: weathered-hat-76a5.380-d00.workers.dev
-- name: trojan-11666
-  type: trojan
-  server: 104.16.71.213
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_28|382KB/s|C002-260622
-  type: vless
-  server: 104.17.170.132
-  port: 8880
-  uuid: 8e8e2034-33eb-4ccc-938f-ba86d877c449
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: icy-hall-8013.386-58c.workers.dev
-- name: trojan-294267606
-  type: trojan
-  server: 45.130.125.75
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_30|253KB/s|C002-260622
-  type: vless
-  server: 104.129.164.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime40.workers.dev
-- name: trojan-2514925
-  type: trojan
-  server: 104.18.9.83
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_51|112KB/s|X001-260618
-  type: vless
-  server: 104.25.122.72
-  port: 80
-  uuid: 6cd78ec7-b715-471c-92b4-0c3842caea4b
-  udp: true
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiVXRIT2UwaDUiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0=
-    headers:
-      Host: billowing-cloud-d339.sospanel.workers.dev
-- name: trojan-11933
-  type: trojan
-  server: 212.183.88.136
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_58|359KB/s
-  type: vless
-  server: 104.25.118.238
-  port: 80
-  uuid: 6cd78ec7-b715-471c-92b4-0c3842caea4b
-  udp: true
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiOFRwTjlPWHgiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0=
-    headers:
-      Host: billowing-cloud-d339.sospanel.workers.dev
-- name: trojan-2513809
-  type: trojan
-  server: 104.16.72.50
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: trojan-11670
-  type: trojan
-  server: 104.17.121.71
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_156|213KB/s|M002-260618
-  type: vless
-  server: 172.64.53.194
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: trojan-2513798
-  type: trojan
-  server: 104.16.7.70
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_160|211KB/s|B007-260618
-  type: vless
-  server: 104.17.248.26
-  port: 443
-  uuid: c9d1b8e6-f28a-419f-2581-97ad3258c320
-  udp: true
-  network: ws
-  tls: true
-  servername: withered-cake-d636.asfvgsrhtrzdbvcgfn.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /kbapqjwhbsjwoqjhskso
-    headers:
-      Host: withered-cake-d636.asfvgsrhtrzdbvcgfn.workers.dev
-- name: trojan-2516885
-  type: trojan
-  server: 185.18.250.245
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_178|227KB/s|M003-260806
-  type: vless
-  server: 172.67.69.129
-  port: 8880
-  uuid: d33cc776-9c57-4ea3-8c5a-6d85043029d7
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shiny-flower-c72d.105-161.workers.dev
-- name: trojan-11926
-  type: trojan
-  server: 198.62.62.23
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_187|365KB/s
-  type: trojan
-  server: 104.16.174.121
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: trojan-11695
-  type: trojan
-  server: 104.19.64.105
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_191|427KB/s
-  type: vless
-  server: 185.148.106.50
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime54.workers.dev
-- name: trojan-2469741
-  type: trojan
-  server: 45.130.125.69
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_197|209KB/s
-  type: trojan
-  server: 104.18.152.143
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: trojan-16149
-  type: trojan
-  server: 104.17.121.43
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_199|177KB/s
-  type: trojan
-  server: 104.18.152.229
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: trojan-2515929
-  type: trojan
-  server: 162.159.36.20
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: trojan-113446
-  type: trojan
-  server: 162.159.91.211
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: trojan-24164
-  type: trojan
-  server: 188.114.96.3
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: trojan-11673
-  type: trojan
-  server: 104.18.12.149
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_61|490KB/s
-  type: vless
-  server: 172.67.215.201
-  port: 2096
-  uuid: f8fff57f-224a-4ae3-80c1-a9299796ad7c
-  udp: true
-  network: ws
-  tls: true
-  servername: 11.EZ-70eF02.wOrkeRS.DeV
-  client-fingerprint: chrome
-  ws-opts:
-    path: /eyJqdW5rIjoicmc2S3lEeXFMV3Y3UHkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyI1Ny4xMjkuNDcuNTIiXX0=?ed=2560
-    headers:
-      Host: 11.ez-70ef02.workers.dev
-- name: trojan-118986
-  type: trojan
-  server: 45.130.125.190
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_104|259KB/s|C002-260622
-  type: trojan
-  server: 104.18.152.246
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: trojan-2463772
-  type: trojan
-  server: 45.130.125.160
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_124|233KB/s|S001-260618
-  type: vless
-  server: 104.21.39.47
-  port: 8080
-  uuid: b0c94dd5-0c4c-6e1e-7ecf-84c386f7c748
-  udp: true
-  network: ws
-  ws-opts:
-    path: /taha3
-    headers:
-      Host: aged-silence-8d7d.tahaggs.workers.dev
-- name: trojan-2513858
-  type: trojan
-  server: 104.17.121.9
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: trojan-303203219
-  type: trojan
-  server: 104.18.28.234
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_140|428KB/s|C002-260622
-  type: vless
-  server: 45.130.125.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime58.workers.dev
-- name: trojan-404344005
-  type: trojan
-  server: 151.101.56.7
-  port: 443
-  password: MiTiVPN
-  udp: true
-  sni: default.fastly.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_157|260KB/s|T001-260618
-  type: vless
-  server: 172.67.148.41
-  port: 80
-  uuid: 8be64379-08a5-4362-b8cf-234a65409bda
-  udp: true
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiOW56N0hTRm9IS252IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ
-    headers:
-      Host: telegram4.freepersianland8.workers.dev
-- name: trojan-448702657
-  type: trojan
-  server: 151.101.56.0
-  port: 443
-  password: MiTiVPN
-  udp: true
-  sni: default.fastly.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: trojan-419356370
-  type: trojan
-  server: 199.232.78.160
-  port: 443
-  password: MiTiVPN
-  udp: true
-  sni: default.fastly.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_171|227KB/s|M002-260618
-  type: vless
-  server: 172.64.52.30
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: trojan-419356366
-  type: trojan
-  server: 151.101.56.8
-  port: 443
-  password: MiTiVPN
-  udp: true
-  sni: default.fastly.com
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: trojan-448702659
+      Host: damp-surf-aacf.296-8ed.workers.dev
+- name: trojan-463864259
   type: trojan
   server: 151.101.56.9
   port: 443
@@ -1108,6 +674,405 @@ proxies:
   ws-opts:
     path: /
     headers: {}
+- name: 🇫🇷FR_40|100KB/s|B007-260618
+  type: trojan
+  server: 165.215.250.14
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: trojan-463864258
+  type: trojan
+  server: 151.101.56.8
+  port: 443
+  password: MiTiVPN
+  udp: true
+  sni: default.fastly.com
+  network: ws
+  ws-opts:
+    path: /
+    headers: {}
+- name: 🇫🇷FR_42|400KB/s|C002-260622
+  type: trojan
+  server: 104.18.152.175
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_55|291KB/s
+  type: trojan
+  server: 104.18.152.143
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: vless-468105600
+  type: vless
+  server: 172.66.44.124
+  port: 8443
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+  udp: true
+  network: ws
+  tls: true
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  client-fingerprint: randomized
+  ws-opts:
+    path: /9BozNyvQ8VdRvsYX?ed=2560
+    headers:
+      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+- name: 🇫🇷FR_76|164KB/s|B007-260618
+  type: vless
+  server: 172.64.88.251
+  port: 8880
+  uuid: 7e3cd2f1-0de5-4717-9002-64d8597bc577
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.KR.CMLiussss.net
+    headers:
+      Host: dry-credit-fc26.203-d8c.workers.dev
+- name: vless-463893256
+  type: vless
+  server: 199.232.78.159
+  port: 443
+  uuid: c796825a-68ff-46a4-9fd7-51ba54fa6db5
+  udp: true
+  network: ws
+  tls: true
+  servername: ssl.fastly.com
+  ws-opts:
+    path: /
+    headers:
+      Host: svnteamchannel.global.ssl.fastly.net
+- name: vless-463893255
+  type: vless
+  server: 199.232.78.150
+  port: 443
+  uuid: c796825a-68ff-46a4-9fd7-51ba54fa6db5
+  udp: true
+  network: ws
+  tls: true
+  servername: ssl.fastly.com
+  ws-opts:
+    path: /
+    headers:
+      Host: svnteamchannel.global.ssl.fastly.net
+- name: 🇫🇷FR_58|295KB/s|C002-260622
+  type: trojan
+  server: 198.41.223.96
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_60|207KB/s
+  type: vless
+  server: 104.18.34.245
+  port: 8880
+  uuid: 0b01d4d8-656d-4d55-8ad5-ed2a362788b5
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: square-tree-3dbf.285.workers.dev
+- name: vless-463872258
+  type: vless
+  server: 69.46.46.17
+  port: 443
+  uuid: 1f347596-193a-baf6-a33b-4eeb1bbb548b
+  udp: true
+  network: ws
+  tls: true
+  servername: rvg-production-cc31.up.railway.app
+  client-fingerprint: ios
+  ws-opts:
+    path: /ws/1f347596-193a-baf6-a33b-4eeb1bbb548b
+    headers:
+      Host: rvg-production-cc31.up.railway.app
+- name: 🇫🇷FR_18|127KB/s|B007-260618
+  type: vless
+  server: 172.64.94.251
+  port: 8880
+  uuid: 9f4b666c-ecf1-49e9-8ab8-9ae2c4f4c613
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.KR.CMLiussss.net
+    headers:
+      Host: withered-morning-aa51.64-c79.workers.dev
+- name: vless-459544110
+  type: vless
+  server: 69.46.46.40
+  port: 443
+  uuid: 1365d474-01c0-1c34-5206-3e7ceca5b178
+  udp: true
+  network: ws
+  tls: true
+  servername: rvg-production-ccf4.up.railway.app
+  client-fingerprint: ios
+  ws-opts:
+    path: /ws/1365d474-01c0-1c34-5206-3e7ceca5b178
+    headers:
+      Host: rvg-production-ccf4.up.railway.app
+- name: 🇫🇷FR_17|382KB/s|B007-260618
+  type: vless
+  server: 104.17.21.32
+  port: 8880
+  uuid: 300f44af-adb8-42b7-b869-bef70b205d7e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.KR.CMLiussss.net
+    headers:
+      Host: icy-rice-3c1c.340-680.workers.dev
+- name: trojan-465806707
+  type: trojan
+  server: 151.101.56.7
+  port: 443
+  password: MiTiVPN
+  udp: true
+  sni: default.fastly.com
+  network: ws
+  ws-opts:
+    path: /
+    headers: {}
+- name: 🇫🇷FR_48|98KB/s|B007-260618
+  type: trojan
+  server: 104.16.174.6
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_9|161KB/s
+  type: vless
+  server: 104.24.152.211
+  port: 8880
+  uuid: a7b8b48e-1000-46f5-a974-f6606d94f3b4
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: misty-hill-4b94.146-c18.workers.dev
+- name: vless-468900808
+  type: vless
+  server: 188.114.99.0
+  port: 443
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+  udp: true
+  network: ws
+  tls: true
+  servername: josni.hoyes.cloudns.ch
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: josni.hoyes.cloudns.ch
+- name: 🇫🇷FR_54|319KB/s
+  type: trojan
+  server: 104.18.152.77
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_83|505KB/s|C002-260622
+  type: trojan
+  server: 104.18.152.108
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_100|143KB/s
+  type: trojan
+  server: 104.16.174.121
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: vless-459504014
+  type: vless
+  server: 69.46.46.13
+  port: 443
+  uuid: 0d3f7c50-591f-eac4-5092-eb37d97772ca
+  udp: true
+  network: ws
+  tls: true
+  servername: rvg-production-2164.up.railway.app
+  client-fingerprint: chrome
+  ws-opts:
+    path: /ws/0d3f7c50-591f-eac4-5092-eb37d97772ca
+    headers:
+      Host: rvg-production-2164.up.railway.app
+- name: 🇫🇷FR_43|349KB/s|C002-260622
+  type: trojan
+  server: 104.18.152.50
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_52|162KB/s
+  type: trojan
+  server: 104.18.152.219
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: vless-459575923
+  type: vless
+  server: 84.32.61.66
+  port: 443
+  uuid: ff1b0b50-70dc-4bae-866e-55cff86f4d6d
+  udp: true
+  tls: true
+  servername: united.nosok-top.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: oYo4UjPmIVNSFTLYR7wuadY2v44sVuckzRAKyzi0UAE
+    short-id: a25c781f24d4209f
+  flow: xtls-rprx-vision
+- name: 🇫🇷FR_57|274KB/s|B007-260618
+  type: trojan
+  server: 104.26.14.137
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_33|201KB/s|C002-260622
+  type: trojan
+  server: 104.18.12.149
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: vless-461814960
+  type: vless
+  server: 84.32.61.68
+  port: 443
+  uuid: ff1b0b50-70dc-4bae-866e-55cff86f4d6d
+  udp: true
+  tls: true
+  servername: united.nosok-top.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: oYo4UjPmIVNSFTLYR7wuadY2v44sVuckzRAKyzi0UAE
+    short-id: a25c781f24d4209f
+  flow: xtls-rprx-vision
+- name: 🇫🇷FR_56|286KB/s|B007-260618
+  type: trojan
+  server: 104.18.152.187
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_89|456KB/s|C002-260622
+  type: vless
+  server: 104.27.82.154
+  port: 8880
+  uuid: b0962bf7-0b03-4353-9be1-131b78ad71d0
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.US.CMLiussss.net
+    headers:
+      Host: weathered-truth-581a.383.workers.dev
+- name: 🇫🇷FR_97|587KB/s|C002-260622
+  type: trojan
+  server: 104.18.152.155
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_8|145KB/s
+  type: trojan
+  server: 104.18.155.119
+  port: 443
+  password: 988sR-269PKCKlb&3pMrFTEr
+  udp: true
+  sni: LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560
+    headers: {}
+- name: vless-468316548
+  type: vless
+  server: 104.21.4.33
+  port: 443
+  uuid: c110db8f-72c8-52a2-8ae9-dfbfd9704035
+  udp: true
+  network: ws
+  tls: true
+  servername: joinmahdiserver.pmyzdpx.workers.dev
+  ws-opts:
+    path: /vless-ws/?ed=2048
+    headers: {}
+- name: 🇫🇷FR_509|465KB/s|A004-260618
+  type: vless
+  server: 172.67.179.98
+  port: 8880
+  uuid: 86d998bc-a5a2-45d5-8169-b906259110a6
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: muddy-art-8cda.197-0c6.workers.dev
 - name: 🇨🇳_CN_中国->🇺🇸_US_美国
   type: vmess
   server: v29.heduian.link
@@ -1128,216 +1093,241 @@ proxies:
   password: ef23ddd0-14c5-39c2-9880-af55ce892363
   udp: true
   sni: t28.qifei.app
+- name: 🇺🇸_US_美国->🇨🇳_CN_中国
+  type: vmess
+  server: 2.58.87.221
+  port: 12269
+  uuid: db85ff0e-c33f-401d-c415-4c7cce135704
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers: {}
+- name: 🇬🇧_GB_英国
+  type: trojan
+  server: 51.68.13.106
+  port: 1935
+  password: FiSo7J6vfS
+  udp: true
+  sni: x1fr-ovh.devefun.net
+- name: 🇯🇴_JO_约旦
+  type: vless
+  server: 109.107.159.69
+  port: 22069
+  uuid: 361427b1-5cf9-4ae6-bd1b-5dbf99a21b61
+  udp: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
+  - shadowsocks-415243975
+  - shadowsocks-159
+  - shadowsocks-158
   - shadowsocks-27269
-  - trojan-246566047
-  - 🇫🇷FR_170|471KB/s|T001-260618
-  - 🇫🇷FR_159|232KB/s|B007-260618
-  - CO - zhuhai.uk
-  - 🇫🇷FR_3|358KB/s
-  - 🇫🇷FR_215|195KB/s
-  - 🇫🇷FR_33|212KB/s|C002-260622
-  - KR - zhuhai.uk 02
-  - 🇫🇷FR_194|239KB/s
-  - 🇫🇷FR_108|238KB/s|M002-260618
-  - 🇫🇷FR_133|222KB/s|B007-260618
-  - 🇫🇷FR_154|377KB/s|A004-260618
-  - 🇫🇷FR_175|205KB/s|M003-260806
-  - 🇫🇷FR_42|168KB/s|C002-260622
-  - SE - zhuhai.uk
-  - US - zhuhai.uk 05
-  - IN - zhuhai.uk
-  - trojan-408494770
-  - 🇺🇸_US_美国_8
-  - 🇺🇸US_447|79KB/s|R002-260618
-  - 🇫🇷FR_188|471KB/s
-  - trojan-379268098
-  - 🇺🇸_US_美国_6
-  - 🇫🇷FR_196|178KB/s
-  - trojan-442529881
-  - 🇺🇸_US_美国_5
-  - 🇫🇷FR_204|482KB/s
-  - trojan-114712191
-  - 🇺🇸_US_美国_4
-  - trojan-292956737
-  - 🇺🇸_US_美国_3
-  - FI - zhuhai.uk 02
-  - 🇫🇷FR_47|126KB/s|C002-260622
-  - trojan-16421
-  - 🇺🇸_US_美国_2
-  - SG - zhuhai.uk
-  - 🇫🇷FR_136|276KB/s|C002-260622
-  - trojan-2514876
-  - 🇺🇸_US_美国_1
-  - 🇫🇷FR_168|155KB/s|B007-260618
-  - trojan-387464376
-  - 🇺🇸_US_美国->🇧🇪_BE_比利时
-  - JP - zhuhai.uk
-  - 🇫🇷FR_180|267KB/s|M003-260806
-  - trojan-16166
-  - 🇺🇸_US_美国_7
-  - 🇫🇷FR_181|416KB/s
-  - trojan-108567
-  - 🇫🇷FR_198|239KB/s
+  - shadowsocks-163
+  - trojan-120887
+  - shadowsocks-194
+  - trojan-198807551
+  - trojan-2520863
+  - trojan-2520867
+  - vless-468883230
+  - vless-461784514
+  - vless-468904445
+  - 🇺🇸US_25|353KB/s|B007-260618
+  - NL - zhuhai.uk 02
+  - NL - zhuhai.uk 05
+  - NL - zhuhai.uk 03
+  - BR - zhuhai.uk
+  - 🇺🇸US_67|266KB/s|A001-260618
+  - 🇺🇸US_68|182KB/s|A001-260618
+  - vless-468901396
+  - vless-468154221
+  - vless-468892486
+  - vless-468900810
+  - 🇫🇷FR_102|109KB/s|M002-260618
+  - vless-468900809
+  - vless-465856923
+  - 🇫🇷FR_92|317KB/s|M002-260618
+  - 🇺🇸US_70|454KB/s|M002-260618
+  - shadowsocks-11074
+  - 🇫🇷FR_99|468KB/s|M002-260618
+  - vless-463888256
+  - ❓Other_13|139KB/s|M002-260618
+  - vless-468154225
+  - vless-468904448
+  - FI - zhuhai.uk
+  - vless-468892528
+  - 🇫🇷FR_1|324KB/s
   - trojan-24728
-  - 🇫🇷FR_252|378KB/s
-  - trojan-24448
-  - 🇫🇷FR_4|200KB/s
-  - trojan-2513804
-  - 🇫🇷FR_6|173KB/s
-  - trojan-11666
-  - 🇫🇷FR_28|382KB/s|C002-260622
-  - trojan-294267606
-  - 🇫🇷FR_30|253KB/s|C002-260622
-  - trojan-2514925
-  - 🇫🇷FR_51|112KB/s|X001-260618
-  - trojan-11933
-  - 🇫🇷FR_58|359KB/s
-  - trojan-2513809
-  - trojan-11670
-  - 🇫🇷FR_156|213KB/s|M002-260618
-  - trojan-2513798
-  - 🇫🇷FR_160|211KB/s|B007-260618
-  - trojan-2516885
-  - 🇫🇷FR_178|227KB/s|M003-260806
-  - trojan-11926
-  - 🇫🇷FR_187|365KB/s
-  - trojan-11695
-  - 🇫🇷FR_191|427KB/s
-  - trojan-2469741
-  - 🇫🇷FR_197|209KB/s
-  - trojan-16149
-  - 🇫🇷FR_199|177KB/s
-  - trojan-2515929
-  - trojan-113446
-  - trojan-24164
-  - trojan-11673
-  - 🇫🇷FR_61|490KB/s
-  - trojan-118986
-  - 🇫🇷FR_104|259KB/s|C002-260622
-  - trojan-2463772
-  - 🇫🇷FR_124|233KB/s|S001-260618
-  - trojan-2513858
-  - trojan-303203219
-  - 🇫🇷FR_140|428KB/s|C002-260622
-  - trojan-404344005
-  - 🇫🇷FR_157|260KB/s|T001-260618
-  - trojan-448702657
-  - trojan-419356370
-  - 🇫🇷FR_171|227KB/s|M002-260618
-  - trojan-419356366
-  - trojan-448702659
+  - 🇺🇸_US_美国_8
+  - 🇫🇷FR_25|199KB/s|C002-260622
+  - 🇺🇸_US_美国_6
+  - 🇫🇷FR_71|216KB/s|B007-260618
+  - trojan-13367504
+  - 🇺🇸_US_美国_4
+  - 🇫🇷FR_19|207KB/s|C002-260622
+  - 🇺🇸_US_美国_5
+  - 🇺🇸_US_美国_3
+  - 🇫🇷FR_5|225KB/s
+  - 🇺🇸_US_美国_2
+  - DE - zhuhai.uk 02
+  - 🇫🇷FR_31|275KB/s|C002-260622
+  - 🇺🇸_US_美国_1
+  - 🇫🇷FR_73|319KB/s|B007-260618
+  - 🇺🇸_US_美国->🇧🇪_BE_比利时
+  - 🇫🇷FR_74|263KB/s|B007-260618
+  - 🇺🇸_US_美国_7
+  - 🇫🇷FR_104|330KB/s|M002-260618
+  - vless-468105601
+  - 🇫🇷FR_34|286KB/s|C002-260622
+  - trojan-463864259
+  - 🇫🇷FR_40|100KB/s|B007-260618
+  - trojan-463864258
+  - 🇫🇷FR_42|400KB/s|C002-260622
+  - 🇫🇷FR_55|291KB/s
+  - vless-468105600
+  - 🇫🇷FR_76|164KB/s|B007-260618
+  - vless-463893256
+  - vless-463893255
+  - 🇫🇷FR_58|295KB/s|C002-260622
+  - 🇫🇷FR_60|207KB/s
+  - vless-463872258
+  - 🇫🇷FR_18|127KB/s|B007-260618
+  - vless-459544110
+  - 🇫🇷FR_17|382KB/s|B007-260618
+  - trojan-465806707
+  - 🇫🇷FR_48|98KB/s|B007-260618
+  - 🇫🇷FR_9|161KB/s
+  - vless-468900808
+  - 🇫🇷FR_54|319KB/s
+  - 🇫🇷FR_83|505KB/s|C002-260622
+  - 🇫🇷FR_100|143KB/s
+  - vless-459504014
+  - 🇫🇷FR_43|349KB/s|C002-260622
+  - 🇫🇷FR_52|162KB/s
+  - vless-459575923
+  - 🇫🇷FR_57|274KB/s|B007-260618
+  - 🇫🇷FR_33|201KB/s|C002-260622
+  - vless-461814960
+  - 🇫🇷FR_56|286KB/s|B007-260618
+  - 🇫🇷FR_89|456KB/s|C002-260622
+  - 🇫🇷FR_97|587KB/s|C002-260622
+  - 🇫🇷FR_8|145KB/s
+  - vless-468316548
+  - 🇫🇷FR_509|465KB/s|A004-260618
   - 🇨🇳_CN_中国->🇺🇸_US_美国
   - 🇨🇦_CA_加拿大
+  - 🇺🇸_US_美国->🇨🇳_CN_中国
+  - 🇬🇧_GB_英国
+  - 🇯🇴_JO_约旦
 - name: ♻️ 自动选择
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
+  - shadowsocks-415243975
+  - shadowsocks-159
+  - shadowsocks-158
   - shadowsocks-27269
-  - trojan-246566047
-  - 🇫🇷FR_170|471KB/s|T001-260618
-  - 🇫🇷FR_159|232KB/s|B007-260618
-  - CO - zhuhai.uk
-  - 🇫🇷FR_3|358KB/s
-  - 🇫🇷FR_215|195KB/s
-  - 🇫🇷FR_33|212KB/s|C002-260622
-  - KR - zhuhai.uk 02
-  - 🇫🇷FR_194|239KB/s
-  - 🇫🇷FR_108|238KB/s|M002-260618
-  - 🇫🇷FR_133|222KB/s|B007-260618
-  - 🇫🇷FR_154|377KB/s|A004-260618
-  - 🇫🇷FR_175|205KB/s|M003-260806
-  - 🇫🇷FR_42|168KB/s|C002-260622
-  - SE - zhuhai.uk
-  - US - zhuhai.uk 05
-  - IN - zhuhai.uk
-  - trojan-408494770
-  - 🇺🇸_US_美国_8
-  - 🇺🇸US_447|79KB/s|R002-260618
-  - 🇫🇷FR_188|471KB/s
-  - trojan-379268098
-  - 🇺🇸_US_美国_6
-  - 🇫🇷FR_196|178KB/s
-  - trojan-442529881
-  - 🇺🇸_US_美国_5
-  - 🇫🇷FR_204|482KB/s
-  - trojan-114712191
-  - 🇺🇸_US_美国_4
-  - trojan-292956737
-  - 🇺🇸_US_美国_3
-  - FI - zhuhai.uk 02
-  - 🇫🇷FR_47|126KB/s|C002-260622
-  - trojan-16421
-  - 🇺🇸_US_美国_2
-  - SG - zhuhai.uk
-  - 🇫🇷FR_136|276KB/s|C002-260622
-  - trojan-2514876
-  - 🇺🇸_US_美国_1
-  - 🇫🇷FR_168|155KB/s|B007-260618
-  - trojan-387464376
-  - 🇺🇸_US_美国->🇧🇪_BE_比利时
-  - JP - zhuhai.uk
-  - 🇫🇷FR_180|267KB/s|M003-260806
-  - trojan-16166
-  - 🇺🇸_US_美国_7
-  - 🇫🇷FR_181|416KB/s
-  - trojan-108567
-  - 🇫🇷FR_198|239KB/s
+  - shadowsocks-163
+  - trojan-120887
+  - shadowsocks-194
+  - trojan-198807551
+  - trojan-2520863
+  - trojan-2520867
+  - vless-468883230
+  - vless-461784514
+  - vless-468904445
+  - 🇺🇸US_25|353KB/s|B007-260618
+  - NL - zhuhai.uk 02
+  - NL - zhuhai.uk 05
+  - NL - zhuhai.uk 03
+  - BR - zhuhai.uk
+  - 🇺🇸US_67|266KB/s|A001-260618
+  - 🇺🇸US_68|182KB/s|A001-260618
+  - vless-468901396
+  - vless-468154221
+  - vless-468892486
+  - vless-468900810
+  - 🇫🇷FR_102|109KB/s|M002-260618
+  - vless-468900809
+  - vless-465856923
+  - 🇫🇷FR_92|317KB/s|M002-260618
+  - 🇺🇸US_70|454KB/s|M002-260618
+  - shadowsocks-11074
+  - 🇫🇷FR_99|468KB/s|M002-260618
+  - vless-463888256
+  - ❓Other_13|139KB/s|M002-260618
+  - vless-468154225
+  - vless-468904448
+  - FI - zhuhai.uk
+  - vless-468892528
+  - 🇫🇷FR_1|324KB/s
   - trojan-24728
-  - 🇫🇷FR_252|378KB/s
-  - trojan-24448
-  - 🇫🇷FR_4|200KB/s
-  - trojan-2513804
-  - 🇫🇷FR_6|173KB/s
-  - trojan-11666
-  - 🇫🇷FR_28|382KB/s|C002-260622
-  - trojan-294267606
-  - 🇫🇷FR_30|253KB/s|C002-260622
-  - trojan-2514925
-  - 🇫🇷FR_51|112KB/s|X001-260618
-  - trojan-11933
-  - 🇫🇷FR_58|359KB/s
-  - trojan-2513809
-  - trojan-11670
-  - 🇫🇷FR_156|213KB/s|M002-260618
-  - trojan-2513798
-  - 🇫🇷FR_160|211KB/s|B007-260618
-  - trojan-2516885
-  - 🇫🇷FR_178|227KB/s|M003-260806
-  - trojan-11926
-  - 🇫🇷FR_187|365KB/s
-  - trojan-11695
-  - 🇫🇷FR_191|427KB/s
-  - trojan-2469741
-  - 🇫🇷FR_197|209KB/s
-  - trojan-16149
-  - 🇫🇷FR_199|177KB/s
-  - trojan-2515929
-  - trojan-113446
-  - trojan-24164
-  - trojan-11673
-  - 🇫🇷FR_61|490KB/s
-  - trojan-118986
-  - 🇫🇷FR_104|259KB/s|C002-260622
-  - trojan-2463772
-  - 🇫🇷FR_124|233KB/s|S001-260618
-  - trojan-2513858
-  - trojan-303203219
-  - 🇫🇷FR_140|428KB/s|C002-260622
-  - trojan-404344005
-  - 🇫🇷FR_157|260KB/s|T001-260618
-  - trojan-448702657
-  - trojan-419356370
-  - 🇫🇷FR_171|227KB/s|M002-260618
-  - trojan-419356366
-  - trojan-448702659
+  - 🇺🇸_US_美国_8
+  - 🇫🇷FR_25|199KB/s|C002-260622
+  - 🇺🇸_US_美国_6
+  - 🇫🇷FR_71|216KB/s|B007-260618
+  - trojan-13367504
+  - 🇺🇸_US_美国_4
+  - 🇫🇷FR_19|207KB/s|C002-260622
+  - 🇺🇸_US_美国_5
+  - 🇺🇸_US_美国_3
+  - 🇫🇷FR_5|225KB/s
+  - 🇺🇸_US_美国_2
+  - DE - zhuhai.uk 02
+  - 🇫🇷FR_31|275KB/s|C002-260622
+  - 🇺🇸_US_美国_1
+  - 🇫🇷FR_73|319KB/s|B007-260618
+  - 🇺🇸_US_美国->🇧🇪_BE_比利时
+  - 🇫🇷FR_74|263KB/s|B007-260618
+  - 🇺🇸_US_美国_7
+  - 🇫🇷FR_104|330KB/s|M002-260618
+  - vless-468105601
+  - 🇫🇷FR_34|286KB/s|C002-260622
+  - trojan-463864259
+  - 🇫🇷FR_40|100KB/s|B007-260618
+  - trojan-463864258
+  - 🇫🇷FR_42|400KB/s|C002-260622
+  - 🇫🇷FR_55|291KB/s
+  - vless-468105600
+  - 🇫🇷FR_76|164KB/s|B007-260618
+  - vless-463893256
+  - vless-463893255
+  - 🇫🇷FR_58|295KB/s|C002-260622
+  - 🇫🇷FR_60|207KB/s
+  - vless-463872258
+  - 🇫🇷FR_18|127KB/s|B007-260618
+  - vless-459544110
+  - 🇫🇷FR_17|382KB/s|B007-260618
+  - trojan-465806707
+  - 🇫🇷FR_48|98KB/s|B007-260618
+  - 🇫🇷FR_9|161KB/s
+  - vless-468900808
+  - 🇫🇷FR_54|319KB/s
+  - 🇫🇷FR_83|505KB/s|C002-260622
+  - 🇫🇷FR_100|143KB/s
+  - vless-459504014
+  - 🇫🇷FR_43|349KB/s|C002-260622
+  - 🇫🇷FR_52|162KB/s
+  - vless-459575923
+  - 🇫🇷FR_57|274KB/s|B007-260618
+  - 🇫🇷FR_33|201KB/s|C002-260622
+  - vless-461814960
+  - 🇫🇷FR_56|286KB/s|B007-260618
+  - 🇫🇷FR_89|456KB/s|C002-260622
+  - 🇫🇷FR_97|587KB/s|C002-260622
+  - 🇫🇷FR_8|145KB/s
+  - vless-468316548
+  - 🇫🇷FR_509|465KB/s|A004-260618
   - 🇨🇳_CN_中国->🇺🇸_US_美国
   - 🇨🇦_CA_加拿大
+  - 🇺🇸_US_美国->🇨🇳_CN_中国
+  - 🇬🇧_GB_英国
+  - 🇯🇴_JO_约旦
 rules:
 - MATCH,🚀 节点选择
