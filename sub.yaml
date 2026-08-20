@@ -3,23 +3,16 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: shadowsocks-163
+- name: shadowsocks-158
   type: ss
-  server: 156.146.38.168
+  server: 156.146.38.167
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: shadowsocks-468218514
+- name: shadowsocks-163
   type: ss
-  server: 107.151.182.197
-  port: 8080
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  udp: true
-- name: shadowsocks-158
-  type: ss
-  server: 156.146.38.167
+  server: 156.146.38.168
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
@@ -31,12 +24,42 @@ proxies:
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: shadowsocks-696780666
+- name: shadowsocks-468218514
   type: ss
-  server: 154.12.242.150
+  server: 107.151.182.197
+  port: 8080
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  udp: true
+- name: shadowsocks-795694285
+  type: ss
+  server: 209.38.142.23
   port: 80
   cipher: aes-256-gcm
-  password: Hi9wk14VntzGq7kq
+  password: qfJZnq91w6aX8K1Y
+  udp: true
+- name: vmess-655843100
+  type: vmess
+  server: 82.198.246.233
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: vmess-717846984
+  type: vmess
+  server: 82.198.246.250
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: shadowsocks-717969065
+  type: ss
+  server: 94.72.127.58
+  port: 80
+  cipher: aes-256-gcm
+  password: goRz8CTFE6zPZXIA
   udp: true
 - name: shadowsocks-738053617
   type: ss
@@ -45,13 +68,19 @@ proxies:
   cipher: aes-256-gcm
   password: Hi9wk14VntzGq7kq
   udp: true
-- name: vmess-717847048
-  type: vmess
-  server: 82.198.246.97
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
+- name: shadowsocks-738053653
+  type: ss
+  server: 154.53.60.212
+  port: 80
+  cipher: aes-256-gcm
+  password: Nxv8ypErRfCSczD7
+  udp: true
+- name: shadowsocks-717968979
+  type: ss
+  server: 94.72.127.55
+  port: 80
+  cipher: aes-256-gcm
+  password: kRKZE3ZhECwawy1N
   udp: true
 - name: shadowsocks-738053655
   type: ss
@@ -60,122 +89,54 @@ proxies:
   cipher: aes-256-gcm
   password: PSwavTHWD0nkfcyW
   udp: true
-- name: shadowsocks-738053653
-  type: ss
-  server: 154.53.60.212
-  port: 80
-  cipher: aes-256-gcm
-  password: Nxv8ypErRfCSczD7
-  udp: true
-- name: shadowsocks-696780675
-  type: ss
-  server: 154.53.60.212
+- name: trojan-474801100
+  type: trojan
+  server: 34.94.125.227
   port: 443
-  cipher: aes-256-gcm
-  password: Nxv8ypErRfCSczD7
+  password: M7v%25w11Se%2A
   udp: true
-- name: vless-474875702
-  type: vless
-  server: 70.39.197.9
-  port: 59216
-  uuid: 0bcec952-a452-43ed-9468-4547b9f5dfc4
-  udp: true
-- name: shadowsocks-723348714
-  type: ss
-  server: 155.138.136.240
-  port: 80
-  cipher: aes-256-gcm
-  password: sZSZi7tGs9wodT7k
-  udp: true
-- name: shadowsocks-771195680
-  type: ss
-  server: 3.144.19.187
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-- name: shadowsocks-696780673
-  type: ss
-  server: 94.72.127.58
-  port: 443
-  cipher: aes-256-gcm
-  password: goRz8CTFE6zPZXIA
-  udp: true
-- name: vmess-710529892
+  sni: mxlo.wsone.icu
+- name: vmess-794240325
   type: vmess
-  server: 165.140.216.142
-  port: 443
-  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
+  server: 129.146.143.80
+  port: 48111
+  uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
   alterId: 0
   cipher: auto
   udp: true
-- name: shadowsocks-156
-  type: ss
-  server: 173.244.56.9
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
+- name: vmess-655845770
+  type: vmess
+  server: 67.220.72.237
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
   udp: true
-- name: vless-719312111
+- name: vless-742983220
   type: vless
-  server: 38.244.21.216
+  server: 38.244.20.98
   port: 443
-  uuid: 93b20d00-c16c-4a49-8b66-4a1ee0b6da95
+  uuid: 05a582ec-e74b-46fe-b131-6e9e5575a836
   udp: true
   tls: true
   servername: www.apple.com
-  client-fingerprint: qq
+  client-fingerprint: chrome
   reality-opts:
-    public-key: _hetCO1z82axzKuCWxc1rbdqd3NdtbcsXf2Y5p6UGQ8
-    short-id: 86c2e49f2e122d0b
+    public-key: s8LsdrKbLX2USYl-t9Olxo4yYUlJXjmbbjBh1OONTCE
+    short-id: f210a210add58f09
   flow: xtls-rprx-vision
-- name: vless-470362344
+- name: vless-721034806
   type: vless
-  server: 195.211.99.49
+  server: 154.29.155.211
   port: 443
-  uuid: 7eed6d87-ecf6-467b-a8ca-52071fa84fca
+  uuid: e1588d14-0a16-483f-9d54-cf521541035b
   udp: true
-  network: raw
   tls: true
-  servername: www.cloudflare.com
+  servername: www.apple.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: VRrsZmyM-QD8YgLGgy2h3pMLbauIBCMoGN2pc8Xt5hE
-    short-id: b605d4e8b7f453ab
-  flow: xtls-rprx-vision
-- name: trojan-696780687
-  type: trojan
-  server: 128.14.181.220
-  port: 5555
-  password: fg20mtCFHy
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: US - zhuhai.uk 02
-  type: vless
-  server: 38.244.4.1
-  port: 443
-  uuid: 5905d91f-c3bc-4e80-bd66-4b17beb166cb
-  udp: true
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 8BglmwULIVotYAbGXx3Vd1fXiGJbKSsWnZCGvm4Exl0
-    short-id: aebdb601b1371778
-  flow: xtls-rprx-vision
-- name: vless-468883230
-  type: vless
-  server: 195.211.98.214
-  port: 443
-  uuid: 522fdbb0-61a9-4779-bcc9-ebae85978685
-  udp: true
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1GEimhTv11Oyp85VBhiJ77ytOsmb3O6On8O7jkdH0EE
-    short-id: 62bae2f417e00f89
+    public-key: GYD0NwdNDlDIAkRGIMqRC7RuhZTScmSw2SlknoRNrDo
+    short-id: 521959f62377e2fa
   flow: xtls-rprx-vision
 - name: vless-682972326
   type: vless
@@ -190,6 +151,133 @@ proxies:
     public-key: v1hVg2Uc7Wsc_bhlLfKkML_HUGogQA9O9n9uZFwzQSM
     short-id: 065cf4f1c7d83e79
   flow: xtls-rprx-vision
+- name: vless-742983235
+  type: vless
+  server: 38.244.21.39
+  port: 443
+  uuid: f1dcdda0-b2d2-4e18-88e2-c87c9257128e
+  udp: true
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 5iZBmQ9iLLxvEHo_XilfjC7OM2-EmYTPQp-bzxlTqUU
+    short-id: 4568f3e435322cc8
+  flow: xtls-rprx-vision
+- name: vless-747510021
+  type: vless
+  server: 38.244.4.1
+  port: 443
+  uuid: 5905d91f-c3bc-4e80-bd66-4b17beb166cb
+  udp: true
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 8BglmwULIVotYAbGXx3Vd1fXiGJbKSsWnZCGvm4Exl0
+    short-id: aebdb601b1371778
+  flow: xtls-rprx-vision
+- name: vless-721034808
+  type: vless
+  server: 38.244.21.216
+  port: 443
+  uuid: 93b20d00-c16c-4a49-8b66-4a1ee0b6da95
+  udp: true
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: _hetCO1z82axzKuCWxc1rbdqd3NdtbcsXf2Y5p6UGQ8
+    short-id: 86c2e49f2e122d0b
+  flow: xtls-rprx-vision
+- name: vless-720888897
+  type: vless
+  server: 195.211.99.45
+  port: 443
+  uuid: 1f999bcd-f85e-47c3-afd7-92b6dd6b14b0
+  udp: true
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: U_LRWSRuJNqBS3kXxaXveMhC_D8c_WuqK3sglCGCnSo
+    short-id: 17a6cd20d21e4740
+  flow: xtls-rprx-vision
+- name: vless-468883230
+  type: vless
+  server: 195.211.98.214
+  port: 443
+  uuid: 522fdbb0-61a9-4779-bcc9-ebae85978685
+  udp: true
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1GEimhTv11Oyp85VBhiJ77ytOsmb3O6On8O7jkdH0EE
+    short-id: 62bae2f417e00f89
+  flow: xtls-rprx-vision
+- name: vless-650646321
+  type: vless
+  server: 195.211.99.49
+  port: 443
+  uuid: 7eed6d87-ecf6-467b-a8ca-52071fa84fca
+  udp: true
+  network: raw
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: VRrsZmyM-QD8YgLGgy2h3pMLbauIBCMoGN2pc8Xt5hE
+    short-id: b605d4e8b7f453ab
+  flow: xtls-rprx-vision
+- name: shadowsocks-156
+  type: ss
+  server: 173.244.56.9
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: trojan-713169257
+  type: trojan
+  server: 35.91.138.234
+  port: 443
+  password: PQ05174892
+  udp: true
+  sni: sure-bengal.rooster465.autos
+- name: trojan-541367282
+  type: trojan
+  server: 44.247.89.62
+  port: 443
+  password: FH72359861
+  udp: true
+  sni: communal-squid.rooster465.autos
+- name: trojan-713169317
+  type: trojan
+  server: 34.220.224.252
+  port: 443
+  password: PQ05174892
+  udp: true
+  sni: smooth-sculpin.rooster465.autos
+- name: vless-723419454
+  type: vless
+  server: 192.227.168.162
+  port: 443
+  uuid: 41f4cb15-5a3f-3934-89fe-b4177146adf4
+  udp: true
+  tls: true
+  servername: u643766u3772685ds489.gogocs.xyz
+  flow: xtls-rprx-vision
+- name: 🇫🇷FR_924|266KB/s|M003-260806 01
+  type: vless
+  server: 104.20.23.154
+  port: 8880
+  uuid: 15ce0fde-88e2-42b0-91e6-e4a1b4568f6e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip
+    headers:
+      Host: old-truth-de8a.110-187.workers.dev
 - name: vless-723342363
   type: vless
   server: 150.241.82.19
@@ -203,199 +291,175 @@ proxies:
     public-key: v1hVg2Uc7Wsc_bhlLfKkML_HUGogQA9O9n9uZFwzQSM
     short-id: 065cf4f1c7d83e79
   flow: xtls-rprx-vision
-- name: vless-470978189
+- name: 🇫🇷FR_206|210KB/s 01
   type: vless
-  server: 216.152.147.28
-  port: 443
-  uuid: d9e4721d-cdac-44c7-bc91-117367eac194
-  udp: true
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: kjiuPmjM4IutdZudHfcPZHEwcrBEFY4qBLlvfC6A_Ss
-    short-id: b9f8d3f8
-  flow: xtls-rprx-vision
-- name: vmess-656156642
-  type: vmess
-  server: 173.249.209.146
-  port: 20086
-  uuid: 3935c2dc-dbb0-43f7-b367-fe89abe87fdf
-  alterId: 0
-  cipher: auto
+  server: 104.17.58.113
+  port: 8880
+  uuid: fbd6ffcc-f07b-4790-898e-2a6827f6d10f
   udp: true
   network: ws
   ws-opts:
-    path: /
-    headers: {}
-- name: vless-730458271
+    path: /pyip=ProxyIP.US.CMLiussss.net
+    headers:
+      Host: old-disk-b667.399-1b9.workers.dev
+- name: 🇫🇷FR_349|498KB/s 01
   type: vless
-  server: 192.3.118.133
-  port: 443
-  uuid: 41f4cb15-5a3f-3934-89fe-b4177146adf4
+  server: 104.16.72.41
+  port: 8880
+  uuid: 1bc8fb2a-3bee-4ae0-aa12-957885e63e18
   udp: true
-  tls: true
-  servername: u643766u75eebf99s2316.kukuss.top
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-- name: vmess-669789140
-  type: vmess
-  server: 216.106.185.141
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 🇫🇷FR_479|326KB/s|A004-260618
+  network: ws
+  ws-opts:
+    path: /pyip
+    headers:
+      Host: super-mud-8b38.114-a90.workers.dev
+- name: vless-730134133
   type: vless
-  server: 104.25.3.165
-  port: 443
-  uuid: 737678dc-cc15-4643-85a4-ca9359df1aa4
+  server: 104.25.51.62
+  port: 2083
+  uuid: bfd6afff-b00a-4f3e-842e-97b9c8d30442
   udp: true
   network: ws
   tls: true
-  servername: patient-moon-c61f.ggfsa55.workers.dev
+  servername: royal-math-853a.alipapy-1378-78.workers.dev
   client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: patient-moon-c61f.ggfsa55.workers.dev
-- name: trojan-625721207
-  type: trojan
-  server: 35.92.245.6
-  port: 443
-  password: FH72359861
-  udp: true
-  sni: neutral-quail.rooster465.autos
-- name: vless-692622873
+      Host: royal-math-853a.alipapy-1378-78.workers.dev
+- name: 🇺🇸US_237|201KB/s|A004-260618
   type: vless
-  server: 130.107.73.148
-  port: 41373
-  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
-  udp: true
-  tls: true
-  servername: google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
-    short-id: 0e
-  flow: xtls-rprx-vision
-- name: vless-470976185
-  type: vless
-  server: 70.39.198.183
-  port: 46197
-  uuid: 5aab0d40-c509-4560-b048-ade921fdfb6a
-  udp: true
-  tls: true
-  servername: updates.cdn-apple.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: npJEB6VpYJ9iYTZ-z0IL06Xs7PEz0N3fZU_IRwftQ00
-    short-id: f24c17bb7fc284
-- name: vless-656442337
-  type: vless
-  server: 51.81.223.225
-  port: 11094
-  uuid: f1fa0ad9-b122-4b7c-da82-4bea9edc48dd
-  udp: true
-  tls: true
-  servername: www.yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 9dnXiXxP4xgvtTVRj9SBFdyO6mjGvVhWD8qVZZLCCCk
-    short-id: a356addf
-  flow: xtls-rprx-vision
-- name: vless-468882945
-  type: vless
-  server: 31.58.50.200
+  server: 104.18.35.15
   port: 8443
-  uuid: 880e605a-082b-47d5-8a37-cac00309ec7c
-  udp: true
-  tls: true
-  servername: tradingview.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
-    short-id: ''
-  flow: xtls-rprx-vision
-- name: FR - zhuhai.uk
-  type: ss
-  server: 13.38.78.128
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-- name: 🇫🇷FR_318|337KB/s|M003-260806
-  type: vless
-  server: 104.25.5.52
-  port: 443
-  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
+  uuid: 916e3030-6eac-418b-9402-7508ca7d6280
   udp: true
   network: ws
   tls: true
-  servername: FORnEwIRAn.ADE-1000.worKeRS.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /vl/yLWNcuUuw1jlJpkDhGy?ed=2560
-    headers:
-      Host: fornewiran.ade-1000.workers.dev
-- name: shadowsocks-687923666
-  type: ss
-  server: 15.204.246.132
-  port: 7307
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: PE - zhuhai.uk 01
-  type: vless
-  server: 5r86-tuq187.operix.top
-  port: 443
-  uuid: 4caaaae0-516b-4026-b2b2-69fea69df19a
-  udp: true
-  tls: true
-  servername: www.bing.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: LDpWYUJjGRJomvaN-gfgY96EJOF2DDHiFcNPEBLtoW0
-    short-id: 9019bbea8ff8781e
-  flow: xtls-rprx-vision
-- name: 🇫🇷FR_505|109KB/s|A004-260618
-  type: vless
-  server: 141.193.213.21
-  port: 8443
-  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
-  udp: true
-  network: ws
-  tls: true
-  servername: josni.hoyes.cloudns.ch
+  servername: us-akile.nanniang.top
   client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: josni.hoyes.cloudns.ch
-- name: SG - zhuhai.uk 04
-  type: ss
-  server: 120.232.253.90
-  port: 65443
-  cipher: aes-256-cfb
-  password: 7eadc6dbe2ae
-  udp: true
-- name: LV - zhuhai.uk
+      Host: us-akile.nanniang.top
+- name: 🇺🇸US_398|114KB/s|A004-260618
   type: vless
-  server: 195.123.210.168
-  port: 13443
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  server: 172.64.152.241
+  port: 8443
+  uuid: 916e3030-6eac-418b-9402-7508ca7d6280
+  udp: true
+  network: ws
+  tls: true
+  servername: us-akile.nanniang.top
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: us-akile.nanniang.top
+- name: 🇫🇷FR_194|71KB/s 01
+  type: vless
+  server: 104.16.8.66
+  port: 8880
+  uuid: 2f5c68d9-182f-4d8b-ab53-9358a04387b7
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.US.CMLiussss.net
+    headers:
+      Host: broad-truth-e988.258-217.workers.dev
+- name: 🇫🇷FR_710|119KB/s|B007-260618 01
+  type: vless
+  server: 172.67.173.89
+  port: 443
+  uuid: ffa431ab-a59b-4092-a418-905fcb1e4d5f
+  udp: true
+  network: ws
+  tls: true
+  servername: s0P42F8wwpdDE5tF7M4l6L.aB1X-Sn9O4y3N7oNdkRd.workeRS.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /vl/rYScQPG1EEjxXdswdMEU2b3rM4?ed=2560
+    headers:
+      Host: s0p42f8wwpdde5tf7m4l6l.ab1x-sn9o4y3n7ondkrd.workers.dev
+- name: 🇫🇷FR_683|332KB/s|M003-260806 01
+  type: vless
+  server: 104.21.89.181
+  port: 8880
+  uuid: 25322a43-4ef3-45cc-9e96-db44bcccd7be
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.US.CMLiussss.net
+    headers:
+      Host: purple-disk-f68d.14-360.workers.dev
+- name: 🇦🇹AT_3|173KB/s|S001-260618
+  type: vless
+  server: 104.17.108.69
+  port: 443
+  uuid: 9f2f3e55-a8a6-40f3-aeb2-1061e9207d4d
+  udp: true
+  network: ws
+  tls: true
+  servername: 4fspx0q.uploodmusicmelody.ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /ws-at
+    headers:
+      Host: 4fspx0q.uploodmusicmelody.ir
+- name: 🇫🇷FR_264|225KB/s|C002-260622 01
+  type: vless
+  server: 172.67.219.176
+  port: 2087
+  uuid: f2f4e2dc-3e7b-402f-a461-b48acc6aa310
+  udp: true
+  network: ws
+  tls: true
+  servername: sTeEp-BoNUs-8E6A.AmIrhon1376.woRKeRS.dEv
+  client-fingerprint: chrome
+  ws-opts:
+    path: /eyJqdW5rIjoid2JBOTRVclNMOVdBSVQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560
+    headers:
+      Host: steep-bonus-8e6a.amirhon1376.workers.dev
+- name: 🇫🇷FR_983|269KB/s|A004-260618 01
+  type: vless
+  server: 104.20.6.153
+  port: 8880
+  uuid: a22bff60-a40a-4250-bde2-4c660e363b47
+  udp: true
+  network: ws
+  ws-opts:
+    path: /j100sy9wn073cxbvir
+    headers:
+      Host: index.harmonica02.workers.dev
+- name: 🇺🇸US_731|374KB/s|A001-260618
+  type: vless
+  server: 38.180.242.205
+  port: 13779
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
   udp: true
   tls: true
-  servername: auto.cendora.ru
-  client-fingerprint: random
+  servername: tesla.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
-    short-id: a7f3c91b2e6d84c0
+    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
+    short-id: af1bdd293097b664
   flow: xtls-rprx-vision
-- name: 🇫🇷FR_802|210KB/s|A004-260618 01
+- name: 🇸🇬SG_35|170KB/s|M002-260618
   type: vless
-  server: 188.114.99.0
+  server: 154.194.0.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: vless-794165874
+  type: vless
+  server: 104.18.37.228
   port: 443
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   udp: true
@@ -404,483 +468,51 @@ proxies:
   servername: hhlfy.twiladaphne.ndjp.net
   client-fingerprint: chrome
   ws-opts:
-    path: /sg-melbi
+    path: /sg-melbi#TELEGRAM-PROXY_MTM?ed=512
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
-- name: 🇫🇷FR_605|345KB/s|B007-260618
+- name: 🇫🇷FR_281|191KB/s|C002-260622 01
   type: vless
-  server: 170.114.46.6
-  port: 443
-  uuid: 6680846a-8a57-4dfd-9a0e-63209cfc8535
+  server: 172.64.147.34
+  port: 2096
+  uuid: 56e4896e-90a9-4fe0-8480-90d3d68b9928
   udp: true
   network: ws
   tls: true
-  servername: support.zoom.us.yxls.eu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /sg-amz
-    headers:
-      Host: support.zoom.us.yxls.eu.cc
-- name: DE - zhuhai.uk
-  type: vless
-  server: api.fuck-you.dyn.site.fwqfw783rg2dad.website
-  port: 443
-  uuid: 5ca83936-136d-4314-8453-4ba10a86cf60
-  udp: true
-  network: ws
-  tls: true
-  servername: api.fuck-you.dyn.site.fwqfw783rg2dad.website
-  client-fingerprint: firefox
-  ws-opts:
-    path: /websocket
-    headers: {}
-- name: 🇷🇺俄罗斯丨yoyapai.com
-  type: vless
-  server: 104.18.32.47
-  port: 443
-  uuid: a5a544bf-e4b3-4651-9ff4-de3461910d87
-  udp: true
-  network: xhttp
-  tls: true
-  servername: rus.aba-hum.store
-  client-fingerprint: chrome
-- name: HK - zhuhai.uk
-  type: vless
-  server: 155.117.199.13
-  port: 9713
-  uuid: f06c6039-a489-3d78-a676-ed43be6deca3
-  udp: true
-  tls: true
-  servername: cdnjs.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: JrWOojSFwFA93YjsiQkDydTItQzNAsXsHU24HuWGWjA
-    short-id: bc8e3658db7d1323
-  flow: xtls-rprx-vision
-- name: 🇮🇹IT_21|444KB/s|M003-260806 01
-  type: vless
-  server: 151.101.56.7
-  port: 443
-  uuid: e0454af2-6fe9-4983-a55d-05e1da202602
-  udp: true
-  network: ws
-  tls: true
-  servername: ssl.fastly.com
+  servername: go.iranfree.de5.net
   client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: italyan.global.ssl.fastly.net.
-- name: vless-716759478
+      Host: go.iranfree.de5.net
+- name: LV - zhuhai.uk
   type: vless
-  server: 170.114.46.6
-  port: 8080
-  uuid: ce9e52ff-7069-4b43-91a9-c8bd4a5b38d3
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: zero.csmaster.ggff.net
-- name: vless-410640198
-  type: vless
-  server: 170.114.46.6
-  port: 80
-  uuid: cac6ec8f-99f0-44c5-814f-2f3f65e4db74
-  udp: true
-  network: ws
-  ws-opts:
-    path: /dula
-    headers:
-      Host: speed.dulacloud.store
-- name: vless-450834934
-  type: vless
-  server: 170.114.45.6
-  port: 80
-  uuid: cac6ec8f-99f0-44c5-814f-2f3f65e4db74
-  udp: true
-  network: ws
-  ws-opts:
-    path: /dula
-    headers:
-      Host: speed.dulacloud.store
-- name: SG - zhuhai.uk
-  type: vless
-  server: 155.117.199.13
-  port: 31873
-  uuid: f06c6039-a489-3d78-a676-ed43be6deca3
-  udp: true
-  tls: true
-  servername: cdnjs.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: JrWOojSFwFA93YjsiQkDydTItQzNAsXsHU24HuWGWjA
-    short-id: bc8e3658db7d1323
-  flow: xtls-rprx-vision
-- name: KZ - zhuhai.uk 01
-  type: vless
-  server: 199.189.253.213
-  port: 13443
-  uuid: 5238521b-c5dd-42af-870e-c174a2aaaafe
-  udp: true
-  tls: true
-  servername: auto.cendora.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
-    short-id: a7f3c91b2e6d84c0
-  flow: xtls-rprx-vision
-- name: vless-468904445
-  type: vless
-  server: 195.211.99.45
+  server: 195.123.210.168
   port: 443
-  uuid: 1f999bcd-f85e-47c3-afd7-92b6dd6b14b0
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
   udp: true
   tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  servername: eu-west.cendora.ru
+  client-fingerprint: qq
   reality-opts:
-    public-key: U_LRWSRuJNqBS3kXxaXveMhC_D8c_WuqK3sglCGCnSo
-    short-id: 17a6cd20d21e4740
+    public-key: m6RDw1b8R4lCaRUIzhHpy6TtX2Dhk6nyby8dWzeQqA0
+    short-id: dd3ff38418d29d22
   flow: xtls-rprx-vision
-- name: 🇸🇬SG_76|301KB/s|M002-260618
+- name: 🇫🇷FR_335|169KB/s|M002-260618 01
   type: vless
-  server: 164.38.155.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  server: 162.159.12.41
+  port: 443
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   udp: true
   network: ws
   tls: true
-  servername: speed.dulacloud.store
+  servername: hhlfy.twiladaphne.ndjp.net
   client-fingerprint: chrome
   ws-opts:
-    path: /dula?Telegram-WangCai2
+    path: /fp=chrome
     headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_51|122KB/s|M002-260618
-  type: vless
-  server: 92.53.189.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_52|334KB/s|M002-260618
-  type: vless
-  server: 185.158.133.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_53|337KB/s|M002-260618
-  type: vless
-  server: 167.68.42.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_47|128KB/s|M002-260618
-  type: vless
-  server: 5.175.141.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_71|288KB/s|M003-260806
-  type: vless
-  server: 190.93.245.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_37|244KB/s|M002-260618
-  type: vless
-  server: 160.153.0.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_72|214KB/s|M002-260618
-  type: vless
-  server: 199.181.197.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_32|253KB/s|M002-260618
-  type: vless
-  server: 185.135.9.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_75|236KB/s|M002-260618
-  type: vless
-  server: 188.42.89.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_74|124KB/s|M002-260618
-  type: vless
-  server: 45.128.76.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_73|192KB/s|M002-260618
-  type: vless
-  server: 139.64.235.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_48|125KB/s|M002-260618
-  type: vless
-  server: 89.116.46.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_49|138KB/s|M002-260618
-  type: vless
-  server: 5.10.244.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: ❓Other_38|210KB/s|M002-260618
-  type: vless
-  server: 193.227.99.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_34|183KB/s|M002-260618
-  type: vless
-  server: 88.216.67.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_39|103KB/s|M002-260618
-  type: vless
-  server: 167.68.4.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_45|207KB/s|M002-260618
-  type: vless
-  server: 45.131.6.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇸🇬SG_40|208KB/s|M002-260618
-  type: vless
-  server: 45.131.7.7
-  port: 8443
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  network: ws
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇫🇷FR_1007|266KB/s|M003-260806 01
-  type: vless
-  server: 104.21.74.214
-  port: 2053
-  uuid: d361072e-9e0e-4e2d-8ec7-2a4189b5b23a
-  udp: true
-  network: ws
-  tls: true
-  servername: ov.iran-servers.shop
-  client-fingerprint: chrome
-  ws-opts:
-    path: /J5aLQOY1R9ONWYCM
-    headers:
-      Host: ov.iran-servers.shop
-- name: vless-689161628
-  type: vless
-  server: 180.178.60.254
-  port: 10000
-  uuid: caec0d8d-ab2f-4247-b97d-7fb1a34ab195
-  udp: true
-- name: vmess-468166890
-  type: vmess
-  server: 23.162.200.198
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 🇺🇸US_357|65KB/s|K001-260618
-  type: vmess
-  server: 172.64.80.1
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  servername: v2ray1.dozapp.xyz
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-- name: KR - zhuhai.uk
-  type: vless
-  server: 155.117.199.13
-  port: 39217
-  uuid: f06c6039-a489-3d78-a676-ed43be6deca3
-  udp: true
-  tls: true
-  servername: cdnjs.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: JrWOojSFwFA93YjsiQkDydTItQzNAsXsHU24HuWGWjA
-    short-id: bc8e3658db7d1323
-  flow: xtls-rprx-vision
-- name: 🇺🇸US_356|65KB/s|C002-260622
-  type: vmess
-  server: 104.21.57.84
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  servername: v2ray1.dozapp.xyz
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-- name: ❓Other_39|151KB/s|T001-260618
+      Host: hhlfy.twiladaphne.ndjp.net
+- name: 🇺🇸US_263|91KB/s|T001-260618
   type: vmess
   server: 104.21.91.53
   port: 8443
@@ -895,72 +527,160 @@ proxies:
     path: /lMnsZUN4/
     headers:
       Host: v2ray1.dozapp.xyz
-- name: FR - zhuhai.uk 01
+- name: 🇫🇷FR_268|188KB/s|C002-260622 01
   type: vless
-  server: 155.117.199.13
-  port: 29893
-  uuid: f06c6039-a489-3d78-a676-ed43be6deca3
-  udp: true
-  tls: true
-  servername: cdnjs.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: JrWOojSFwFA93YjsiQkDydTItQzNAsXsHU24HuWGWjA
-    short-id: bc8e3658db7d1323
-  flow: xtls-rprx-vision
-- name: '[1.0MB/s][171ms] [free18#067] 🇨🇳_中国_95'
-  type: vless
-  server: 120.227.1.43
-  port: 12528
-  uuid: f0169b08-43fd-4dc3-8195-18f6ad2fe39d
-  udp: true
-- name: 🇺🇸_US美國丨yoyapai.com
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: 6e2e03e2-4f66-479a-a186-a34d66ca8c91
-  udp: true
-  network: ws
-  tls: true
-  servername: ssl.fastly.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER?ed=2053
-    headers:
-      Host: pan11.global.ssl.fastly.net
-- name: 🇫🇷FR_159|102KB/s|M002-260618
-  type: trojan
-  server: 104.21.26.36
-  port: 443
-  password: bpb-trojan
-  udp: true
-  sni: vless.herogoing.top
-  network: ws
-  ws-opts:
-    path: /tr?ed=2560
-    headers: {}
-- name: '[330ms] [ermaozi#013] 🇨🇳_CN_中国->🇸🇬_SG_新加坡'
-  type: vmess
-  server: v45.hdacd.com
-  port: 30845
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  udp: true
-- name: 🇫🇷FR_394|351KB/s|B007-260618 01
-  type: vless
-  server: 172.67.152.71
+  server: 89.117.112.30
   port: 8880
-  uuid: 21b93e91-5bb1-4d6d-9093-1fd09ae06903
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   network: ws
   ws-opts:
-    path: /pyip=ProxyIP.JP.CMLiussss.net
+    path: /?ed=2560
     headers:
-      Host: morning-silence-7b1b.222-46c.workers.dev
+      Host: vms.lifetime11.workers.dev
+- name: vless-778599006
+  type: vless
+  server: 170.114.46.6
+  port: 443
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+  udp: true
+  network: ws
+  tls: true
+  servername: josni.hoyes.cloudns.ch
+  ws-opts:
+    path: /
+    headers:
+      Host: josni.hoyes.cloudns.ch
+- name: vless-450834934
+  type: vless
+  server: 170.114.45.6
+  port: 80
+  uuid: cac6ec8f-99f0-44c5-814f-2f3f65e4db74
+  udp: true
+  network: ws
+  ws-opts:
+    path: /dula
+    headers:
+      Host: speed.dulacloud.store
+- name: vless-716759478
+  type: vless
+  server: 170.114.46.6
+  port: 8080
+  uuid: ce9e52ff-7069-4b43-91a9-c8bd4a5b38d3
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zero.csmaster.ggff.net
+- name: 🇨🇦CA加拿大丨yoyapai.com
+  type: vless
+  server: 104.21.23.72
+  port: 8880
+  uuid: f4e6476f-40d0-40cb-841f-cc2f6909ff20
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: calm-haze-d105.21-7cd.workers.dev
+- name: vless-410640198
+  type: vless
+  server: 170.114.46.6
+  port: 80
+  uuid: cac6ec8f-99f0-44c5-814f-2f3f65e4db74
+  udp: true
+  network: ws
+  ws-opts:
+    path: /dula
+    headers:
+      Host: speed.dulacloud.store
+- name: HK - zhuhai.uk 02
+  type: hysteria2
+  server: fg7xl1div.d33tqmk.cc
+  port: 10036
+  password: 1dcc3b89-0b45-3908-9120-19741361d55d
+  udp: true
+  sni: xk7qhk306.ckpfef.top
+  obfs: salamander
+  obfs-password: 1ol3tasb90
+- name: 🇩🇪DE_26|192KB/s|M002-260618
+  type: vless
+  server: 45.130.125.162
+  port: 2053
+  uuid: e7961655-9674-4cbd-a36f-ec0d5d7d660c
+  udp: true
+  network: ws
+  tls: true
+  servername: po.fastbrokencompony.com
+  client-fingerprint: ios
+  ws-opts:
+    path: /
+    headers:
+      Host: po.fastbrokencompony.com
+- name: 🇩🇪DE_50|308KB/s|C002-260622 01
+  type: vless
+  server: 104.16.75.251
+  port: 443
+  uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
+  udp: true
+  network: ws
+  tls: true
+  servername: germany-2.ariyuz.org
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: germany-2.ariyuz.org
+- name: 🇫🇷FR_688|274KB/s|M003-260806 01
+  type: vless
+  server: 104.21.51.145
+  port: 8443
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  udp: true
+  network: ws
+  tls: true
+  servername: INDEX.Arcane509.Workers.DEV
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assets
+    headers:
+      Host: index.arcane509.workers.dev
+- name: SG - zhuhai.uk
+  type: hysteria2
+  server: fg7xl1div.d33tqmk.cc
+  port: 11322
+  password: 1dcc3b89-0b45-3908-9120-19741361d55d
+  udp: true
+  sni: f132cdn-sg.ckpfef.top
+  obfs: salamander
+  obfs-password: 1ol3tasb90
+- name: HK - zhuhai.uk
+  type: hysteria2
+  server: fg7xl1div.d33tqmk.cc
+  port: 10034
+  password: 1dcc3b89-0b45-3908-9120-19741361d55d
+  udp: true
+  sni: xk7qhk304.ckpfef.top
+  obfs: salamander
+  obfs-password: 1ol3tasb90
+- name: 🇭🇰HK_185|109KB/s|A004-260618
+  type: vless
+  server: 104.19.149.99
+  port: 8443
+  uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
+  udp: true
+  network: ws
+  tls: true
+  servername: hongkong.11459178.xyz
+  client-fingerprint: edge
+  ws-opts:
+    path: /cdn/packages/runtime-core.tar.gz
+    headers:
+      Host: hongkong.11459178.xyz
 - name: 🇭🇰HK香港節點丨yoyapai.com
   type: vless
-  server: 91.193.58.117
+  server: 91.193.58.195
   port: 443
   uuid: 9419f782-b18e-4c4b-ae95-a7a279fd021f
   udp: true
@@ -971,132 +691,448 @@ proxies:
     path: Telegram-WangCai2🇨🇳
     headers:
       Host: jamph131-1228.pages.dev
-- name: 🇨🇦加拿大丨yoyapai.com
+- name: 🇸🇬SG_48|233KB/s|M002-260618
   type: vless
-  server: 104.21.88.174
-  port: 2052
-  uuid: 81e09a82-fe8d-4393-aefb-747322b20795
-  udp: true
-  network: httpupgrade
-- name: IT - zhuhai.uk
-  type: vless
-  server: 37.202.205.70
-  port: 443
-  uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
-  udp: true
-  tls: true
-  servername: it.savesafe.cc
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: UknJiwNyRmwBTaQCyY3mpq9blOPEgBFPV_NYJIgBKCs
-    short-id: 62b6d6e51d461d78
-  flow: xtls-rprx-vision
-- name: ❓未知丨yoyapai.com
-  type: vless
-  server: 104.26.13.40
-  port: 8880
-  uuid: 875d3876-ab9a-4dd6-8a8d-bf57f03403aa
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.JP.CMLiussss.net
-    headers:
-      Host: square-sea-01d1.339-be3.workers.dev
-- name: JP日本(mibei77.com 米贝节点分享)
-  type: trojan
-  server: 104.16.174.44
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.ignitelimit.com
-- name: 🇫🇷FR_428|359KB/s|T001-260618
-  type: vless
-  server: 104.24.65.202
-  port: 2086
-  uuid: 7a629a11-b75a-4889-957d-dc0987a73a19
-  udp: true
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoieVMzbmVFWlBsd3prIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OmIwOjY0OjpdIl19?ed
-    headers:
-      Host: jimifree.jimshofree1.workers.dev
-- name: 🇫🇷FR_278|244KB/s|C002-260622 01
-  type: vless
-  server: 172.66.170.53
-  port: 8880
-  uuid: 6b6733fb-580b-411b-8bf8-51137c2aa037
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-    headers:
-      Host: restless-sky-eb31.438-aa8.workers.dev
-- name: 🇫🇷FR_264|207KB/s
-  type: trojan
-  server: 104.24.163.206
-  port: 443
-  password: bd85f5fe32d9446a8b1f59e4f710455b
-  udp: true
-  sni: BpB-PAnEL-62c3.mlM-eE9A3b83.wOrKErS.dev
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoibkN2cER2SDZIUTkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6IiIsInBhbmVsSVBzIjoiWzJhMDI6ODk4OjE0Njo2NDo6XSJ9?ed=2560
-    headers: {}
-- name: 🇫🇷FR_470|107KB/s|C002-260622 01
-  type: vless
-  server: 185.193.29.40
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vms.lifetime08.workers.dev
-- name: 🇫🇷FR_533|224KB/s|B007-260618 01
-  type: vless
-  server: 8.47.69.9
-  port: 443
-  uuid: 11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf
+  server: 5.175.141.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
   udp: true
   network: ws
   tls: true
-  servername: ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV
+  servername: speed.dulacloud.store
   client-fingerprint: chrome
   ws-opts:
-    path: /eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    path: /dula?Telegram-WangCai2
     headers:
-      Host: ancient-heart-60c5.dpccgizieb.workers.dev
-- name: 🇫🇷FR_347|147KB/s|C002-260622
-  type: trojan
-  server: 104.19.173.68
-  port: 443
-  password: d0298536-d670-4045-bbb1-ddd5ea68683e
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_42|201KB/s|M002-260618
+  type: vless
+  server: 141.11.202.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
   udp: true
-  sni: azadnet-5vk.pages.dev
   network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
   ws-opts:
-    path: /azadnet-5vk.pages.dev/?ed=2560&PROT_TYPE=trojan
-    headers: {}
-- name: 🇫🇷FR_716|286KB/s|M003-260806 01
-  type: trojan
-  server: 89.116.180.49
-  port: 443
-  password: f18d6149-e214-8554-e737-f7523c8b2eea
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇫🇷FR_684|147KB/s|M003-260806 01
+  type: vless
+  server: 172.67.133.44
+  port: 2096
+  uuid: af19ce98-b58b-43ef-9f0d-2ae6343e28fe
   udp: true
-  sni: 0403.infinityconfig4.workers.dev
   network: ws
+  tls: true
+  servername: blue-disk-1124.sawmansafi.workers.dev
+  client-fingerprint: chrome
   ws-opts:
-    path: /sync
-    headers: {}
-- name: 🇫🇷FR法国丨yoyapai.com
+    path: /eyJqdW5rIjoic2phSXhvRm5pQmxZIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OjExOjY0OjpdIl19?ed=2560
+    headers:
+      Host: blue-disk-1124.sawmansafi.workers.dev
+- name: 🇸🇬SG_67|253KB/s|M002-260618
+  type: vless
+  server: 139.64.235.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_51|303KB/s|M002-260618
+  type: vless
+  server: 92.53.189.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: vless-2318716
+  type: vless
+  server: 141.193.213.20
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_441|346KB/s|M002-260618
+  type: vless
+  server: 185.162.228.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_398|339KB/s|M002-260618
+  type: vless
+  server: 154.198.173.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_400|168KB/s|M002-260618
+  type: vless
+  server: 108.165.216.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_68|316KB/s|M002-260618
+  type: vless
+  server: 45.128.76.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_43|244KB/s|M002-260618
+  type: vless
+  server: 167.68.4.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_34|177KB/s|M002-260618
+  type: vless
+  server: 185.135.9.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_41|227KB/s|M002-260618
+  type: vless
+  server: 160.153.0.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_49|147KB/s|M002-260618
+  type: vless
+  server: 89.116.46.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_45|146KB/s|M002-260618
+  type: vless
+  server: 45.131.6.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: vless-687167943
+  type: vless
+  server: 141.193.213.21
+  port: 8443
+  uuid: 4c8c4763-d69a-44d0-bb77-ae22c6b9e150
+  udp: true
+  network: ws
+  tls: true
+  servername: zero.csmaster.ggff.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: zero.csmaster.ggff.net
+- name: 🇸🇬SG_37|333KB/s|M002-260618
+  type: vless
+  server: 154.211.8.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_69|170KB/s|M002-260618
+  type: vless
+  server: 188.42.89.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_442|189KB/s|M002-260618
+  type: vless
+  server: 45.135.235.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_36|220KB/s|M002-260618
+  type: vless
+  server: 88.216.67.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_44|250KB/s|M002-260618
+  type: vless
+  server: 45.131.7.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_419|307KB/s|M002-260618
+  type: vless
+  server: 88.216.66.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_47|362KB/s|M002-260618
+  type: vless
+  server: 86.38.214.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_70|212KB/s|M002-260618
+  type: vless
+  server: 164.38.155.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_53|293KB/s|M002-260618
+  type: vless
+  server: 167.68.42.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_66|117KB/s|M002-260618
+  type: vless
+  server: 199.181.197.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: 🇸🇬SG_52|203KB/s|M002-260618
+  type: vless
+  server: 185.158.133.7
+  port: 8443
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  udp: true
+  network: ws
+  tls: true
+  servername: speed.dulacloud.store
+  client-fingerprint: chrome
+  ws-opts:
+    path: /dula?Telegram-WangCai2
+    headers:
+      Host: speed.dulacloud.store
+- name: '[1.0MB/s][171ms] [free18#067] 🇨🇳_中国_95'
+  type: vless
+  server: 120.227.1.43
+  port: 12528
+  uuid: f0169b08-43fd-4dc3-8195-18f6ad2fe39d
+  udp: true
+- name: 🇮🇹IT_21|444KB/s|M003-260806 01
+  type: vless
+  server: 151.101.56.7
+  port: 443
+  uuid: e0454af2-6fe9-4983-a55d-05e1da202602
+  udp: true
+  network: ws
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: italyan.global.ssl.fastly.net.
+- name: 🇫🇷FR_31|199KB/s|M002-260618
+  type: vless
+  server: 104.16.150.130
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
+  network: ws
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+- name: HK - zhuhai.uk 04
+  type: vless
+  server: 155.117.199.13
+  port: 31723
+  uuid: f06c6039-a489-3d78-a676-ed43be6deca3
+  udp: true
+  tls: true
+  servername: cdnjs.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: JrWOojSFwFA93YjsiQkDydTItQzNAsXsHU24HuWGWjA
+    short-id: bc8e3658db7d1323
+  flow: xtls-rprx-vision
+- name: 🇫🇷FR_320|276KB/s|C002-260622 01
+  type: vless
+  server: 185.207.197.123
+  port: 443
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  udp: true
+  network: ws
+  tls: true
+  servername: notls.lukongtou.eu.org
+  client-fingerprint: chrome
+  ws-opts:
+    path: /Telegram-WangCai2🇨🇳
+    headers:
+      Host: notls.lukongtou.eu.org
+- name: 🇫🇷FR_357|229KB/s|B007-260618
   type: trojan
-  server: 104.18.152.152
+  server: 104.16.174.33
   port: 443
   password: humanity
   udp: true
@@ -1105,11 +1141,38 @@ proxies:
   ws-opts:
     path: /assignment
     headers: {}
-- name: HK - zhuhai.uk 02
+- name: CH - zhuhai.uk 01
+  type: vless
+  server: 178.83.226.142
+  port: 8443
+  uuid: 4cb63132-e084-4676-ac67-1ed6b60be05a
+  udp: true
+  tls: true
+  servername: refersion.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: -x9vdxai-qKAzuhxV7H2RIbEmIh_ZgdiFxiUA5q0B1I
+    short-id: aa6988d03cc11454
+  flow: xtls-rprx-vision
+- name: 🇫🇷FR_668|274KB/s|B007-260618 01
+  type: vless
+  server: 172.67.161.136
+  port: 443
+  uuid: d713a25e-d96c-4755-94f4-9a0e0cd1ad68
+  udp: true
+  network: ws
+  tls: true
+  servername: bpb-PanEl-4e2C.SAkWra939.wORKErS.DEV
+  client-fingerprint: chrome
+  ws-opts:
+    path: /eyJqdW5rIjoiVndBTWp2RGsyc0g4TlgiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjoiWzJhMDI6ODk4OjE0Njo2NDo6XSJ9?ed
+    headers:
+      Host: bpb-panel-4e2c.sakwra939.workers.dev
+- name: DE - zhuhai.uk
   type: vmess
-  server: t.cnmjcn.cyou
-  port: 16622
-  uuid: 7b9d480b-ff5a-4fde-a192-ac79131caa9a
+  server: planb.mojcn.com.linuxlh.xin
+  port: 16644
+  uuid: b5f7ad86-9e40-4684-98f9-83f8136a1054
   alterId: 0
   cipher: auto
   udp: true
@@ -1117,245 +1180,231 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: d2e7f5d110ba6d4b122b4723b13ecc8f.mobgslb.tbcache.com
-- name: FR法国(mibei77.com 米贝节点分享)
+      Host: eeee7339c9f412913069ff64b12fb71f.mobgslb.tbcache.com
+- name: 🇮🇹IT_10|147KB/s|M003-260806
   type: vless
-  server: 104.19.87.194
-  port: 443
-  uuid: 407ecce0-dc85-465f-89f5-e520e9378baf
+  server: 104.26.0.7
+  port: 8443
+  uuid: 69ac162b-1643-4acb-9f49-09d8b0fad609
   udp: true
   network: ws
   tls: true
-  servername: ld.223350.xyz
+  servername: milan.adaspoloandco.com
   client-fingerprint: chrome
   ws-opts:
-    path: /
+    path: /RoBeRt
     headers:
-      Host: ld.223350.xyz
-- name: 🇫🇷FR_304|202KB/s|M003-260806
-  type: vless
-  server: 172.64.156.60
-  port: 443
-  uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
-  udp: true
-  network: ws
-  tls: true
-  servername: powered-by-surena.configfarsi6982dd6e0355e.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: powered-by-surena.configfarsi6982dd6e0355e.workers.dev
+      Host: milan.adaspoloandco.com
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - shadowsocks-163
-  - shadowsocks-468218514
   - shadowsocks-158
+  - shadowsocks-163
   - shadowsocks-194
-  - shadowsocks-696780666
+  - shadowsocks-468218514
+  - shadowsocks-795694285
+  - vmess-655843100
+  - vmess-717846984
+  - shadowsocks-717969065
   - shadowsocks-738053617
-  - vmess-717847048
-  - shadowsocks-738053655
   - shadowsocks-738053653
-  - shadowsocks-696780675
-  - vless-474875702
-  - shadowsocks-723348714
-  - shadowsocks-771195680
-  - shadowsocks-696780673
-  - vmess-710529892
-  - shadowsocks-156
-  - vless-719312111
-  - vless-470362344
-  - trojan-696780687
-  - US - zhuhai.uk 02
-  - vless-468883230
+  - shadowsocks-717968979
+  - shadowsocks-738053655
+  - trojan-474801100
+  - vmess-794240325
+  - vmess-655845770
+  - vless-742983220
+  - vless-721034806
   - vless-682972326
+  - vless-742983235
+  - vless-747510021
+  - vless-721034808
+  - vless-720888897
+  - vless-468883230
+  - vless-650646321
+  - shadowsocks-156
+  - trojan-713169257
+  - trojan-541367282
+  - trojan-713169317
+  - vless-723419454
+  - 🇫🇷FR_924|266KB/s|M003-260806 01
   - vless-723342363
-  - vless-470978189
-  - vmess-656156642
-  - vless-730458271
-  - vmess-669789140
-  - 🇫🇷FR_479|326KB/s|A004-260618
-  - trojan-625721207
-  - vless-692622873
-  - vless-470976185
-  - vless-656442337
-  - vless-468882945
-  - FR - zhuhai.uk
-  - 🇫🇷FR_318|337KB/s|M003-260806
-  - shadowsocks-687923666
-  - PE - zhuhai.uk 01
-  - 🇫🇷FR_505|109KB/s|A004-260618
-  - SG - zhuhai.uk 04
+  - 🇫🇷FR_206|210KB/s 01
+  - 🇫🇷FR_349|498KB/s 01
+  - vless-730134133
+  - 🇺🇸US_237|201KB/s|A004-260618
+  - 🇺🇸US_398|114KB/s|A004-260618
+  - 🇫🇷FR_194|71KB/s 01
+  - 🇫🇷FR_710|119KB/s|B007-260618 01
+  - 🇫🇷FR_683|332KB/s|M003-260806 01
+  - 🇦🇹AT_3|173KB/s|S001-260618
+  - 🇫🇷FR_264|225KB/s|C002-260622 01
+  - 🇫🇷FR_983|269KB/s|A004-260618 01
+  - 🇺🇸US_731|374KB/s|A001-260618
+  - 🇸🇬SG_35|170KB/s|M002-260618
+  - vless-794165874
+  - 🇫🇷FR_281|191KB/s|C002-260622 01
   - LV - zhuhai.uk
-  - 🇫🇷FR_802|210KB/s|A004-260618 01
-  - 🇫🇷FR_605|345KB/s|B007-260618
-  - DE - zhuhai.uk
-  - 🇷🇺俄罗斯丨yoyapai.com
-  - HK - zhuhai.uk
-  - 🇮🇹IT_21|444KB/s|M003-260806 01
-  - vless-716759478
-  - vless-410640198
+  - 🇫🇷FR_335|169KB/s|M002-260618 01
+  - 🇺🇸US_263|91KB/s|T001-260618
+  - 🇫🇷FR_268|188KB/s|C002-260622 01
+  - vless-778599006
   - vless-450834934
-  - SG - zhuhai.uk
-  - KZ - zhuhai.uk 01
-  - vless-468904445
-  - 🇸🇬SG_76|301KB/s|M002-260618
-  - 🇸🇬SG_51|122KB/s|M002-260618
-  - 🇸🇬SG_52|334KB/s|M002-260618
-  - 🇸🇬SG_53|337KB/s|M002-260618
-  - 🇸🇬SG_47|128KB/s|M002-260618
-  - 🇸🇬SG_71|288KB/s|M003-260806
-  - 🇸🇬SG_37|244KB/s|M002-260618
-  - 🇸🇬SG_72|214KB/s|M002-260618
-  - 🇸🇬SG_32|253KB/s|M002-260618
-  - 🇸🇬SG_75|236KB/s|M002-260618
-  - 🇸🇬SG_74|124KB/s|M002-260618
-  - 🇸🇬SG_73|192KB/s|M002-260618
-  - 🇸🇬SG_48|125KB/s|M002-260618
-  - 🇸🇬SG_49|138KB/s|M002-260618
-  - ❓Other_38|210KB/s|M002-260618
-  - 🇸🇬SG_34|183KB/s|M002-260618
-  - 🇸🇬SG_39|103KB/s|M002-260618
-  - 🇸🇬SG_45|207KB/s|M002-260618
-  - 🇸🇬SG_40|208KB/s|M002-260618
-  - 🇫🇷FR_1007|266KB/s|M003-260806 01
-  - vless-689161628
-  - vmess-468166890
-  - 🇺🇸US_357|65KB/s|K001-260618
-  - KR - zhuhai.uk
-  - 🇺🇸US_356|65KB/s|C002-260622
-  - ❓Other_39|151KB/s|T001-260618
-  - FR - zhuhai.uk 01
-  - '[1.0MB/s][171ms] [free18#067] 🇨🇳_中国_95'
-  - 🇺🇸_US美國丨yoyapai.com
-  - 🇫🇷FR_159|102KB/s|M002-260618
-  - '[330ms] [ermaozi#013] 🇨🇳_CN_中国->🇸🇬_SG_新加坡'
-  - 🇫🇷FR_394|351KB/s|B007-260618 01
-  - 🇭🇰HK香港節點丨yoyapai.com
-  - 🇨🇦加拿大丨yoyapai.com
-  - IT - zhuhai.uk
-  - ❓未知丨yoyapai.com
-  - JP日本(mibei77.com 米贝节点分享)
-  - 🇫🇷FR_428|359KB/s|T001-260618
-  - 🇫🇷FR_278|244KB/s|C002-260622 01
-  - 🇫🇷FR_264|207KB/s
-  - 🇫🇷FR_470|107KB/s|C002-260622 01
-  - 🇫🇷FR_533|224KB/s|B007-260618 01
-  - 🇫🇷FR_347|147KB/s|C002-260622
-  - 🇫🇷FR_716|286KB/s|M003-260806 01
-  - 🇫🇷FR法国丨yoyapai.com
+  - vless-716759478
+  - 🇨🇦CA加拿大丨yoyapai.com
+  - vless-410640198
   - HK - zhuhai.uk 02
-  - FR法国(mibei77.com 米贝节点分享)
-  - 🇫🇷FR_304|202KB/s|M003-260806
+  - 🇩🇪DE_26|192KB/s|M002-260618
+  - 🇩🇪DE_50|308KB/s|C002-260622 01
+  - 🇫🇷FR_688|274KB/s|M003-260806 01
+  - SG - zhuhai.uk
+  - HK - zhuhai.uk
+  - 🇭🇰HK_185|109KB/s|A004-260618
+  - 🇭🇰HK香港節點丨yoyapai.com
+  - 🇸🇬SG_48|233KB/s|M002-260618
+  - 🇸🇬SG_42|201KB/s|M002-260618
+  - 🇫🇷FR_684|147KB/s|M003-260806 01
+  - 🇸🇬SG_67|253KB/s|M002-260618
+  - 🇸🇬SG_51|303KB/s|M002-260618
+  - vless-2318716
+  - 🇸🇬SG_441|346KB/s|M002-260618
+  - 🇸🇬SG_398|339KB/s|M002-260618
+  - 🇸🇬SG_400|168KB/s|M002-260618
+  - 🇸🇬SG_68|316KB/s|M002-260618
+  - 🇸🇬SG_43|244KB/s|M002-260618
+  - 🇸🇬SG_34|177KB/s|M002-260618
+  - 🇸🇬SG_41|227KB/s|M002-260618
+  - 🇸🇬SG_49|147KB/s|M002-260618
+  - 🇸🇬SG_45|146KB/s|M002-260618
+  - vless-687167943
+  - 🇸🇬SG_37|333KB/s|M002-260618
+  - 🇸🇬SG_69|170KB/s|M002-260618
+  - 🇸🇬SG_442|189KB/s|M002-260618
+  - 🇸🇬SG_36|220KB/s|M002-260618
+  - 🇸🇬SG_44|250KB/s|M002-260618
+  - 🇸🇬SG_419|307KB/s|M002-260618
+  - 🇸🇬SG_47|362KB/s|M002-260618
+  - 🇸🇬SG_70|212KB/s|M002-260618
+  - 🇸🇬SG_53|293KB/s|M002-260618
+  - 🇸🇬SG_66|117KB/s|M002-260618
+  - 🇸🇬SG_52|203KB/s|M002-260618
+  - '[1.0MB/s][171ms] [free18#067] 🇨🇳_中国_95'
+  - 🇮🇹IT_21|444KB/s|M003-260806 01
+  - 🇫🇷FR_31|199KB/s|M002-260618
+  - HK - zhuhai.uk 04
+  - 🇫🇷FR_320|276KB/s|C002-260622 01
+  - 🇫🇷FR_357|229KB/s|B007-260618
+  - CH - zhuhai.uk 01
+  - 🇫🇷FR_668|274KB/s|B007-260618 01
+  - DE - zhuhai.uk
+  - 🇮🇹IT_10|147KB/s|M003-260806
 - name: ♻️ 自动选择
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - shadowsocks-163
-  - shadowsocks-468218514
   - shadowsocks-158
+  - shadowsocks-163
   - shadowsocks-194
-  - shadowsocks-696780666
+  - shadowsocks-468218514
+  - shadowsocks-795694285
+  - vmess-655843100
+  - vmess-717846984
+  - shadowsocks-717969065
   - shadowsocks-738053617
-  - vmess-717847048
-  - shadowsocks-738053655
   - shadowsocks-738053653
-  - shadowsocks-696780675
-  - vless-474875702
-  - shadowsocks-723348714
-  - shadowsocks-771195680
-  - shadowsocks-696780673
-  - vmess-710529892
-  - shadowsocks-156
-  - vless-719312111
-  - vless-470362344
-  - trojan-696780687
-  - US - zhuhai.uk 02
-  - vless-468883230
+  - shadowsocks-717968979
+  - shadowsocks-738053655
+  - trojan-474801100
+  - vmess-794240325
+  - vmess-655845770
+  - vless-742983220
+  - vless-721034806
   - vless-682972326
+  - vless-742983235
+  - vless-747510021
+  - vless-721034808
+  - vless-720888897
+  - vless-468883230
+  - vless-650646321
+  - shadowsocks-156
+  - trojan-713169257
+  - trojan-541367282
+  - trojan-713169317
+  - vless-723419454
+  - 🇫🇷FR_924|266KB/s|M003-260806 01
   - vless-723342363
-  - vless-470978189
-  - vmess-656156642
-  - vless-730458271
-  - vmess-669789140
-  - 🇫🇷FR_479|326KB/s|A004-260618
-  - trojan-625721207
-  - vless-692622873
-  - vless-470976185
-  - vless-656442337
-  - vless-468882945
-  - FR - zhuhai.uk
-  - 🇫🇷FR_318|337KB/s|M003-260806
-  - shadowsocks-687923666
-  - PE - zhuhai.uk 01
-  - 🇫🇷FR_505|109KB/s|A004-260618
-  - SG - zhuhai.uk 04
+  - 🇫🇷FR_206|210KB/s 01
+  - 🇫🇷FR_349|498KB/s 01
+  - vless-730134133
+  - 🇺🇸US_237|201KB/s|A004-260618
+  - 🇺🇸US_398|114KB/s|A004-260618
+  - 🇫🇷FR_194|71KB/s 01
+  - 🇫🇷FR_710|119KB/s|B007-260618 01
+  - 🇫🇷FR_683|332KB/s|M003-260806 01
+  - 🇦🇹AT_3|173KB/s|S001-260618
+  - 🇫🇷FR_264|225KB/s|C002-260622 01
+  - 🇫🇷FR_983|269KB/s|A004-260618 01
+  - 🇺🇸US_731|374KB/s|A001-260618
+  - 🇸🇬SG_35|170KB/s|M002-260618
+  - vless-794165874
+  - 🇫🇷FR_281|191KB/s|C002-260622 01
   - LV - zhuhai.uk
-  - 🇫🇷FR_802|210KB/s|A004-260618 01
-  - 🇫🇷FR_605|345KB/s|B007-260618
-  - DE - zhuhai.uk
-  - 🇷🇺俄罗斯丨yoyapai.com
-  - HK - zhuhai.uk
-  - 🇮🇹IT_21|444KB/s|M003-260806 01
-  - vless-716759478
-  - vless-410640198
+  - 🇫🇷FR_335|169KB/s|M002-260618 01
+  - 🇺🇸US_263|91KB/s|T001-260618
+  - 🇫🇷FR_268|188KB/s|C002-260622 01
+  - vless-778599006
   - vless-450834934
-  - SG - zhuhai.uk
-  - KZ - zhuhai.uk 01
-  - vless-468904445
-  - 🇸🇬SG_76|301KB/s|M002-260618
-  - 🇸🇬SG_51|122KB/s|M002-260618
-  - 🇸🇬SG_52|334KB/s|M002-260618
-  - 🇸🇬SG_53|337KB/s|M002-260618
-  - 🇸🇬SG_47|128KB/s|M002-260618
-  - 🇸🇬SG_71|288KB/s|M003-260806
-  - 🇸🇬SG_37|244KB/s|M002-260618
-  - 🇸🇬SG_72|214KB/s|M002-260618
-  - 🇸🇬SG_32|253KB/s|M002-260618
-  - 🇸🇬SG_75|236KB/s|M002-260618
-  - 🇸🇬SG_74|124KB/s|M002-260618
-  - 🇸🇬SG_73|192KB/s|M002-260618
-  - 🇸🇬SG_48|125KB/s|M002-260618
-  - 🇸🇬SG_49|138KB/s|M002-260618
-  - ❓Other_38|210KB/s|M002-260618
-  - 🇸🇬SG_34|183KB/s|M002-260618
-  - 🇸🇬SG_39|103KB/s|M002-260618
-  - 🇸🇬SG_45|207KB/s|M002-260618
-  - 🇸🇬SG_40|208KB/s|M002-260618
-  - 🇫🇷FR_1007|266KB/s|M003-260806 01
-  - vless-689161628
-  - vmess-468166890
-  - 🇺🇸US_357|65KB/s|K001-260618
-  - KR - zhuhai.uk
-  - 🇺🇸US_356|65KB/s|C002-260622
-  - ❓Other_39|151KB/s|T001-260618
-  - FR - zhuhai.uk 01
-  - '[1.0MB/s][171ms] [free18#067] 🇨🇳_中国_95'
-  - 🇺🇸_US美國丨yoyapai.com
-  - 🇫🇷FR_159|102KB/s|M002-260618
-  - '[330ms] [ermaozi#013] 🇨🇳_CN_中国->🇸🇬_SG_新加坡'
-  - 🇫🇷FR_394|351KB/s|B007-260618 01
-  - 🇭🇰HK香港節點丨yoyapai.com
-  - 🇨🇦加拿大丨yoyapai.com
-  - IT - zhuhai.uk
-  - ❓未知丨yoyapai.com
-  - JP日本(mibei77.com 米贝节点分享)
-  - 🇫🇷FR_428|359KB/s|T001-260618
-  - 🇫🇷FR_278|244KB/s|C002-260622 01
-  - 🇫🇷FR_264|207KB/s
-  - 🇫🇷FR_470|107KB/s|C002-260622 01
-  - 🇫🇷FR_533|224KB/s|B007-260618 01
-  - 🇫🇷FR_347|147KB/s|C002-260622
-  - 🇫🇷FR_716|286KB/s|M003-260806 01
-  - 🇫🇷FR法国丨yoyapai.com
+  - vless-716759478
+  - 🇨🇦CA加拿大丨yoyapai.com
+  - vless-410640198
   - HK - zhuhai.uk 02
-  - FR法国(mibei77.com 米贝节点分享)
-  - 🇫🇷FR_304|202KB/s|M003-260806
+  - 🇩🇪DE_26|192KB/s|M002-260618
+  - 🇩🇪DE_50|308KB/s|C002-260622 01
+  - 🇫🇷FR_688|274KB/s|M003-260806 01
+  - SG - zhuhai.uk
+  - HK - zhuhai.uk
+  - 🇭🇰HK_185|109KB/s|A004-260618
+  - 🇭🇰HK香港節點丨yoyapai.com
+  - 🇸🇬SG_48|233KB/s|M002-260618
+  - 🇸🇬SG_42|201KB/s|M002-260618
+  - 🇫🇷FR_684|147KB/s|M003-260806 01
+  - 🇸🇬SG_67|253KB/s|M002-260618
+  - 🇸🇬SG_51|303KB/s|M002-260618
+  - vless-2318716
+  - 🇸🇬SG_441|346KB/s|M002-260618
+  - 🇸🇬SG_398|339KB/s|M002-260618
+  - 🇸🇬SG_400|168KB/s|M002-260618
+  - 🇸🇬SG_68|316KB/s|M002-260618
+  - 🇸🇬SG_43|244KB/s|M002-260618
+  - 🇸🇬SG_34|177KB/s|M002-260618
+  - 🇸🇬SG_41|227KB/s|M002-260618
+  - 🇸🇬SG_49|147KB/s|M002-260618
+  - 🇸🇬SG_45|146KB/s|M002-260618
+  - vless-687167943
+  - 🇸🇬SG_37|333KB/s|M002-260618
+  - 🇸🇬SG_69|170KB/s|M002-260618
+  - 🇸🇬SG_442|189KB/s|M002-260618
+  - 🇸🇬SG_36|220KB/s|M002-260618
+  - 🇸🇬SG_44|250KB/s|M002-260618
+  - 🇸🇬SG_419|307KB/s|M002-260618
+  - 🇸🇬SG_47|362KB/s|M002-260618
+  - 🇸🇬SG_70|212KB/s|M002-260618
+  - 🇸🇬SG_53|293KB/s|M002-260618
+  - 🇸🇬SG_66|117KB/s|M002-260618
+  - 🇸🇬SG_52|203KB/s|M002-260618
+  - '[1.0MB/s][171ms] [free18#067] 🇨🇳_中国_95'
+  - 🇮🇹IT_21|444KB/s|M003-260806 01
+  - 🇫🇷FR_31|199KB/s|M002-260618
+  - HK - zhuhai.uk 04
+  - 🇫🇷FR_320|276KB/s|C002-260622 01
+  - 🇫🇷FR_357|229KB/s|B007-260618
+  - CH - zhuhai.uk 01
+  - 🇫🇷FR_668|274KB/s|B007-260618 01
+  - DE - zhuhai.uk
+  - 🇮🇹IT_10|147KB/s|M003-260806
 rules:
 - MATCH,🚀 节点选择
