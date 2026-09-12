@@ -3,66 +3,16 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: shadowsocks-196
+- name: 🇺🇸US_219|1.2MB/s
   type: ss
-  server: 37.19.198.244
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: 138.199.42.68
+  port: 8080
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
   udp: true
-- name: vless-1156944845
+- name: vless-1247220687
   type: vless
-  server: 47.253.226.114
-  port: 443
-  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
-  udp: true
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
-    short-id: ''
-  flow: xtls-rprx-vision
-- name: shadowsocks-496614106
-  type: ss
-  server: 51.222.12.127
-  port: 445
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-  udp: true
-- name: vless-1235435929
-  type: vless
-  server: 188.137.243.243
-  port: 443
-  uuid: 6072ca43-2715-49a4-a9a2-a56be73ecfb0
-  udp: true
-  network: grpc
-  tls: true
-  servername: google.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: RfIQJtD0PVoH_0aKu3-pBd8IOLnRURjmtatrPcoEqyQ
-    short-id: cba5422c695303f0
-  grpc-opts:
-    grpc-service-name: MediaService
-- name: hysteria2-159719813
-  type: hysteria2
-  server: 159.223.157.129
-  port: 8443
-  password: suAmQS9LlInNq4Wumh-FUF4GGlpgmG_g
-  udp: true
-  skip-cert-verify: true
-- name: vmess-655845751
-  type: vmess
-  server: 67.220.85.46
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: vless-1247221448
-  type: vless
-  server: 104.18.34.14
+  server: 104.18.46.234
   port: 80
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
@@ -71,41 +21,32 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: shadowsocks-842256759
-  type: ss
-  server: 51.222.155.113
-  port: 5601
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  udp: true
-- name: vless-661025483
+- name: vless-1247220696
   type: vless
-  server: 169.40.42.229
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  flow: xtls-rprx-vision
-- name: vless-1249003633
-  type: vless
-  server: 188.114.97.6
-  port: 2086
+  server: 162.159.48.32
+  port: 2052
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   network: ws
   ws-opts:
-    path: /
+    path: /?ed=2560security=tls
     headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: vless-1247221438
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1247220704
   type: vless
-  server: 162.159.43.187
-  port: 2095
+  server: 104.21.70.21
+  port: 8080
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1247220685
+  type: vless
+  server: 162.159.24.131
+  port: 2086
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   network: ws
@@ -124,9 +65,9 @@ proxies:
     path: /
     headers:
       Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: vless-1247220727
+- name: vless-1254039576
   type: vless
-  server: 172.64.229.170
+  server: 162.159.24.131
   port: 2082
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
@@ -135,149 +76,15 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: vless-1249004619
+- name: vless-1247220706
   type: vless
-  server: 108.162.198.178
-  port: 8880
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: vless-692622915
-  type: vless
-  server: 169.40.42.52
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  flow: xtls-rprx-vision
-- name: vless-1247220742
-  type: vless
-  server: 172.64.42.85
+  server: 172.64.32.108
   port: 2082
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   network: ws
   ws-opts:
     path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: vless-669787752
-  type: vless
-  server: 169.40.42.173
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  flow: xtls-rprx-vision
-- name: shadowsocks-1136106230
-  type: ss
-  server: 51.222.141.125
-  port: 445
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-  udp: true
-- name: vless-1239407526
-  type: vless
-  server: 104.18.33.69
-  port: 2083
-  uuid: 8666ab45-8e3d-4988-841b-2561d91e32d5
-  udp: true
-  network: ws
-  tls: true
-  servername: mianfei-73q.pages.dev
-  ws-opts:
-    path: /
-    headers:
-      Host: mianfei-73q.pages.dev
-- name: vless-1249004585
-  type: vless
-  server: 162.159.48.32
-  port: 2095
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: vless-1239407519
-  type: vless
-  server: 104.17.148.65
-  port: 2087
-  uuid: 8666ab45-8e3d-4988-841b-2561d91e32d5
-  udp: true
-  network: ws
-  tls: true
-  servername: mianfei-73q.pages.dev
-  ws-opts:
-    path: /
-    headers:
-      Host: mianfei-73q.pages.dev
-- name: vless-1249003627
-  type: vless
-  server: 108.162.198.178
-  port: 2095
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: vless-1247221470
-  type: vless
-  server: 104.18.46.46
-  port: 2052
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: shadowsocks-1105433916
-  type: ss
-  server: 51.79.85.185
-  port: 8118
-  cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
-  udp: true
-- name: vless-1230974273
-  type: vless
-  server: 66.70.179.124
-  port: 443
-  uuid: c8f9e08d-7d07-4059-9f71-0b014b9e0ec7
-  udp: true
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: feWlxnxySxB9B9HiuC4NwoTe_6slRqaW-EULPN0yxjY
-    short-id: af7e79b5
-  flow: xtls-rprx-vision
-- name: vless-1249003610
-  type: vless
-  server: 108.162.198.178
-  port: 80
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: vless-1247220690
@@ -291,10 +98,49 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: vless-1247221424
+- name: 🇺🇸US_585|804KB/s|F003-260618
   type: vless
-  server: 172.64.52.6
-  port: 2086
+  server: 172.67.148.211
+  port: 443
+  uuid: a90c264d-3853-4eef-9a3d-628b2d02d15e
+  udp: true
+  network: ws
+  tls: true
+  servername: 8-M19.SoUTH-AfrIca-ChANNEl.cCwU.cC
+  client-fingerprint: chrome
+  ws-opts:
+    path: /CjBjB9sn5pCvaSwScc
+    headers:
+      Host: 8-M19.SoUTH-africA-ChANNeL.ccwu.Cc
+- name: 🇺🇸US_587|385KB/s|F003-260618
+  type: vless
+  server: 172.67.202.114
+  port: 443
+  uuid: a90c264d-3853-4eef-9a3d-628b2d02d15e
+  udp: true
+  network: ws
+  tls: true
+  servername: 1-m19.PeRu-liNe.CcWu.cC
+  client-fingerprint: chrome
+  ws-opts:
+    path: /CjBjB9sn5pCvaSwScc
+    headers:
+      Host: 1-M19.peru-line.CcwU.cC
+- name: vless-1256086117
+  type: vless
+  server: 104.18.47.113
+  port: 2052
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1247220720
+  type: vless
+  server: 172.64.32.108
+  port: 8080
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   network: ws
@@ -302,16 +148,31 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: SG - zhuhai.uk
-  type: ss
-  server: 134.185.91.85
-  port: 56927
-  cipher: 2022-blake3-chacha20-poly1305
-  password: UPqZSWOuB2mJb9pxLSUyEjze4hECPyK3TxxuPYx3BVY=
-  udp: true
-- name: vless-1247220696
+- name: vless-1247220734
   type: vless
   server: 162.159.48.32
+  port: 8080
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1258578710
+  type: vless
+  server: 172.64.229.170
+  port: 2095
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1247220683
+  type: vless
+  server: 104.18.46.234
   port: 2052
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
@@ -320,9 +181,173 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: vless-1249003599
+- name: vless-1254186215
   type: vless
-  server: 108.162.198.178
+  server: 162.159.24.131
+  port: 8880
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1247220694
+  type: vless
+  server: 188.114.97.6
+  port: 2052
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🇺🇸US_426|119KB/s|M001-260618
+  type: vmess
+  server: 104.17.77.77
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  servername: v2ray1.dozapp.xyz
+  ws-opts:
+    path: /lMnsZUN4/
+    headers:
+      Host: v2ray1.dozapp.xyz
+- name: vless-1247220677
+  type: vless
+  server: 172.64.32.103
+  port: 2095
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸US_583|1.0MB/s|F003-260618
+  type: vless
+  server: 172.67.140.160
+  port: 443
+  uuid: 1aa96574-c28b-4ee9-855d-ebdbbf1f7e90
+  udp: true
+  network: ws
+  tls: true
+  servername: 1-StATiC-iMg-m13.xdc.CcWu.Cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /ED3ZQPu7lqyeDGD58KabZ
+    headers:
+      Host: 1-StaTic-ImG-m13.Xdc.cCWU.Cc
+- name: vless-1247220707
+  type: vless
+  server: 188.114.97.6
+  port: 8880
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: vless-1256081160
+  type: vless
+  server: 104.17.189.78
+  port: 2053
+  uuid: 42c62a5a-cd31-4551-80ef-908732370287
+  udp: true
+  network: ws
+  tls: true
+  servername: fq.jp188.dpdns.org
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: fq.jp188.dpdns.org
+- name: vless-1247220716
+  type: vless
+  server: 162.159.43.187
+  port: 80
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1254898691
+  type: vless
+  server: 104.18.47.113
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1254039535
+  type: vless
+  server: 162.159.0.53
+  port: 2052
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1247220727
+  type: vless
+  server: 172.64.229.170
+  port: 2082
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1258578720
+  type: vless
+  server: 104.18.34.14
+  port: 80
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1254039595
+  type: vless
+  server: 172.64.42.85
+  port: 2095
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1247220718
+  type: vless
+  server: 104.18.46.234
+  port: 2082
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1256085120
+  type: vless
+  server: 104.18.39.218
   port: 2086
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
@@ -331,35 +356,99 @@ proxies:
     path: /
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: vless-1248878325
+- name: vless-1247220741
   type: vless
-  server: 172.66.1.247
-  port: 2053
-  uuid: 8666ab45-8e3d-4988-841b-2561d91e32d5
+  server: 108.162.198.178
+  port: 80
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   network: ws
-  tls: true
-  servername: mianfei-73q.pages.dev
-  client-fingerprint: chrome
   ws-opts:
-    path: /proxyip
+    path: /?ed=2560security=tls
     headers:
-      Host: mianfei-73q.pages.dev
-- name: vless-1249003587
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1247220739
   type: vless
-  server: 188.114.97.6
+  server: 172.64.52.6
   port: 8080
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /?ed=2560security=tls
     headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: vless-1230141928
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1247220725
   type: vless
-  server: 104.17.159.237
-  port: 2083
+  server: 172.64.32.108
+  port: 8880
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇫🇷FR_145|1.2MB/s|A004-260618
+  type: vless
+  server: 188.114.97.6
+  port: 8080
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  udp: true
+  network: ws
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+- name: vless-1258578716
+  type: vless
+  server: 104.18.46.46
+  port: 2095
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1247220729
+  type: vless
+  server: 172.64.42.85
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1254898686
+  type: vless
+  server: 162.159.0.53
+  port: 80
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇮🇩ID_4|588KB/s|M003-260806
+  type: trojan
+  server: 104.21.83.135
+  port: 443
+  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
+  udp: true
+  sni: id1.nathaya.web.id
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /trojan
+    headers: {}
+- name: vless-1230141935
+  type: vless
+  server: 104.17.148.65
+  port: 2087
   uuid: 8666ab45-8e3d-4988-841b-2561d91e32d5
   udp: true
   network: ws
@@ -370,41 +459,297 @@ proxies:
     path: /
     headers:
       Host: mianfei-73q.pages.dev
-- name: vless-1203669737
+- name: 🇺🇸US_582|1.1MB/s|F003-260618
   type: vless
-  server: 2.56.124.241
+  server: 104.21.16.74
   port: 443
-  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
-  udp: true
-  tls: true
-  servername: www.amazon.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: bPbAdn6ogLbiv5cRe5d12EL7FhooAIVrC3-fg90P-Bw
-    short-id: 72104d27a0f5f62e
-  flow: xtls-rprx-vision
-- name: vless-975999344
-  type: vless
-  server: 172.67.156.147
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  uuid: 7700ff6d-cefb-4768-a806-ec4f63fe3b38
   udp: true
   network: ws
   tls: true
-  servername: jp3.yohototo.top
+  servername: 1-M13.378Bb7FF-11cF-4DaD-B89E-72538aC75e29.kDnS.Fr
   client-fingerprint: chrome
   ws-opts:
-    path: /tyxyws
+    path: /ED3ZQPu7lqyeDGD58KabZ
     headers:
-      Host: jp3.yohototo.top
-- name: MY - zhuhai.uk
-  type: ss
-  server: 118.107.222.231
-  port: 65443
-  cipher: aes-256-cfb
-  password: 7eadc6dbe2ae
+      Host: 1-M13.378bb7ff-11cf-4dAd-B89e-72538aC75e29.KDNs.fR
+- name: vless-1247220715
+  type: vless
+  server: 104.18.39.218
+  port: 2052
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-- name: 🇫🇷FR_58|3.7MB/s|M002-260618
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇫🇷FR_156|2.4MB/s|T001-260618
+  type: vless
+  server: 104.19.214.97
+  port: 443
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
+  network: ws
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+- name: 🇫🇷FR_73|532KB/s
+  type: trojan
+  server: 104.18.152.219
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_77|304KB/s|B007-260618
+  type: trojan
+  server: 45.130.125.158
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_106|362KB/s|S004-260618
+  type: trojan
+  server: 104.26.15.137
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_115|447KB/s|F003-260618
+  type: trojan
+  server: 8.6.112.6
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_117|1.5MB/s|A001-260618
+  type: trojan
+  server: 104.16.174.14
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: vless-62437
+  type: vless
+  server: 188.114.96.76
+  port: 80
+  uuid: 781a8eb4-c4f7-4f99-9dee-e80369dbf1ec
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: us1.rtacg.com
+- name: 🇫🇷FR_125|460KB/s|S004-260618
+  type: trojan
+  server: 104.17.111.4
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: vless-1256086115
+  type: vless
+  server: 104.18.46.234
+  port: 8080
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇫🇷FR_136|519KB/s|A001-260618
+  type: trojan
+  server: 104.18.152.149
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_138|1.4MB/s|A001-260618
+  type: trojan
+  server: 104.16.174.143
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_141|659KB/s|B007-260618
+  type: trojan
+  server: 104.18.152.159
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: vless-1247220733
+  type: vless
+  server: 104.18.39.218
+  port: 8880
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: ❓Other_20|268KB/s|A001-260618
+  type: trojan
+  server: 172.67.74.2
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_174|3.6MB/s|B007-260618
+  type: vless
+  server: 104.16.151.21
+  port: 443
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
+  network: ws
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+- name: 🇫🇷FR_82|1.1MB/s|C002-260622
+  type: trojan
+  server: 104.18.152.144
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_78|421KB/s|C002-260622
+  type: trojan
+  server: 86.38.214.205
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_86|3.4MB/s|M002-260618
+  type: vless
+  server: 104.16.150.130
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
+  network: ws
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+- name: vless-1247220679
+  type: vless
+  server: 104.18.46.46
+  port: 8080
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇫🇷FR_109|492KB/s|C002-260622
+  type: trojan
+  server: 104.17.177.143
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_123|4.0MB/s|T001-260618
+  type: vless
+  server: 172.64.145.93
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
+  network: ws
+  tls: true
+  servername: fx3h2kf8xn.fx6hsv0.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: fx3h2kf8xn.fx6hsv0.ccwu.cc
+- name: 🇫🇷FR_75|516KB/s
+  type: trojan
+  server: 104.18.22.63
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers: {}
+- name: 🇫🇷FR_95|1.4MB/s|C002-260622
+  type: trojan
+  server: 104.16.174.22
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: //assignment
+    headers: {}
+- name: 🇫🇷FR_100|1.9MB/s|M002-260618
   type: vless
   server: 172.64.147.104
   port: 2087
@@ -418,23 +763,9 @@ proxies:
     path: /
     headers:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: US - zhuhai.uk 02
+- name: 🇫🇷FR_142|1.5MB/s|M002-260618
   type: vless
-  server: 129.146.134.26
-  port: 34237
-  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
-  udp: true
-  network: ws
-  tls: true
-  servername: cf3.schzyc.cc.cd
-  client-fingerprint: chrome
-  ws-opts:
-    path: /proxyip=ProxyIP.CMLiussss.net
-    headers:
-      Host: cf3.schzyc.cc.cd
-- name: 🇫🇷FR_99|4.0MB/s|T001-260618
-  type: vless
-  server: 172.64.53.60
+  server: 172.64.145.202
   port: 2087
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
@@ -446,91 +777,48 @@ proxies:
     path: /
     headers:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇫🇷FR_108|2.6MB/s|M002-260618
-  type: vless
-  server: 172.64.52.182
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: vless-1162311174
-  type: vless
-  server: 172.67.217.240
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  network: ws
-  tls: true
-  servername: jp3.yohototo.top
-  client-fingerprint: ios
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: 🇫🇷FR_126|3.1MB/s|T001-260618
-  type: vless
-  server: 104.16.150.7
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇫🇷FR_71|3.1MB/s|M002-260618
-  type: vless
-  server: 104.16.151.21
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇫🇷FR_72|3.3MB/s|M002-260618
-  type: vless
-  server: 172.64.52.30
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇫🇷FR_46|468KB/s|B007-260618
+- name: 🇫🇷FR_143|740KB/s|A001-260618
   type: trojan
-  server: 165.215.250.14
+  server: 104.18.152.230
   port: 443
   password: humanity
   udp: true
   sni: www.ignitelimit.com
-  skip-cert-verify: true
   network: ws
   ws-opts:
     path: /assignment
     headers: {}
-- name: 🇫🇷FR_60|2.3MB/s|M002-260618
+- name: 🇺🇸US_545|743KB/s|F003-260618
   type: vless
-  server: 172.64.144.66
+  server: 172.67.148.254
+  port: 443
+  uuid: 7e26fd8f-d75a-473d-84ba-9f4e3f47d086
+  udp: true
+  network: ws
+  tls: true
+  servername: 7-m20.d3579eb3-e5cb-497b-82f8-c353614250e0.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /8qMLgNapWf6SBxo8fhQlVPYO
+    headers:
+      Host: 7-m20.d3579eb3-e5cb-497b-82f8-c353614250e0.kdns.fr
+- name: 🇺🇸US_572|338KB/s|F003-260618
+  type: vless
+  server: 172.67.173.191
+  port: 443
+  uuid: 7e26fd8f-d75a-473d-84ba-9f4e3f47d086
+  udp: true
+  network: ws
+  tls: true
+  servername: 4-m20.e00e.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /8qMLgNapWf6SBxo8fhQlVPYO
+    headers:
+      Host: 4-m20.e00e.ccwu.cc
+- name: 🇫🇷FR_87|2.0MB/s|M002-260618
+  type: vless
+  server: 104.19.214.98
   port: 2087
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
@@ -542,21 +830,7 @@ proxies:
     path: /
     headers:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇫🇷FR_64|4.5MB/s|M002-260618
-  type: vless
-  server: 172.64.53.140
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇫🇷FR_69|2.7MB/s|T001-260618
+- name: 🇫🇷FR_107|1.7MB/s|T001-260618
   type: vless
   server: 172.64.146.211
   port: 2087
@@ -570,88 +844,7 @@ proxies:
     path: /
     headers:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇫🇷FR_116|509KB/s|A001-260618
-  type: trojan
-  server: 104.16.174.148
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_123|314KB/s|A001-260618
-  type: trojan
-  server: 104.18.152.230
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: trojan-1040050345
-  type: trojan
-  server: 104.21.83.135
-  port: 443
-  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
-  udp: true
-  sni: id1.nathaya.web.id
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: 🇫🇷FR_55|287KB/s|B007-260618
-  type: trojan
-  server: 104.18.152.208
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_74|4.8MB/s|M002-260618
-  type: vless
-  server: 172.64.52.173
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇫🇷FR_56|709KB/s|C002-260622
-  type: trojan
-  server: 104.17.177.143
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_76|331KB/s|B007-260618
-  type: trojan
-  server: 104.18.152.159
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_100|181KB/s|F003-260618
+- name: 🇫🇷FR_118|1004KB/s|F003-260618
   type: trojan
   server: 216.24.57.1
   port: 443
@@ -662,92 +855,62 @@ proxies:
   ws-opts:
     path: /assignment
     headers: {}
-- name: 🇫🇷FR_107|2.0MB/s|T001-260618
+- name: vless-1247220703
   type: vless
-  server: 172.64.52.60
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  server: 172.64.229.2
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸US_543|670KB/s|F003-260618
+  type: vless
+  server: 104.21.27.240
+  port: 443
+  uuid: 7e26fd8f-d75a-473d-84ba-9f4e3f47d086
   udp: true
   network: ws
   tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  servername: 3-m20.20260721-9dc5-4f76-ad18-12cd86bca954.ccwu.cc
   client-fingerprint: chrome
   ws-opts:
-    path: /
+    path: /8qMLgNapWf6SBxo8fhQlVPYO
     headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇫🇷FR_115|134KB/s|A001-260618
-  type: trojan
-  server: 104.16.174.101
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_119|209KB/s|A001-260618
-  type: trojan
-  server: 172.67.74.2
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_45|315KB/s|B007-260618
-  type: trojan
-  server: 104.19.229.21
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: vless-1249004597
+      Host: 3-m20.20260721-9dc5-4f76-ad18-12cd86bca954.ccwu.cc
+- name: 🇺🇸US_573|140KB/s|F003-260618
   type: vless
-  server: 104.18.16.56
-  port: 80
-  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
-  udp: true
-  network: ws
-  ws-opts:
-    path: 🔒 [By EbraSha]
-    headers:
-      Host: vip.yaml7.ggff.net
-- name: 🇫🇷FR_47|511KB/s|C002-260622
-  type: trojan
-  server: 45.130.125.160
+  server: 104.21.8.136
   port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_63|2.7MB/s|M002-260618
-  type: vless
-  server: 172.64.53.194
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  uuid: 7e26fd8f-d75a-473d-84ba-9f4e3f47d086
   udp: true
   network: ws
   tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  servername: 6-m20.c79324d6-7c42-4d44-be57-c3e1debe6c59.kdns.fr
   client-fingerprint: chrome
   ws-opts:
-    path: /
+    path: /8qMLgNapWf6SBxo8fhQlVPYO
     headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇫🇷FR_68|1.2MB/s|S004-260618
+      Host: 6-m20.c79324d6-7c42-4d44-be57-c3e1debe6c59.kdns.fr
+- name: 🇺🇸US_599|765KB/s|F003-260618
+  type: vless
+  server: 172.67.223.223
+  port: 443
+  uuid: 7e26fd8f-d75a-473d-84ba-9f4e3f47d086
+  udp: true
+  network: ws
+  tls: true
+  servername: 1-m20.d3b454d2-cba8-4b62-8d16-189d13194e3a.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /8qMLgNapWf6SBxo8fhQlVPYO
+    headers:
+      Host: 1-m20.d3b454d2-cba8-4b62-8d16-189d13194e3a.kdns.fr
+- name: 🇫🇷FR_81|1.8MB/s|B007-260618
   type: trojan
-  server: 104.26.15.137
+  server: 104.16.174.6
   port: 443
   password: humanity
   udp: true
@@ -756,37 +919,9 @@ proxies:
   ws-opts:
     path: /assignment
     headers: {}
-- name: 🇫🇷FR_77|2.8MB/s|T001-260618
-  type: vless
-  server: 172.64.53.240
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇫🇷FR_78|1.9MB/s|M002-260618
-  type: vless
-  server: 172.64.52.68
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇫🇷FR_40|378KB/s
+- name: 🇫🇷FR_101|619KB/s
   type: trojan
-  server: 104.18.152.219
+  server: 104.18.152.143
   port: 443
   password: humanity
   udp: true
@@ -795,76 +930,160 @@ proxies:
   ws-opts:
     path: /assignment
     headers: {}
-- name: 🇫🇷FR_42|698KB/s
-  type: trojan
-  server: 104.18.23.63
-  port: 443
-  password: humanity
+- name: vless-1258578730
+  type: vless
+  server: 104.18.46.46
+  port: 2052
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: hysteria2-892566713
+  type: hysteria2
+  server: 202.146.222.174
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  udp: true
+  sni: https%3a%2f%2ft.me%2fwangcai2%f0%9f%87%a8%f0%9f%87%b3
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_48|393KB/s|C002-260622
-  type: trojan
-  server: 104.16.174.72
+- name: hysteria2-1066924724
+  type: hysteria2
+  server: 202.146.222.29
   port: 443
-  password: humanity
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_61|287KB/s|B007-260618
-  type: trojan
-  server: 104.18.152.225
+  sni: 'off'
+  skip-cert-verify: true
+- name: hysteria2-721489367
+  type: hysteria2
+  server: 202.146.222.29
   port: 443
-  password: humanity
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_102|4.3MB/s|M002-260618
-  type: vless
-  server: 172.64.52.230
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: 🇫🇷FR_111|369KB/s|B007-260618
-  type: trojan
-  server: 104.16.174.33
+  sni: t.me
+  skip-cert-verify: true
+- name: hysteria2-547757559
+  type: hysteria2
+  server: 3.36.93.74
   port: 443
-  password: humanity
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_134|292KB/s|C002-260622
-  type: trojan
-  server: 104.18.152.204
+  sni: speedtest.tinkoff.ru
+  skip-cert-verify: true
+- name: hysteria2-1066924718
+  type: hysteria2
+  server: 202.146.222.89
   port: 443
-  password: humanity
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
+  sni: 'off'
+  skip-cert-verify: true
+- name: hysteria2-561697888
+  type: hysteria2
+  server: hy2.561891.xyz
+  port: 44356
+  password: dongtaiwang.com
+  udp: true
+  skip-cert-verify: true
+- name: hysteria2-692912199
+  type: hysteria2
+  server: 202.146.222.29
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  udp: true
+  sni: css.rbxcdn.com
+  skip-cert-verify: true
+- name: hysteria2-474576920
+  type: hysteria2
+  server: 47.129.241.226
+  port: 443
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  udp: true
+  sni: vpn-sg-001.fastervpn.world
+  skip-cert-verify: true
+- name: hysteria2-796133334
+  type: hysteria2
+  server: 46.229.243.137
+  port: 8443
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  udp: true
+  sni: grape-turbo-fr.roxa.org
+  skip-cert-verify: true
+- name: hysteria2-1208885900
+  type: hysteria2
+  server: 85.204.107.186
+  port: 8443
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  udp: true
+  sni: hopp-romania-new.roxa.org
+- name: hysteria2-1227273038
+  type: hysteria2
+  server: 72.56.102.31
+  port: 443
+  password: BWAFlp8g53
+  udp: true
+  sni: hys28.wba-pn.ru
+- name: hysteria2-1250669977
+  type: hysteria2
+  server: 38.77.133.69
+  port: 443
+  password: SYYq3OEWx05YkV6BhtSIUXkM
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: hysteria2-1232696196
+  type: hysteria2
+  server: 152.70.237.123
+  port: 2053
+  password: maintell
+  udp: true
+  sni: bing.com
+  skip-cert-verify: true
+- name: shadowsocks-951685696
+  type: ss
+  server: 84.247.155.196
+  port: 443
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+  udp: true
+- name: shadowsocks-415243972
+  type: ss
+  server: 38.180.135.156
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: YHtesZ0qvgtg
+  udp: true
+- name: shadowsocks-155
+  type: ss
+  server: 173.244.56.6
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: shadowsocks-159
+  type: ss
+  server: 156.146.38.170
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: shadowsocks-1251465982
+  type: ss
+  server: 185.164.175.81
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: shadowsocks-1249801518
+  type: ss
+  server: 142.4.216.225
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: 3ssumf2
+  udp: true
 - name: trojan-1245369771
   type: trojan
   server: 172.64.229.84
@@ -876,439 +1095,216 @@ proxies:
   ws-opts:
     path: /
     headers: {}
-- name: 🇫🇷FR_137|217KB/s
-  type: trojan
-  server: 104.16.174.121
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_39|300KB/s
-  type: trojan
-  server: 104.18.152.97
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_51|211KB/s|C002-260622
-  type: trojan
-  server: 104.16.7.70
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_110|348KB/s|A001-260618
-  type: trojan
-  server: 104.17.111.1
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_117|509KB/s|A001-260618
-  type: trojan
-  server: 104.16.174.143
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers: {}
-- name: 🇫🇷FR_196|3.5MB/s|B007-260618
-  type: vless
-  server: 172.64.146.211
-  port: 2083
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: vless-1204134961
-  type: vless
-  server: 169.40.42.89
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  flow: xtls-rprx-vision
-- name: 🇫🇷FR_28|240KB/s|C002-260622
-  type: trojan
-  server: 104.16.174.22
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: //assignment
-    headers: {}
-- name: hysteria2-1066924718
-  type: hysteria2
-  server: 202.146.222.89
-  port: 443
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  udp: true
-  sni: 'off'
-  skip-cert-verify: true
-- name: hysteria2-737135161
-  type: hysteria2
-  server: 103.115.109.49
-  port: 443
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  udp: true
-  sni: 'https:'
-  skip-cert-verify: true
-- name: hysteria2-1066924724
-  type: hysteria2
-  server: 202.146.222.29
-  port: 443
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  udp: true
-  sni: 'off'
-  skip-cert-verify: true
-- name: hysteria2-920243845
-  type: hysteria2
-  server: 202.146.222.174
-  port: 443
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  udp: true
-  sni: https://t.me/wangcai2
-  skip-cert-verify: true
-- name: hysteria2-1179262910
-  type: hysteria2
-  server: 54.151.142.26
-  port: 443
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  udp: true
-  skip-cert-verify: true
-- name: hysteria2-1121839551
-  type: hysteria2
-  server: mz.hkychina.com
-  port: 8443
-  password: HysTeria2026!Proxy
-  udp: true
-  sni: mz.hkychina.com
-- name: hysteria2-1208885879
-  type: hysteria2
-  server: 205.237.109.176
-  port: 8443
-  password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
-  udp: true
-  sni: hopp-netherland-new.dynuddns.net
-- name: hysteria2-1046909563
-  type: hysteria2
-  server: 54.151.142.26
-  port: 443
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  udp: true
-  sni: css.rbxcdn.com
-  skip-cert-verify: true
-- name: hysteria2-1235887697
-  type: hysteria2
-  server: 47.129.0.20
-  port: 443
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  udp: true
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: hysteria2-1227273038
-  type: hysteria2
-  server: 72.56.102.31
-  port: 443
-  password: BWAFlp8g53
-  udp: true
-  sni: hys28.wba-pn.ru
-- name: shadowsocks-951685696
-  type: ss
-  server: 84.247.155.196
-  port: 443
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-  udp: true
-- name: shadowsocks-1211880885
-  type: ss
-  server: 15.204.247.206
-  port: 4444
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-  udp: true
-- name: shadowsocks-126340
-  type: ss
-  server: 167.150.100.115
-  port: 27755
-  cipher: 2022-blake3-aes-256-gcm
-  password: fnvo82p9y4AKykZXyIFtnodFy6fQmWnVlI2SvGleOB0=
-  udp: true
-- name: shadowsocks-1223448949
-  type: ss
-  server: 108.129.176.139
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-- name: trojan-1245369766
-  type: trojan
-  server: ot2.hyas.space
-  port: 443
-  password: 624209bb-8216-45fe-bbe0-50132ec63162
-  udp: true
-  sni: ot2.hyas.space
-  network: ws
-  ws-opts:
-    path: /
-    headers: {}
-- name: trojan-2525865
-  type: trojan
-  server: aa.ccmusic.jp
-  port: 443
-  password: tsuchiya
-  udp: true
-  sni: aa.ccmusic.jp
-  skip-cert-verify: true
-- name: trojan-201299290
-  type: trojan
-  server: 161.34.39.108
-  port: 443
-  password: tsuchiya
-  udp: true
-  sni: aa.ccmusic.jp
-  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - shadowsocks-196
-  - vless-1156944845
-  - shadowsocks-496614106
-  - vless-1235435929
-  - hysteria2-159719813
-  - vmess-655845751
-  - vless-1247221448
-  - shadowsocks-842256759
-  - vless-661025483
-  - vless-1249003633
-  - vless-1247221438
-  - vless-1249003608
-  - vless-1247220727
-  - vless-1249004619
-  - vless-692622915
-  - vless-1247220742
-  - vless-669787752
-  - shadowsocks-1136106230
-  - vless-1239407526
-  - vless-1249004585
-  - vless-1239407519
-  - vless-1249003627
-  - vless-1247221470
-  - shadowsocks-1105433916
-  - vless-1230974273
-  - vless-1249003610
-  - vless-1247220690
-  - vless-1247221424
-  - SG - zhuhai.uk
+  - 🇺🇸US_219|1.2MB/s
+  - vless-1247220687
   - vless-1247220696
-  - vless-1249003599
-  - vless-1248878325
-  - vless-1249003587
-  - vless-1230141928
-  - vless-1203669737
-  - vless-975999344
-  - MY - zhuhai.uk
-  - 🇫🇷FR_58|3.7MB/s|M002-260618
-  - US - zhuhai.uk 02
-  - 🇫🇷FR_99|4.0MB/s|T001-260618
-  - 🇫🇷FR_108|2.6MB/s|M002-260618
-  - vless-1162311174
-  - 🇫🇷FR_126|3.1MB/s|T001-260618
-  - 🇫🇷FR_71|3.1MB/s|M002-260618
-  - 🇫🇷FR_72|3.3MB/s|M002-260618
-  - 🇫🇷FR_46|468KB/s|B007-260618
-  - 🇫🇷FR_60|2.3MB/s|M002-260618
-  - 🇫🇷FR_64|4.5MB/s|M002-260618
-  - 🇫🇷FR_69|2.7MB/s|T001-260618
-  - 🇫🇷FR_116|509KB/s|A001-260618
-  - 🇫🇷FR_123|314KB/s|A001-260618
-  - trojan-1040050345
-  - 🇫🇷FR_55|287KB/s|B007-260618
-  - 🇫🇷FR_74|4.8MB/s|M002-260618
-  - 🇫🇷FR_56|709KB/s|C002-260622
-  - 🇫🇷FR_76|331KB/s|B007-260618
-  - 🇫🇷FR_100|181KB/s|F003-260618
-  - 🇫🇷FR_107|2.0MB/s|T001-260618
-  - 🇫🇷FR_115|134KB/s|A001-260618
-  - 🇫🇷FR_119|209KB/s|A001-260618
-  - 🇫🇷FR_45|315KB/s|B007-260618
-  - vless-1249004597
-  - 🇫🇷FR_47|511KB/s|C002-260622
-  - 🇫🇷FR_63|2.7MB/s|M002-260618
-  - 🇫🇷FR_68|1.2MB/s|S004-260618
-  - 🇫🇷FR_77|2.8MB/s|T001-260618
-  - 🇫🇷FR_78|1.9MB/s|M002-260618
-  - 🇫🇷FR_40|378KB/s
-  - 🇫🇷FR_42|698KB/s
-  - 🇫🇷FR_48|393KB/s|C002-260622
-  - 🇫🇷FR_61|287KB/s|B007-260618
-  - 🇫🇷FR_102|4.3MB/s|M002-260618
-  - 🇫🇷FR_111|369KB/s|B007-260618
-  - 🇫🇷FR_134|292KB/s|C002-260622
-  - trojan-1245369771
-  - 🇫🇷FR_137|217KB/s
-  - 🇫🇷FR_39|300KB/s
-  - 🇫🇷FR_51|211KB/s|C002-260622
-  - 🇫🇷FR_110|348KB/s|A001-260618
-  - 🇫🇷FR_117|509KB/s|A001-260618
-  - 🇫🇷FR_196|3.5MB/s|B007-260618
-  - vless-1204134961
-  - 🇫🇷FR_28|240KB/s|C002-260622
-  - hysteria2-1066924718
-  - hysteria2-737135161
+  - vless-1247220704
+  - vless-1247220685
+  - vless-1249003608
+  - vless-1254039576
+  - vless-1247220706
+  - vless-1247220690
+  - 🇺🇸US_585|804KB/s|F003-260618
+  - 🇺🇸US_587|385KB/s|F003-260618
+  - vless-1256086117
+  - vless-1247220720
+  - vless-1247220734
+  - vless-1258578710
+  - vless-1247220683
+  - vless-1254186215
+  - vless-1247220694
+  - 🇺🇸US_426|119KB/s|M001-260618
+  - vless-1247220677
+  - 🇺🇸US_583|1.0MB/s|F003-260618
+  - vless-1247220707
+  - vless-1256081160
+  - vless-1247220716
+  - vless-1254898691
+  - vless-1254039535
+  - vless-1247220727
+  - vless-1258578720
+  - vless-1254039595
+  - vless-1247220718
+  - vless-1256085120
+  - vless-1247220741
+  - vless-1247220739
+  - vless-1247220725
+  - 🇫🇷FR_145|1.2MB/s|A004-260618
+  - vless-1258578716
+  - vless-1247220729
+  - vless-1254898686
+  - 🇮🇩ID_4|588KB/s|M003-260806
+  - vless-1230141935
+  - 🇺🇸US_582|1.1MB/s|F003-260618
+  - vless-1247220715
+  - 🇫🇷FR_156|2.4MB/s|T001-260618
+  - 🇫🇷FR_73|532KB/s
+  - 🇫🇷FR_77|304KB/s|B007-260618
+  - 🇫🇷FR_106|362KB/s|S004-260618
+  - 🇫🇷FR_115|447KB/s|F003-260618
+  - 🇫🇷FR_117|1.5MB/s|A001-260618
+  - vless-62437
+  - 🇫🇷FR_125|460KB/s|S004-260618
+  - vless-1256086115
+  - 🇫🇷FR_136|519KB/s|A001-260618
+  - 🇫🇷FR_138|1.4MB/s|A001-260618
+  - 🇫🇷FR_141|659KB/s|B007-260618
+  - vless-1247220733
+  - ❓Other_20|268KB/s|A001-260618
+  - 🇫🇷FR_174|3.6MB/s|B007-260618
+  - 🇫🇷FR_82|1.1MB/s|C002-260622
+  - 🇫🇷FR_78|421KB/s|C002-260622
+  - 🇫🇷FR_86|3.4MB/s|M002-260618
+  - vless-1247220679
+  - 🇫🇷FR_109|492KB/s|C002-260622
+  - 🇫🇷FR_123|4.0MB/s|T001-260618
+  - 🇫🇷FR_75|516KB/s
+  - 🇫🇷FR_95|1.4MB/s|C002-260622
+  - 🇫🇷FR_100|1.9MB/s|M002-260618
+  - 🇫🇷FR_142|1.5MB/s|M002-260618
+  - 🇫🇷FR_143|740KB/s|A001-260618
+  - 🇺🇸US_545|743KB/s|F003-260618
+  - 🇺🇸US_572|338KB/s|F003-260618
+  - 🇫🇷FR_87|2.0MB/s|M002-260618
+  - 🇫🇷FR_107|1.7MB/s|T001-260618
+  - 🇫🇷FR_118|1004KB/s|F003-260618
+  - vless-1247220703
+  - 🇺🇸US_543|670KB/s|F003-260618
+  - 🇺🇸US_573|140KB/s|F003-260618
+  - 🇺🇸US_599|765KB/s|F003-260618
+  - 🇫🇷FR_81|1.8MB/s|B007-260618
+  - 🇫🇷FR_101|619KB/s
+  - vless-1258578730
+  - hysteria2-892566713
   - hysteria2-1066924724
-  - hysteria2-920243845
-  - hysteria2-1179262910
-  - hysteria2-1121839551
-  - hysteria2-1208885879
-  - hysteria2-1046909563
-  - hysteria2-1235887697
+  - hysteria2-721489367
+  - hysteria2-547757559
+  - hysteria2-1066924718
+  - hysteria2-561697888
+  - hysteria2-692912199
+  - hysteria2-474576920
+  - hysteria2-796133334
+  - hysteria2-1208885900
   - hysteria2-1227273038
+  - hysteria2-1250669977
+  - hysteria2-1232696196
   - shadowsocks-951685696
-  - shadowsocks-1211880885
-  - shadowsocks-126340
-  - shadowsocks-1223448949
-  - trojan-1245369766
-  - trojan-2525865
-  - trojan-201299290
+  - shadowsocks-415243972
+  - shadowsocks-155
+  - shadowsocks-159
+  - shadowsocks-1251465982
+  - shadowsocks-1249801518
+  - trojan-1245369771
 - name: ♻️ 自动选择
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - shadowsocks-196
-  - vless-1156944845
-  - shadowsocks-496614106
-  - vless-1235435929
-  - hysteria2-159719813
-  - vmess-655845751
-  - vless-1247221448
-  - shadowsocks-842256759
-  - vless-661025483
-  - vless-1249003633
-  - vless-1247221438
-  - vless-1249003608
-  - vless-1247220727
-  - vless-1249004619
-  - vless-692622915
-  - vless-1247220742
-  - vless-669787752
-  - shadowsocks-1136106230
-  - vless-1239407526
-  - vless-1249004585
-  - vless-1239407519
-  - vless-1249003627
-  - vless-1247221470
-  - shadowsocks-1105433916
-  - vless-1230974273
-  - vless-1249003610
-  - vless-1247220690
-  - vless-1247221424
-  - SG - zhuhai.uk
+  - 🇺🇸US_219|1.2MB/s
+  - vless-1247220687
   - vless-1247220696
-  - vless-1249003599
-  - vless-1248878325
-  - vless-1249003587
-  - vless-1230141928
-  - vless-1203669737
-  - vless-975999344
-  - MY - zhuhai.uk
-  - 🇫🇷FR_58|3.7MB/s|M002-260618
-  - US - zhuhai.uk 02
-  - 🇫🇷FR_99|4.0MB/s|T001-260618
-  - 🇫🇷FR_108|2.6MB/s|M002-260618
-  - vless-1162311174
-  - 🇫🇷FR_126|3.1MB/s|T001-260618
-  - 🇫🇷FR_71|3.1MB/s|M002-260618
-  - 🇫🇷FR_72|3.3MB/s|M002-260618
-  - 🇫🇷FR_46|468KB/s|B007-260618
-  - 🇫🇷FR_60|2.3MB/s|M002-260618
-  - 🇫🇷FR_64|4.5MB/s|M002-260618
-  - 🇫🇷FR_69|2.7MB/s|T001-260618
-  - 🇫🇷FR_116|509KB/s|A001-260618
-  - 🇫🇷FR_123|314KB/s|A001-260618
-  - trojan-1040050345
-  - 🇫🇷FR_55|287KB/s|B007-260618
-  - 🇫🇷FR_74|4.8MB/s|M002-260618
-  - 🇫🇷FR_56|709KB/s|C002-260622
-  - 🇫🇷FR_76|331KB/s|B007-260618
-  - 🇫🇷FR_100|181KB/s|F003-260618
-  - 🇫🇷FR_107|2.0MB/s|T001-260618
-  - 🇫🇷FR_115|134KB/s|A001-260618
-  - 🇫🇷FR_119|209KB/s|A001-260618
-  - 🇫🇷FR_45|315KB/s|B007-260618
-  - vless-1249004597
-  - 🇫🇷FR_47|511KB/s|C002-260622
-  - 🇫🇷FR_63|2.7MB/s|M002-260618
-  - 🇫🇷FR_68|1.2MB/s|S004-260618
-  - 🇫🇷FR_77|2.8MB/s|T001-260618
-  - 🇫🇷FR_78|1.9MB/s|M002-260618
-  - 🇫🇷FR_40|378KB/s
-  - 🇫🇷FR_42|698KB/s
-  - 🇫🇷FR_48|393KB/s|C002-260622
-  - 🇫🇷FR_61|287KB/s|B007-260618
-  - 🇫🇷FR_102|4.3MB/s|M002-260618
-  - 🇫🇷FR_111|369KB/s|B007-260618
-  - 🇫🇷FR_134|292KB/s|C002-260622
-  - trojan-1245369771
-  - 🇫🇷FR_137|217KB/s
-  - 🇫🇷FR_39|300KB/s
-  - 🇫🇷FR_51|211KB/s|C002-260622
-  - 🇫🇷FR_110|348KB/s|A001-260618
-  - 🇫🇷FR_117|509KB/s|A001-260618
-  - 🇫🇷FR_196|3.5MB/s|B007-260618
-  - vless-1204134961
-  - 🇫🇷FR_28|240KB/s|C002-260622
-  - hysteria2-1066924718
-  - hysteria2-737135161
+  - vless-1247220704
+  - vless-1247220685
+  - vless-1249003608
+  - vless-1254039576
+  - vless-1247220706
+  - vless-1247220690
+  - 🇺🇸US_585|804KB/s|F003-260618
+  - 🇺🇸US_587|385KB/s|F003-260618
+  - vless-1256086117
+  - vless-1247220720
+  - vless-1247220734
+  - vless-1258578710
+  - vless-1247220683
+  - vless-1254186215
+  - vless-1247220694
+  - 🇺🇸US_426|119KB/s|M001-260618
+  - vless-1247220677
+  - 🇺🇸US_583|1.0MB/s|F003-260618
+  - vless-1247220707
+  - vless-1256081160
+  - vless-1247220716
+  - vless-1254898691
+  - vless-1254039535
+  - vless-1247220727
+  - vless-1258578720
+  - vless-1254039595
+  - vless-1247220718
+  - vless-1256085120
+  - vless-1247220741
+  - vless-1247220739
+  - vless-1247220725
+  - 🇫🇷FR_145|1.2MB/s|A004-260618
+  - vless-1258578716
+  - vless-1247220729
+  - vless-1254898686
+  - 🇮🇩ID_4|588KB/s|M003-260806
+  - vless-1230141935
+  - 🇺🇸US_582|1.1MB/s|F003-260618
+  - vless-1247220715
+  - 🇫🇷FR_156|2.4MB/s|T001-260618
+  - 🇫🇷FR_73|532KB/s
+  - 🇫🇷FR_77|304KB/s|B007-260618
+  - 🇫🇷FR_106|362KB/s|S004-260618
+  - 🇫🇷FR_115|447KB/s|F003-260618
+  - 🇫🇷FR_117|1.5MB/s|A001-260618
+  - vless-62437
+  - 🇫🇷FR_125|460KB/s|S004-260618
+  - vless-1256086115
+  - 🇫🇷FR_136|519KB/s|A001-260618
+  - 🇫🇷FR_138|1.4MB/s|A001-260618
+  - 🇫🇷FR_141|659KB/s|B007-260618
+  - vless-1247220733
+  - ❓Other_20|268KB/s|A001-260618
+  - 🇫🇷FR_174|3.6MB/s|B007-260618
+  - 🇫🇷FR_82|1.1MB/s|C002-260622
+  - 🇫🇷FR_78|421KB/s|C002-260622
+  - 🇫🇷FR_86|3.4MB/s|M002-260618
+  - vless-1247220679
+  - 🇫🇷FR_109|492KB/s|C002-260622
+  - 🇫🇷FR_123|4.0MB/s|T001-260618
+  - 🇫🇷FR_75|516KB/s
+  - 🇫🇷FR_95|1.4MB/s|C002-260622
+  - 🇫🇷FR_100|1.9MB/s|M002-260618
+  - 🇫🇷FR_142|1.5MB/s|M002-260618
+  - 🇫🇷FR_143|740KB/s|A001-260618
+  - 🇺🇸US_545|743KB/s|F003-260618
+  - 🇺🇸US_572|338KB/s|F003-260618
+  - 🇫🇷FR_87|2.0MB/s|M002-260618
+  - 🇫🇷FR_107|1.7MB/s|T001-260618
+  - 🇫🇷FR_118|1004KB/s|F003-260618
+  - vless-1247220703
+  - 🇺🇸US_543|670KB/s|F003-260618
+  - 🇺🇸US_573|140KB/s|F003-260618
+  - 🇺🇸US_599|765KB/s|F003-260618
+  - 🇫🇷FR_81|1.8MB/s|B007-260618
+  - 🇫🇷FR_101|619KB/s
+  - vless-1258578730
+  - hysteria2-892566713
   - hysteria2-1066924724
-  - hysteria2-920243845
-  - hysteria2-1179262910
-  - hysteria2-1121839551
-  - hysteria2-1208885879
-  - hysteria2-1046909563
-  - hysteria2-1235887697
+  - hysteria2-721489367
+  - hysteria2-547757559
+  - hysteria2-1066924718
+  - hysteria2-561697888
+  - hysteria2-692912199
+  - hysteria2-474576920
+  - hysteria2-796133334
+  - hysteria2-1208885900
   - hysteria2-1227273038
+  - hysteria2-1250669977
+  - hysteria2-1232696196
   - shadowsocks-951685696
-  - shadowsocks-1211880885
-  - shadowsocks-126340
-  - shadowsocks-1223448949
-  - trojan-1245369766
-  - trojan-2525865
-  - trojan-201299290
+  - shadowsocks-415243972
+  - shadowsocks-155
+  - shadowsocks-159
+  - shadowsocks-1251465982
+  - shadowsocks-1249801518
+  - trojan-1245369771
 rules:
 - MATCH,🚀 节点选择
